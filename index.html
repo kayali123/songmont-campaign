@@ -3,183 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>中国原创设计师包袋赛道 × 东方美学消费趋势 — 行业研究报告</title>
+<title>见针 · 一针，一个人 ｜ Songmont 品牌营销 Campaign 提案</title>
 <style>
 :root{
   --font-heading:'Noto Serif SC','Source Han Serif SC','STSong',Georgia,serif;
   --font-body:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
   --font-mono:'JetBrains Mono','Cascadia Code','SF Mono',Consolas,monospace;
   --font-data:'Inter',-apple-system,sans-serif;
-  /* light — Songmont warm earth palette (camel / cream / espresso) */
   --bg:#f7f3ec;--card:#fffefb;--h1:#2b2420;--body:#4d453c;--muted:#9a8f7f;
   --accent:#8c5e36;--accent-soft:#8c5e361a;--data:#a04b30;--thead:#f0e9dc;
-  --line:#e7decf;--unsourced-bg:#f6e8ce;--unsourced-fg:#8a5a1e;
+  --line:#e7decf;--assume-bg:#f6e8ce;--assume-fg:#8a5a1e;
   --finding-bg:#f5efe4;--warn-bg:#fbf4e6;--warn-border:#c08a3e;--warn-fg:#7a5320;
-  --measured-bg:#ede7dc;--measured-fg:#6b4e2e;--row-alt:#faf6ef;--shadow:0 1px 3px rgba(60,42,28,.07),0 1px 2px rgba(60,42,28,.05);
+  --brand-bg:#ede7dc;--brand-fg:#6b4e2e;--row-alt:#faf6ef;--shadow:0 1px 3px rgba(60,42,28,.07),0 1px 2px rgba(60,42,28,.05);
   --row-hover:#f3ecdf;
 }
 html[data-theme="dark"]{
   --bg:#1b1714;--card:#262019;--h1:#f1e9dc;--body:#cfc4b4;--muted:#9e9384;
   --accent:#c9a37a;--accent-soft:#c9a37a1f;--data:#e0a06e;--thead:#2e261d;
-  --line:#3a3026;--unsourced-bg:#3a2a12;--unsourced-fg:#e5c58a;
+  --line:#3a3026;--assume-bg:#3a2a12;--assume-fg:#e5c58a;
   --finding-bg:#241d14;--warn-bg:#2a2110;--warn-border:#c08a3e;--warn-fg:#e5c58a;
-  --measured-bg:#2a2318;--measured-fg:#d8c3a0;--row-alt:#221b14;--shadow:0 1px 3px rgba(0,0,0,.4);
+  --brand-bg:#2a2318;--brand-fg:#d8c3a0;--row-alt:#221b14;--shadow:0 1px 3px rgba(0,0,0,.4);
   --row-hover:#2e261d;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;font-size:18px;}
-body{
-  margin:0;background:var(--bg);color:var(--body);
-  font-family:var(--font-body);font-size:1rem;line-height:1.78;
-  -webkit-font-smoothing:antialiased;
-}
-/* ---------- Top bar ---------- */
-.topbar{
-  position:sticky;top:0;z-index:50;display:flex;align-items:center;
-  justify-content:space-between;gap:1rem;padding:.7rem 1.5rem;
-  background:color-mix(in srgb,var(--bg) 88%,transparent);
-  backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);
-}
-.topbar .brand{font-family:var(--font-heading);font-weight:700;color:var(--h1);font-size:1rem;letter-spacing:.01em;}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font-body);font-size:1rem;line-height:1.8;-webkit-font-smoothing:antialiased;}
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1.5rem;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);}
+.topbar .brand{font-family:var(--font-heading);font-weight:700;color:var(--h1);font-size:1rem;letter-spacing:.01em;display:flex;align-items:center;}
 .topbar .brand small{color:var(--muted);font-weight:400;font-family:var(--font-body);}
 .tb-actions{display:flex;gap:.5rem;}
-.tb-actions button{
-  font-family:var(--font-body);font-size:.82rem;cursor:pointer;
-  border:1px solid var(--line);background:var(--card);color:var(--body);
-  padding:.35rem .8rem;border-radius:6px;transition:all .15s;
-}
+.tb-actions button{font-family:var(--font-body);font-size:.82rem;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--body);padding:.35rem .8rem;border-radius:6px;transition:all .15s;}
 .tb-actions button:hover{border-color:var(--accent);color:var(--accent);}
 .xnav{font-family:var(--font-body);font-size:.82rem;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--body);padding:.35rem .8rem;border-radius:6px;transition:all .15s;text-decoration:none;display:inline-flex;align-items:center;white-space:nowrap;}
 .xnav:hover{border-color:var(--accent);color:var(--accent);}
+.xnav.cur{background:var(--accent-soft);color:var(--accent);border-color:var(--accent);cursor:default;}
 @media(max-width:640px){.xnav .lbl{display:none;}}
-/* ---------- Layout ---------- */
-.layout{display:grid;grid-template-columns:248px minmax(0,1fr);max-width:1240px;margin:0 auto;}
-nav.toc{
-  position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);
-  overflow-y:auto;padding:1.5rem 1rem 3rem;border-right:1px solid var(--line);
-  font-size:.86rem;
-}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1240px;margin:0 auto;}
+nav.toc{position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);overflow-y:auto;padding:1.5rem 1rem 3rem;border-right:1px solid var(--line);font-size:.86rem;}
 nav.toc h4{font-family:var(--font-body);text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;color:var(--muted);margin:.2rem 0 .8rem;}
-nav.toc a{
-  display:block;color:var(--muted);text-decoration:none;padding:.32rem .6rem;
-  border-radius:6px;border-left:2px solid transparent;line-height:1.4;transition:all .12s;
-}
+nav.toc a{display:block;color:var(--muted);text-decoration:none;padding:.32rem .6rem;border-radius:6px;border-left:2px solid transparent;line-height:1.4;transition:all .12s;}
 nav.toc a:hover{color:var(--body);background:var(--accent-soft);}
 nav.toc a.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-soft);font-weight:600;}
-nav.toc a.sub{padding-left:1.4rem;font-size:.8rem;}
 main{padding:2.5rem 3rem 5rem;min-width:0;}
-.content-wrap{max-width:880px;}
-/* ---------- Typography ---------- */
-h1.report-title{font-family:var(--font-heading);font-weight:700;font-size:2.25rem;line-height:1.3;color:var(--h1);margin:.2rem 0 .6rem;}
-h2{font-family:var(--font-heading);font-weight:600;font-size:1.5rem;line-height:1.3;color:var(--h1);margin:3rem 0 1rem;padding-top:.6rem;scroll-margin-top:70px;border-top:2px solid var(--line);}
+.content-wrap{max-width:900px;}
+h1.deck-title{font-family:var(--font-heading);font-weight:700;font-size:2.5rem;line-height:1.25;color:var(--h1);margin:.2rem 0 .5rem;letter-spacing:.02em;}
+h2{font-family:var(--font-heading);font-weight:600;font-size:1.55rem;line-height:1.3;color:var(--h1);margin:3rem 0 1rem;padding-top:.6rem;scroll-margin-top:70px;border-top:2px solid var(--line);}
 h2:first-of-type{border-top:none;}
-h3{font-family:var(--font-heading);font-weight:600;font-size:1.15rem;color:var(--h1);margin:2rem 0 .8rem;scroll-margin-top:70px;}
-h4{font-weight:600;font-size:1rem;color:var(--h1);margin:1.4rem 0 .6rem;}
-p{margin:0 0 1.1rem;max-width:760px;}
+h3{font-family:var(--font-heading);font-weight:600;font-size:1.2rem;color:var(--h1);margin:2rem 0 .8rem;scroll-margin-top:70px;}
+h4{font-weight:600;font-size:1.02rem;color:var(--h1);margin:1.4rem 0 .6rem;}
+p{margin:0 0 1.1rem;max-width:780px;}
 strong{color:var(--h1);font-weight:600;}
-a.ref{color:var(--accent);text-decoration:none;font-weight:600;font-size:.82em;vertical-align:.18em;padding:0 .05em;}
-a.ref:hover{text-decoration:underline;}
 hr.div{border:none;border-top:1px solid var(--line);margin:2.5rem 0;}
-ul,ol{max-width:760px;padding-left:1.4rem;}
-li{margin:.4rem 0;}
-/* ---------- Cover ---------- */
+ul,ol{max-width:800px;padding-left:1.4rem;}
+li{margin:.45rem 0;}
 .cover{padding:1rem 0 1.5rem;border-bottom:2px solid var(--line);margin-bottom:1rem;}
-.cover .meta{font-size:.9rem;color:var(--muted);line-height:1.9;}
+.cover .meta{font-size:.92rem;color:var(--muted);line-height:1.95;}
 .cover .meta b{color:var(--body);}
 .kicker{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.6rem;}
-/* ---------- Songmont brand motif (山下有松 · mountain & pine) ---------- */
-.brand-mark{color:var(--accent);display:inline-flex;vertical-align:-2px;margin-right:.55rem;}
-.brand-mark svg{width:26px;height:auto;display:block;}
 .cover-mark{color:var(--accent);line-height:0;margin:.4rem 0 1.2rem;}
-.cover-mark svg{width:74px;height:auto;}
-.cover-tagline{font-family:var(--font-heading);font-size:1rem;letter-spacing:.34em;color:var(--accent);font-weight:500;margin:.2rem 0 1.3rem;}
+.cover-mark svg{width:96px;height:auto;}
+.cover-tagline{font-family:var(--font-heading);font-size:1.15rem;letter-spacing:.14em;color:var(--accent);font-weight:500;margin:.4rem 0 1.3rem;}
 .cover-tagline::after{content:"";display:block;width:46px;height:2px;background:var(--accent);opacity:.5;margin:.9rem 0 0;}
-/* ---------- KPI cards ---------- */
-.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:1.5rem 0;}
+.brand-mark{color:var(--accent);display:inline-flex;vertical-align:-4px;margin-right:.55rem;}
+.brand-mark svg{width:28px;height:auto;display:block;}
+.setup-box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:1rem 1.3rem;margin:1.4rem 0;box-shadow:var(--shadow);font-size:.92rem;}
+.setup-box .r{display:grid;grid-template-columns:8.5rem 1fr;gap:.5rem;padding:.35rem 0;border-bottom:1px dashed var(--line);}
+.setup-box .r:last-child{border-bottom:none;}
+.setup-box .r .k{font-weight:700;color:var(--accent);font-size:.82rem;}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0;}
 .kpi-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.2rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.3rem;}
-.kpi-value{font-family:var(--font-data);font-feature-settings:"tnum";font-weight:700;font-size:1.7rem;color:var(--data);line-height:1.1;}
-.kpi-label{font-size:.84rem;color:var(--body);font-weight:500;}
-.kpi-source{font-size:.72rem;color:var(--muted);}
-/* ---------- Finding / warn / note boxes ---------- */
-blockquote.finding{margin:1.4rem 0;background:var(--finding-bg);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:1rem 1.3rem;}
-blockquote.finding p{margin:.4rem 0;}
-blockquote.finding p:first-child{margin-top:0;}
-blockquote.finding p:last-child{margin-bottom:0;}
-blockquote.warn{margin:1.4rem 0;background:var(--warn-bg);border-left:4px solid var(--warn-border);border-radius:0 8px 8px 0;padding:1rem 1.3rem;color:var(--warn-fg);}
-blockquote.warn p{margin:.4rem 0;}
-blockquote.warn p:first-child{margin-top:0;}blockquote.warn p:last-child{margin-bottom:0;}
-blockquote.warn strong{color:var(--warn-fg);}
-blockquote.note{margin:1.3rem 0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--muted);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;color:var(--muted);font-size:.92rem;}
+.kpi-value{font-family:var(--font-heading);font-weight:700;font-size:1.35rem;color:var(--data);line-height:1.2;}
+.kpi-label{font-size:.86rem;color:var(--body);font-weight:500;}
+.kpi-source{font-size:.74rem;color:var(--muted);}
+blockquote.finding{margin:1.4rem 0;background:var(--finding-bg);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:1rem 1.3rem;max-width:820px;}
+blockquote.finding p{margin:.4rem 0;}blockquote.finding p:first-child{margin-top:0;}blockquote.finding p:last-child{margin-bottom:0;}
+blockquote.warn{margin:1.4rem 0;background:var(--warn-bg);border-left:4px solid var(--warn-border);border-radius:0 8px 8px 0;padding:1rem 1.3rem;color:var(--warn-fg);max-width:820px;}
+blockquote.warn p{margin:.4rem 0;}blockquote.warn p:first-child{margin-top:0;}blockquote.warn p:last-child{margin-bottom:0;}blockquote.warn strong{color:var(--warn-fg);}
+blockquote.note{margin:1.3rem 0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--muted);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;color:var(--muted);font-size:.92rem;max-width:820px;}
 blockquote.note p{margin:.3rem 0;}blockquote.note p:first-child{margin-top:0;}blockquote.note p:last-child{margin-bottom:0;}
-/* ---------- Core conclusions ---------- */
-.concl-lead{font-family:var(--font-heading);font-size:1.15rem;line-height:1.7;color:var(--h1);background:var(--finding-bg);border:1px solid var(--accent);border-radius:12px;padding:1.4rem 1.6rem;margin:1.2rem 0 2rem;}
-.concl-list{counter-reset:cc;list-style:none;padding:0;display:grid;gap:1rem;max-width:none;}
-.concl-list li{counter-increment:cc;position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.3rem 1.1rem 3.4rem;box-shadow:var(--shadow);margin:0;}
-.concl-list li::before{content:counter(cc);position:absolute;left:1.1rem;top:1.1rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--font-data);font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;}
-html[data-theme="dark"] .concl-list li::before{color:#2b2118;}
-/* ---------- Tags ---------- */
-.tag{display:inline-block;font-size:.72rem;font-weight:600;padding:.05em .5em;border-radius:4px;font-family:var(--font-body);white-space:nowrap;line-height:1.5;}
-.tag.measured{background:var(--measured-bg);color:var(--measured-fg);}
-.tag.unsourced{background:var(--unsourced-bg);color:var(--unsourced-fg);border-bottom:1px dashed currentColor;}
-/* ---------- Tables ---------- */
+.concl-lead{font-family:var(--font-heading);font-size:1.18rem;line-height:1.7;color:var(--h1);background:var(--finding-bg);border:1px solid var(--accent);border-radius:12px;padding:1.4rem 1.6rem;margin:1.2rem 0 2rem;max-width:none;}
+.pillars{counter-reset:cc;list-style:none;padding:0;display:grid;gap:1rem;max-width:none;}
+.pillars li{counter-increment:cc;position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.3rem 1.1rem 3.4rem;box-shadow:var(--shadow);margin:0;}
+.pillars li::before{content:counter(cc);position:absolute;left:1.1rem;top:1.1rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--font-data);font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;}
+html[data-theme="dark"] .pillars li::before{color:#2b2118;}
+.tag{display:inline-block;font-size:.7rem;font-weight:600;padding:.05em .5em;border-radius:4px;font-family:var(--font-body);white-space:nowrap;line-height:1.5;vertical-align:.08em;}
+.tag.brand{background:var(--brand-bg);color:var(--brand-fg);}
+.tag.assume{background:var(--assume-bg);color:var(--assume-fg);border-bottom:1px dashed currentColor;}
 .table-scroll{overflow-x:auto;margin:1.4rem 0;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);}
-table.data-table{border-collapse:collapse;width:100%;font-size:.86rem;background:var(--card);min-width:560px;}
+table.data-table{border-collapse:collapse;width:100%;font-size:.88rem;background:var(--card);min-width:600px;}
 table.data-table caption{caption-side:top;text-align:left;font-size:.82rem;color:var(--muted);padding:.6rem .9rem;font-weight:500;}
 table.data-table thead th{position:sticky;top:0;background:var(--thead);color:var(--h1);font-weight:600;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--line);white-space:nowrap;z-index:2;}
-table.data-table td{padding:.55rem .8rem;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55;}
+table.data-table td{padding:.6rem .8rem;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6;}
 table.data-table tbody tr:nth-child(even){background:var(--row-alt);}
 table.data-table tbody tr:hover{background:var(--row-hover);}
-table.data-table td.num,table.data-table th.num{text-align:right;font-family:var(--font-data);font-feature-settings:"tnum";white-space:nowrap;}
-table.data-table td.unsourced{background:var(--unsourced-bg);color:var(--unsourced-fg);}
-/* ---------- ASCII / viz cards ---------- */
-.viz-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;margin:1.5rem 0;box-shadow:var(--shadow);}
-.viz-card .viz-title{font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1rem;margin-bottom:1rem;}
-.viz-card pre{font-family:var(--font-mono);font-size:.78rem;line-height:1.55;color:var(--body);overflow-x:auto;margin:0;white-space:pre;}
-.viz-note{font-size:.82rem;color:var(--muted);margin-top:1rem;line-height:1.7;}
-/* ---------- 2x2 quadrant ---------- */
-.quad-wrap{margin:1.5rem 0;}
-.quad{position:relative;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);aspect-ratio:1/.78;min-height:420px;overflow:hidden;}
-.quad .axis-x,.quad .axis-y{position:absolute;background:var(--line);}
-.quad .axis-x{left:0;right:0;top:50%;height:1px;}
-.quad .axis-y{top:0;bottom:0;left:50%;width:1px;}
-.quad .ax-label{position:absolute;font-size:.72rem;color:var(--muted);font-weight:600;letter-spacing:.04em;}
-.quad .ax-label.top{top:.5rem;left:50%;transform:translateX(-50%);}
-.quad .ax-label.bottom{bottom:.5rem;left:50%;transform:translateX(-50%);}
-.quad .ax-label.left{left:.6rem;top:50%;transform:translateY(-50%);}
-.quad .ax-label.right{right:.6rem;top:50%;transform:translateY(-50%);text-align:right;}
-.quad .pt{position:absolute;transform:translate(-50%,-50%);text-align:center;max-width:150px;}
-.quad .pt .dot{display:inline-block;font-size:.86rem;font-weight:700;color:var(--h1);background:var(--accent-soft);border:1px solid var(--accent);border-radius:20px;padding:.2rem .7rem;line-height:1.3;}
-.quad .pt.local .dot{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);}
-.quad .pt.legacy .dot{background:var(--unsourced-bg);border-color:var(--data);color:var(--data);}
-.quad .pt .sub{display:block;font-size:.68rem;color:var(--muted);margin-top:.25rem;line-height:1.3;}
-.quad .qbg{position:absolute;font-size:.66rem;color:var(--muted);opacity:.5;font-weight:600;}
-/* ---------- strategy cards ---------- */
 .strat-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0;margin:1.4rem 0;box-shadow:var(--shadow);overflow:hidden;}
-.strat-head{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:.9rem 1.3rem;font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1.05rem;display:flex;gap:.7rem;align-items:baseline;}
+.strat-head{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:.9rem 1.3rem;font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1.08rem;display:flex;gap:.7rem;align-items:baseline;}
 .strat-head .n{font-family:var(--font-data);font-weight:700;color:var(--accent);font-size:1.2rem;}
 .strat-body{padding:.4rem 1.3rem 1.1rem;}
-.strat-row{display:grid;grid-template-columns:7.5rem 1fr;gap:.6rem;padding:.7rem 0;border-bottom:1px dashed var(--line);}
+.strat-row{display:grid;grid-template-columns:8rem 1fr;gap:.6rem;padding:.7rem 0;border-bottom:1px dashed var(--line);}
 .strat-row:last-child{border-bottom:none;}
-.strat-row .lab{font-size:.76rem;font-weight:700;color:var(--accent);text-transform:none;padding-top:.1rem;}
-.strat-row .val{font-size:.92rem;line-height:1.65;}
-.strat-row .val p{margin:0;}
-/* ---------- refs ---------- */
-.refs-block{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.2rem 1.4rem;margin:1.2rem 0;box-shadow:var(--shadow);}
-.refs-block ol{list-style:none;padding:0;margin:0;counter-reset:none;font-size:.82rem;}
-.refs-block li{padding:.32rem 0;border-bottom:1px solid var(--line);line-height:1.55;scroll-margin-top:70px;display:flex;gap:.6rem;}
-.refs-block li:last-child{border-bottom:none;}
-.refs-block li:target{background:var(--accent-soft);border-radius:6px;padding-left:.5rem;}
-.refs-block .rid{font-family:var(--font-data);font-weight:700;color:var(--accent);flex:0 0 auto;min-width:2.4rem;}
-.refs-block .rtxt{color:var(--body);word-break:break-word;}
-.refs-block .rtxt a{color:var(--muted);text-decoration:none;font-size:.92em;}
-.refs-block .rtxt a:hover{color:var(--accent);text-decoration:underline;}
-/* ---------- footer ---------- */
-footer{max-width:880px;margin:4rem 0 0;padding-top:1.5rem;border-top:2px solid var(--line);font-size:.82rem;color:var(--muted);line-height:1.8;}
-/* ---------- back to top ---------- */
+.strat-row .lab{font-size:.78rem;font-weight:700;color:var(--accent);padding-top:.1rem;}
+.strat-row .val{font-size:.94rem;line-height:1.7;}
+.strat-row .val p{margin:0 0 .5rem;}.strat-row .val p:last-child{margin-bottom:0;}
+.arc{display:grid;gap:1rem;margin:1.4rem 0;}
+.arc-yr{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;}
+.arc-yr .hd{display:flex;gap:.8rem;align-items:baseline;background:var(--brand-bg);padding:.7rem 1.2rem;border-bottom:1px solid var(--line);}
+.arc-yr .hd .y{font-family:var(--font-data);font-weight:700;color:var(--accent);font-size:.8rem;letter-spacing:.06em;}
+.arc-yr .hd .t{font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1.05rem;}
+.arc-yr .bd{padding:.9rem 1.2rem;font-size:.94rem;}
+.arc-yr .bd p{margin:0;}
+.flight{display:flex;gap:.5rem;margin:1.4rem 0;flex-wrap:wrap;}
+.flight .q{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);overflow:hidden;}
+.flight .q .qh{background:var(--accent-soft);padding:.5rem .8rem;font-weight:700;color:var(--accent);font-size:.82rem;border-bottom:1px solid var(--line);}
+.flight .q .qb{padding:.7rem .8rem;font-size:.84rem;line-height:1.55;}
+.flight .q .qb b{color:var(--h1);}
+.viz-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;margin:1.5rem 0;box-shadow:var(--shadow);}
+.viz-card .viz-title{font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1rem;margin-bottom:1rem;}
+.viz-card pre{font-family:var(--font-mono);font-size:.76rem;line-height:1.5;color:var(--body);overflow-x:auto;margin:0;white-space:pre;}
+.viz-note{font-size:.82rem;color:var(--muted);margin-top:1rem;line-height:1.7;}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.3rem 1.3rem 1.1rem;margin:1.6rem 0;box-shadow:var(--shadow);}
+.fig .fig-title{font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1.02rem;margin-bottom:1rem;text-align:center;}
+.fig svg{display:block;width:100%;height:auto;overflow:visible;}
+.fig figcaption{font-size:.82rem;color:var(--muted);margin-top:1rem;line-height:1.65;text-align:center;max-width:640px;margin-left:auto;margin-right:auto;}
+.fig svg text{font-family:var(--font-body);}
+.fig svg .t-body{fill:var(--body);}
+.fig svg .t-title{fill:var(--h1);font-weight:600;}
+.fig svg .t-accent{fill:var(--accent);font-weight:600;}
+.fig svg .t-data{fill:var(--data);font-weight:700;}
+.fig svg .t-muted{fill:var(--muted);}
+.fig svg .box{fill:var(--card);stroke:var(--line);stroke-width:1.2;}
+.fig svg .box-accent{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.4;}
+.fig svg .box-brand{fill:var(--brand-bg);stroke:var(--line);stroke-width:1.2;}
+.fig svg .box-assume{fill:var(--warn-bg);stroke:var(--warn-border);stroke-width:1.2;}
+.fig svg .ln{stroke:var(--accent);stroke-width:1.7;fill:none;}
+.fig svg .ln-soft{stroke:var(--muted);stroke-width:1.3;fill:none;stroke-dasharray:4 3;opacity:.7;}
+.fig svg .area{fill:var(--accent-soft);stroke:none;}
+.fig svg .dot{fill:var(--accent);}
+.fig svg .fill-accent{fill:var(--accent);}
+footer{max-width:900px;margin:4rem 0 0;padding-top:1.5rem;border-top:2px solid var(--line);font-size:.82rem;color:var(--muted);line-height:1.85;}
 #toTop{position:fixed;right:1.5rem;bottom:1.5rem;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--accent);font-size:1.1rem;cursor:pointer;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s;z-index:60;}
 #toTop.show{opacity:1;pointer-events:auto;}
 #toTop:hover{border-color:var(--accent);}
-/* ---------- mobile ---------- */
 .toc-toggle{display:none;}
 @media(max-width:1024px){
   .layout{grid-template-columns:1fr;}
@@ -187,38 +151,29 @@ footer{max-width:880px;margin:4rem 0 0;padding-top:1.5rem;border-top:2px solid v
   nav.toc.open{transform:translateX(0);}
   .toc-toggle{display:inline-block;}
   main{padding:1.8rem 1.3rem 4rem;}
-  h1.report-title{font-size:1.7rem;}
+  h1.deck-title{font-size:1.9rem;}
 }
-@media(max-width:560px){
-  .strat-row{grid-template-columns:1fr;gap:.2rem;}
-  main{padding:1.4rem 1rem 4rem;}
-}
-/* ---------- print ---------- */
+@media(max-width:560px){.strat-row{grid-template-columns:1fr;gap:.2rem;}main{padding:1.4rem 1rem 4rem;}}
 @media print{
   @page{size:A4;margin:16mm 14mm;}
   .topbar,nav.toc,#toTop,.toc-toggle{display:none!important;}
-  .layout{display:block;max-width:none;}
-  main{padding:0;}
+  .layout{display:block;max-width:none;}main{padding:0;}
   .content-wrap,p,ul,ol{max-width:none;}
   body{background:#fff;color:#2b2420;font-size:11pt;}
-  h2{break-after:avoid;border-top:1px solid #d8cdbb;}
-  h3,h4{break-after:avoid;}
-  .kpi-card,.viz-card,.strat-card,blockquote,.table-scroll,.quad{break-inside:avoid;box-shadow:none;}
+  h2{break-after:avoid;border-top:1px solid #d8cdbb;}h3,h4{break-after:avoid;}
+  .kpi-card,.viz-card,.strat-card,.arc-yr,blockquote,.table-scroll,.flight .q,.setup-box{break-inside:avoid;box-shadow:none;}
   table.data-table{font-size:8.5pt;}
-  a.ref{color:#8c5e36;}
-  .refs-block{font-size:8pt;}
 }
 </style>
 </head>
 <body data-theme="light">
 <div class="topbar">
   <div class="brand">
-    <button class="tb-actions" style="display:none"></button>
     <span class="toc-toggle"><button id="tocBtn" aria-label="目录">☰</button></span>
-    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 72 44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 33 L20 11 L31 22 L44 8 L70 33"/><path d="M36 42 V30"/><path d="M29 37 L36 27 L43 37"/><path d="M31.5 32 L36 25 L40.5 32"/></svg></span>中国原创设计师包袋赛道 <small>· 行业研究报告</small>
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 80 44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38 L60 10"/><circle cx="57" cy="11.5" r="2.4"/><path d="M8 38 C 22 26, 30 42, 44 30 S 58 22, 66 30"/></svg></span>见针 <small>· Songmont 品牌营销提案</small>
   </div>
   <div class="tb-actions">
-    <a class="xnav" href="https://kayali123.github.io/songmont-campaign/" title="配套：见针 · Songmont 品牌营销 Campaign 提案">见针 Campaign<span class="lbl"> 提案</span> ▸</a>
+    <a class="xnav" href="https://kayali123.github.io/china-designer-bag-report/" title="配套：中国原创设计师包袋赛道行研报告">◂<span class="lbl"> 赛道行研报告</span></a>
     <button id="themeBtn">◑ 深色</button>
     <button onclick="window.print()">⎙ 打印 / PDF</button>
   </div>
@@ -227,752 +182,448 @@ footer{max-width:880px;margin:4rem 0 0;padding-top:1.5rem;border-top:2px solid v
 <div class="layout">
 <nav class="toc" id="toc">
   <h4>目录</h4>
-  <a href="#cover">封面 · 研究目的</a>
-  <a href="#core">核心结论</a>
-  <a href="#ch1">一、行业定义与分类</a>
-  <a href="#ch2">二、生命周期阶段定位</a>
-  <a href="#ch3">三、产业链与价值链</a>
-  <a href="#ch4">四、竞争格局</a>
-  <a href="#ch5">五、市场规模与消费者洞察</a>
-  <a href="#ch6">六、外部因素（PEST）</a>
-  <a href="#ch7">七、景气度指标体系</a>
-  <a href="#ch8">八、Songmont 品牌营销启示</a>
-  <a href="#appA" class="sub">附录 A · 数据矛盾</a>
-  <a href="#appB" class="sub">附录 B · 待补清单</a>
-  <a href="#appC" class="sub">附录 C · 参考资料</a>
+  <a href="#cover">封面 · 本案设定</a>
+  <a href="#summary">一页纸 · 战役总纲</a>
+  <a href="#ch1">一、背景与挑战</a>
+  <a href="#ch2">二、洞察</a>
+  <a href="#ch3">三、大主意「见针」</a>
+  <a href="#ch4">四、信任层 · 见针保修</a>
+  <a href="#ch5">五、三年 IP 弧线</a>
+  <a href="#ch6">六、战役节奏与内容日历</a>
+  <a href="#ch7">七、整合渠道打法</a>
+  <a href="#ch8">八、跨团队协同</a>
+  <a href="#ch9">九、效果衡量</a>
+  <a href="#ch10">十、风险与应对</a>
+  <a href="#ch11">十一、口径与诚信声明</a>
 </nav>
 <main>
 <div class="content-wrap" id="content">
+
 <!-- ===== COVER ===== -->
 <section id="cover" class="cover">
-  <div class="cover-mark" aria-hidden="true"><svg viewBox="0 0 72 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 33 L20 11 L31 22 L44 8 L70 33"/><path d="M36 42 V30"/><path d="M29 37 L36 27 L43 37"/><path d="M31.5 32 L36 25 L40.5 32"/></svg></div>
-  <span class="kicker">中国市场 · 原创设计师 · 包袋 · 轻奢价位带</span>
-  <h1 class="report-title">中国原创设计师包袋赛道 × 东方美学消费趋势</h1>
-  <p class="cover-tagline">东方美学 · 静奢叙事 · 中女悦己</p>
+  <div class="cover-mark" aria-hidden="true"><svg viewBox="0 0 80 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38 L60 10"/><circle cx="57" cy="11.5" r="2.6"/><path d="M8 38 C 22 26, 30 42, 44 30 S 58 22, 66 30"/></svg></div>
+  <span class="kicker">Songmont 山下有松 · 品牌营销 Campaign 提案 · 多年连载品牌 IP</span>
+  <h1 class="deck-title">见针 · 一针，一个人</h1>
+  <p class="cover-tagline">一针一个名字，把手交给时间</p>
   <div class="meta">
-    <b>报告日期：</b>2026-06-30　｜　<b>研究目的：</b>系统梳理中国原创设计师包袋赛道的行业全景与东方美学消费趋势<br>
-    <b>口径：</b>中国市场 · 原创设计师 · 包袋（手袋为主）· 轻奢价位带（¥1k–5k 为主体）；以东方美学/新中式消费趋势为贯穿透镜<br>
-    <b>模式：</b>基础技术分析模式（消费/时尚行业）　｜　<b>主力检索：</b>WebSearch + 公开消费研报<br>
-    <b>锚定品牌：</b>山下有松 Songmont（仅作行业锚点，不做公司估值）
+    <b>提案日期：</b>2026-07-01　｜　<b>提案类型：</b>可连载三年的品牌内容 IP（非一次性战役）<br>
+    <b>情感主线：</b>A 文化叙事（传承与被看见）　·　<b>底层机制：</b>C 工艺信任兑现<br>
+    <b>战役节奏：</b>巴黎时装周（9–10 月）为声量轴　+　双 11 为转化收口<br>
+    <b>承接研究：</b>《中国原创设计师包袋赛道 × 东方美学消费趋势 行业研究报告》→ 本案为其洞察的品牌侧落地
+  </div>
+  <div class="setup-box">
+    <div class="r"><span class="k">本案设定</span><span>以下为演示参数，供评审快速定位口径，可按实际调整。</span></div>
+    <div class="r"><span class="k">概念</span><span>见针为主，嫁接澄泥砚信任道具、气质派选角、七十二候内容日历、以养代换收口、母题占位审计</span></div>
+    <div class="r"><span class="k">信任层</span><span>试点先行，一城跑通售后养护 SOP 与成本模型后再放量</span></div>
+    <div class="r"><span class="k">预算 / KPI</span><span>按千万级 campaign 演示；双 11 双口径（转化 GMV + 关系蓄客）</span></div>
+    <div class="r"><span class="k">真实性口径</span><span>非遗合作与代言均为 <span class="tag assume">策略假设</span>，未写成既成事实；品牌自有数据均标 <span class="tag brand">品牌公开口径</span></span></div>
   </div>
 </section>
 
-<!-- ===== CORE CONCLUSIONS ===== -->
-<section id="core">
-  <h2 style="border-top:none;margin-top:1.5rem;">核心结论</h2>
+<!-- ===== SUMMARY ===== -->
+<section id="summary">
+  <h2 style="border-top:none;margin-top:1.5rem;">一页纸 · 战役总纲</h2>
   <div class="concl-lead">
-    <strong>一句话：</strong>中国原创设计师包袋是一条处于<strong>成长期（偏早中段）</strong>的赛道——传统轻奢退潮让出的中端需求 + 新中式/东方美学浪潮 + 中女悦己祛魅，三股力量在 2023–2025 同时到位，本土设计师品牌正快速承接。<strong>能进；但赢的关键不在产能，在品牌叙事。</strong>
+    <strong>一句话：</strong>Songmont 眼下的死结不是不够美，而是「没人认识」加「配不上价」两个心结叠在一起，又被舆论点名「重营销轻设计」。<strong>「见针」把答案收进一个动作</strong>：每年只讲一位真实的手作人和她手里的一道工序，把包上那道看不见的针脚，变成一个有名字、有脸、可溯源的人。讲得越多，越是在讲这只包到底怎么做出来的。这是对「重营销轻设计」最结构性的回击。
   </div>
+
+  <ol class="pillars">
+    <li><strong>母题是「针脚」，不是又一座「山」。</strong> 品牌自己的风、山、野、生长已经用得很密，月相被松月占了、云山被老花占了。针脚是包上真实存在、却从没被讲透的东方切口，它天生只有真做手作的品牌配讲，同行抄不走。</li>
+    <li><strong>一个动作解两个死结。</strong> 「见针保修」既是可验证的售后（治信任），又是「缝它的那双手为你重缝」的情感兑现（治认知）。一个动作，两个 KPI，这是品牌营销岗要看的杠杆思维。</li>
+    <li><strong>不押任何外部资源。</strong> 主角是品牌已有的万荣姥姥手作团和付家三代女性，故事自我供给三年。澄泥砚、代言是加分嫁接，不是命门。</li>
+    <li><strong>巴黎立势，双 11 收口。</strong> 复用已跑通两年的巴黎「远山有声」展做 prestige 声量峰值，把「六旬姥姥被巴黎看见」推到最高潮；双 11 用信任内容而非降价承接转化，守住天猫箱包第一。</li>
+  </ol>
 
   <div class="kpi-row">
-    <div class="kpi-card"><span class="kpi-value">18.4%</span><span class="kpi-label">设计师品牌大盘 CAGR（远超整体箱包 2–6%）</span><span class="kpi-source">[来源：CIC<a class="ref" href="#ref-1">[1]</a>][12]</span></div>
-    <div class="kpi-card"><span class="kpi-value">40–70 亿</span><span class="kpi-label">本赛道狭义规模 <span class="tag measured">测算值</span>（中枢 ~50 亿）</span><span class="kpi-source">三法互校</span></div>
-    <div class="kpi-card"><span class="kpi-value">50–80%</span><span class="kpi-label">品牌端毛利（vs 代工 20–35%）</span><span class="kpi-source">[来源：行业口径<a class="ref" href="#ref-20">[20]</a><a class="ref" href="#ref-21">[21]</a>]</span></div>
-    <div class="kpi-card"><span class="kpi-value">12–15%</span><span class="kpi-label">2025–30 中性增速预测</span><span class="kpi-source">中性情景 <span class="tag measured">测算值</span></span></div>
+    <div class="kpi-card"><span class="kpi-value">见针保修</span><span class="kpi-label">开线由缝它的团队重缝，把售后变成情感资产</span><span class="kpi-source">试点先行落地</span></div>
+    <div class="kpi-card"><span class="kpi-value">一针一档案</span><span class="kpi-label">每只 IP 款绑定手作人姓名 + 工序 + 验真码</span><span class="kpi-source">见针档案库为内容中台</span></div>
+    <div class="kpi-card"><span class="kpi-value">2 个声量峰值</span><span class="kpi-label">巴黎时装周（9–10 月）+ 双 11</span><span class="kpi-source">立势 + 收口双轴</span></div>
+    <div class="kpi-card"><span class="kpi-value">3 年连载</span><span class="kpi-label">见其手 → 见其名 → 见其传</span><span class="kpi-source">母题固定，内容逐年长大</span></div>
   </div>
 
-  <ol class="concl-list">
-    <li><strong>赛道判定：成长期、格局未定、值得进。</strong> 设计师品牌大盘 CAGR 18.4% 远超整体箱包 2–6%<a class="ref" href="#ref-1">[1]</a><a class="ref" href="#ref-12">[12]</a>；本赛道狭义规模<span class="tag measured">测算值</span>约 <strong>40–70 亿（中枢 ~50 亿）</strong>，2025–30 中性增速 <strong>12–15%</strong>。线上头部集中度低、无寡头，份额仍在剧烈再分配——典型的"<strong>需求争夺</strong>"窗口期。</li>
-    <li><strong>价值在"软端"，不在制造。</strong> 皮料、五金、代工产能国内都买得到，<strong>没有硬科技卡脖子</strong>；利润池高度集中在品牌+渠道端（品牌毛利 <strong>50–80%</strong> vs 代工 20–35%<a class="ref" href="#ref-20">[20]</a><a class="ref" href="#ref-21">[21]</a>）。真正的壁垒是<strong>原创设计语言 + 品牌叙事 + 用户心智 + DTC/内容运营</strong>——这恰恰是品牌营销岗的主场。</li>
-    <li><strong>竞争是"叙事之争"，且对手不止本土。</strong> 本土设计师（Songmont/古良吉吉/端木良锦…）以"东方美学 + 性价比"承接 MK/Furla 让出的需求，但<strong>逆势复苏的 Coach（大中华区 FY26Q2 +37%、3 年开 100 店）是头号正面对手</strong><a class="ref" href="#ref-100">[100]</a>——不是本土单边吃下。护城河真正可持续的是"<strong>叙事系统性 + 供应链/工艺</strong>"，而非易抄的视觉符号。</li>
-    <li><strong>需求母题清晰：不卖 logo，卖"懂你的审美与情绪"。</strong> 核心人群是一二线 28–40 岁、有钱有审美、为悦己而非炫耀买单的独立中产女性<a class="ref" href="#ref-68">[68]</a><a class="ref" href="#ref-69">[69]</a>；东方美学此刻共鸣 = 文化自信（宏观）× 新中式外溢（中观）× 中女祛魅（微观）三重叠加。营销最优杠杆是<strong>小红书种草飞轮</strong>（内容质量而非投放预算起量<a class="ref" href="#ref-78">[78]</a>）。</li>
-    <li><strong>风险均非颠覆性、可管理。</strong> 设计侵权维权慢<a class="ref" href="#ref-43">[43]</a>、出海关税<a class="ref" href="#ref-76">[76]</a>、AI 稀释外观——但司法已护"人类原创"<a class="ref" href="#ref-79">[79]</a>，真壁垒（叙事/供应链）AI 仿不了；头部最大隐忧反而是"<strong>重营销轻设计 / 高价低质</strong>"的口碑反噬（Songmont 已被点名<a class="ref" href="#ref-44">[44]</a>），需靠持续兑现叙事 + 守住品质来对冲。</li>
-  </ol>
+  <figure class="fig">
+  <div class="fig-title">一个动作，解开两个死结</div>
+  <svg viewBox="0 0 760 250" role="img" aria-label="见针如何同时解决认知与信任双死结">
+  <defs><marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path class="fill-accent" d="M0 0 L8 4 L0 8 Z"/></marker></defs>
+  <rect class="box" x="8" y="24" width="212" height="68" rx="10"/>
+  <text class="t-accent" x="114" y="55" text-anchor="middle" font-size="15">认知死结</text>
+  <text class="t-muted" x="114" y="76" text-anchor="middle" font-size="12">「没人认识这个牌子」</text>
+  <rect class="box" x="8" y="158" width="212" height="68" rx="10"/>
+  <text class="t-accent" x="114" y="189" text-anchor="middle" font-size="15">信任死结</text>
+  <text class="t-muted" x="114" y="210" text-anchor="middle" font-size="12">「配不上这个价」</text>
+  <rect class="box-accent" x="290" y="90" width="180" height="70" rx="12"/>
+  <text class="t-title" x="380" y="120" text-anchor="middle" font-size="16">见针 · 一个动作</text>
+  <text class="t-muted" x="380" y="142" text-anchor="middle" font-size="12">见针保修 + 一针一档案</text>
+  <rect class="box-brand" x="548" y="24" width="204" height="68" rx="10"/>
+  <text class="t-accent" x="650" y="55" text-anchor="middle" font-size="15">被看见</text>
+  <text class="t-muted" x="650" y="76" text-anchor="middle" font-size="12">建立认知锚点</text>
+  <rect class="box-brand" x="548" y="158" width="204" height="68" rx="10"/>
+  <text class="t-accent" x="650" y="189" text-anchor="middle" font-size="15">可验证</text>
+  <text class="t-muted" x="650" y="210" text-anchor="middle" font-size="12">补上信任缺口</text>
+  <path class="ln" marker-end="url(#ar1)" d="M222 62 C 258 78, 262 96, 286 108"/>
+  <path class="ln" marker-end="url(#ar1)" d="M222 188 C 258 172, 262 154, 286 142"/>
+  <path class="ln" marker-end="url(#ar1)" d="M472 108 C 500 96, 512 78, 544 62"/>
+  <path class="ln" marker-end="url(#ar1)" d="M472 142 C 500 154, 512 172, 544 188"/>
+  </svg>
+  <figcaption>认知问「你是谁」，信任问「你配吗」。见针把答案收进一个动作，两问一起松开。</figcaption>
+  </figure>
 </section>
 
 <hr class="div">
 
 <!-- ===== CH1 ===== -->
 <section id="ch1">
-<h2>一、行业定义与分类</h2>
+<h2>一、背景与挑战</h2>
 
-<h3>1. 行业定义</h3>
-<p>本报告的研究对象是 <strong>「中国市场的原创设计师包袋（以手袋为主）· 轻奢价位带」赛道</strong>，即由本土原创设计师/独立品牌主导、以自有设计语言和品牌叙事为核心竞争力、零售价主体落在 <strong>¥1,000–5,000</strong> 价格带（轻奢，主力区间 ¥2,000–5,000<a class="ref" href="#ref-15">[15]</a>）的女性手袋及其延伸品类（托特、腋下包、链条包、手拎包等）。本赛道的典型锚点品牌为山下有松 Songmont、古良吉吉 KUNOGIJI、端木良锦，以及个乐 GROTTO、裘真等同价位带原创品牌<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-9">[9]</a><a class="ref" href="#ref-10">[10]</a>；其在消费者心智中的主要参照系（即被替代/被对标的对象）是传统国际轻奢手袋 Coach、Michael Kors、Furla、Kate Spade<a class="ref" href="#ref-5">[5]</a><a class="ref" href="#ref-6">[6]</a>。</p>
+<h3>1. 品牌处境：登了顶，但被追，也被质疑</h3>
+<p>行业研究已经判定：中国原创设计师包袋处在成长期偏早中段，价值在软端（设计、叙事、DTC 内容），Songmont 已经在 2025 双 11 反超 Coach 登上天猫箱包第一 <span class="tag brand">品牌公开口径</span>。但两件事同时在发生。一是 Coach 逆势复苏，大中华区强劲增长、计划三年开约 100 店，中端需求是被争夺而不是被本土单边吃下。二是 2026 年初品牌被媒体点名「设计趋同、高价低质、假货泛滥、重营销轻设计」，这不是可以回避的噪音，而是这份提案必须正面回应的题目。</p>
 
-<p><strong>明确包含：</strong></p>
-<ul>
-  <li>原创设计师/独立品牌（设计驱动、有清晰品牌叙事），而非纯代工或贴牌；</li>
-  <li>包袋（手袋为主体），即软质皮具箱包中的「包(袋)」类目；</li>
-  <li>轻奢价位带（¥1,000–5,000 为主体，向上延伸至万元级设计师精品如端木良锦<a class="ref" href="#ref-8">[8]</a>）。</li>
-</ul>
-<p><strong>明确不包含：</strong></p>
-<ul>
-  <li>国际大牌奢侈手袋（Hermès、Chanel、LV、Gucci 等，价位 ¥1 万以上、品牌逻辑为传统奢侈品）；</li>
-  <li>纯白牌 / 无设计的快时尚平价包（千元以下、以走量为主、无原创设计标识）；</li>
-  <li>行李箱、旅行硬箱、拉杆箱等「箱」类硬箱品类（虽同属"箱包"统计大类，但消费逻辑、渠道与本赛道差异显著）。</li>
-</ul>
-<blockquote class="finding"><p><strong>一句话边界：</strong>本报告研究的是<strong>"中国人自己设计、卖一两千到五千、靠设计和东方审美而不是奢侈品 logo 取胜的女包"</strong>，不是国际大牌，也不是地摊白牌，更不是行李箱。</p></blockquote>
+<blockquote class="warn"><p><strong>真正的挑战不是声量不够，是信任不够。</strong>一个已经登顶的品牌，继续砸声量的边际收益在递减，而「重营销轻设计」的质疑恰恰会被越高调的营销放大。这份提案的任务，是把营销从「制造声量」转向「兑现信任」，让每一次传播都在替产品说话。</p></blockquote>
 
-<h3>2. 行业分类口径</h3>
-<p>本赛道<strong>没有精确对应的申万二级行业</strong>，需通过三套主流分类体系交叉定位，并据此说明本报告采用的自定义边界：</p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>分类体系</th><th>对应位置</th><th>说明</th></tr></thead>
-<tbody>
-<tr><td><strong>《国民经济行业分类》(GB/T 4754-2017)</strong></td><td>制造端：<strong>C19 皮革、毛皮、羽毛及其制品和制鞋业</strong> → <strong>C192 皮革制品制造</strong> → <strong>C1922 皮箱、包(袋)制造</strong><a class="ref" href="#ref-2">[2]</a></td><td>仅覆盖"制造"环节，不含品牌、设计、零售；统计口径是工厂端产值，无法刻画品牌溢价</td></tr>
-<tr><td>零售端</td><td>归口 <strong>F 批发和零售业</strong> 下的箱包/服装零售</td><td>设计师品牌的价值主要在品牌+零售端实现，与制造端 C19 在统计上割裂</td></tr>
-<tr><td><strong>GICS 全球行业分类标准</strong></td><td>可选消费(Consumer Discretionary) → <strong>纺织品、服装与奢侈品</strong><a class="ref" href="#ref-3">[3]</a></td><td>资本市场视角最贴近的归类；但该子行业把奢侈品、服装、鞋帽混在一起，不单列"设计师包袋"</td></tr>
-<tr><td>申万/中信</td><td>无精确二级对应（散落于纺织服饰、商贸零售）</td><td>故本报告<strong>不以申万行业口径取数</strong>，避免口径错配</td></tr>
-</tbody>
-</table></div>
-<p><strong>本报告采用的自定义边界</strong>：考虑到上述三套体系都无法精确切出"中国·原创设计师·包袋·轻奢"这一子集，本报告统一采用 <strong>「中国市场 × 原创设计师/独立品牌 × 包袋(手袋为主) × 轻奢价位带(¥1k–5k 主体)」</strong> 的自定义边界。<strong>后续所有板块的数据都向这一边界对齐</strong>；当只能取到更宽口径的数据时，正文会明确标注口径差异，不与本赛道直接等同。</p>
-
-<h3>3. 研究边界说明</h3>
-<p><strong>覆盖的子领域：</strong>设计师/原创手袋（托特、腋下包、链条包等女包主流包型）；以<strong>东方美学 / 新中式定位</strong>为差异化标签的本土包袋品牌（本报告以此为贯穿透镜）；¥1k–5k 轻奢价位带的本土原创玩家及其与传统国际轻奢的替代关系。</p>
-<p><strong>排除的子领域：</strong>旅行硬箱 / 拉杆箱、功能性背包、运动户外包；国际奢侈品大牌包、国际轻奢品牌本身（仅作为参照系/被替代对象出现）；纯白牌、快时尚平价包、纯外贸代工产能。</p>
-<blockquote class="warn"><p><strong>口径警示（贯穿全文）</strong>：公开资料中"箱包行业""时尚包袋市场""设计师品牌市场"三个口径经常混用且数值打架（见 §附录 A）——例如"中国箱包市场"被不同机构记为 2,039 亿 / 2,318.9 亿 / 2,640–2,990 亿元不等<a class="ref" href="#ref-12">[12]</a>，这是因为是否含硬箱、是否含出口代工、统计年份不同所致。本报告<strong>严格区分</strong>："设计师包袋赛道" ≠ "整体箱包行业" ≠ "整体设计师品牌行业(794 亿，含服装<a class="ref" href="#ref-1">[1]</a>)"，读者引用数据时须先确认口径。</p></blockquote>
+<h3>2. 两个心结，其实同源</h3>
+<p>回到顾客那一端，中女买 Songmont 时反复出现两句话。一句是「没有必要花几千元买一个大家都不认识的包」，这是认知锚点缺失。另一句是「花三四千买它，就像花奢侈品的钱买快时尚」，这是信任缺失。表面是两个问题，根子是同一个：这只包背后到底站着谁、值不值，用户看不见。</p>
+<blockquote class="finding"><p><strong>把死结说清楚：</strong>认知问题问的是「你是谁」，信任问题问的是「你配吗」。只要让用户看见包背后那个真实的人和那道真实的工序，两个问题一起松开。<strong>答案不在讲一个更玄的东方美学，而在把人推到台前。</strong></p></blockquote>
 </section>
 
 <!-- ===== CH2 ===== -->
 <section id="ch2">
-<h2>二、行业生命周期阶段定位</h2>
+<h2>二、洞察</h2>
 
-<h3>1. 生命周期阶段判定</h3>
-<blockquote class="finding"><p><strong>结论先行：中国原创设计师包袋赛道当前处于「成长期（偏早中段）」。</strong></p></blockquote>
-<p><strong>为何用替代指标</strong>：标准生命周期判定以"渗透率"为锚（导入 &lt;15% / 成长 15–40% / 成熟 &gt;40% / 衰退），但"设计师包袋渗透率"无公开权威统计——它既无独立的行业统计口径，消费者也不会按"是否买过设计师包袋"被普查。因此本报告采用 <strong>4 组替代指标交叉验证</strong>：</p>
+<h3>1. 人群：要的是被看见，不是被定义</h3>
+<p>核心人群是一二线 25 到 40 岁的高知中产女性，律师、策展人、花艺师、旅行博主。她们对大牌 logo 祛魅，为「自我价值导向、听从内心」买单。顾客原声里最稳定的三条情绪母题是：松弛不被定义、内核稳定的力量、自我和解与治愈。她们不是炫富人群，是内核稳定人群。购买触发很理性，能装、有调性、保值百搭；最大的顾虑就是前面那两个心结。</p>
+<blockquote class="note"><p>顾客原声取样（供文案定调，非逐字硬引）：看代言短片「有种被温柔的女性友人拥抱了一下」；加购纠结「反复加购是因为反复被打动，删除是因为价格」；品质差评「售价三千的包，不到半个月开线掉皮」。这几句同时给出了情感开关和信任缺口。</p></blockquote>
+
+<h3>2. 母题占位审计：为什么必须绕开「风」和「山」</h3>
+<p>要做一个能连载三年的东方母题，先得确认这块地没被占。我们对品牌自有母题和同行做了一次占位审计，结论很清楚：Songmont 自己已经把风、山、野、成风、生长用得很密，月相被「松月」占了，云山青松被老花系列占了，同行也都在抢自然意象。<strong>再用一次风山，就是自我重复加同质化。</strong></p>
 <div class="table-scroll"><table class="data-table">
-<thead><tr><th>替代指标</th><th>当前数值 / 证据</th><th>来源</th><th>指向的阶段特征</th></tr></thead>
+<caption>母题占位审计（节选）：哪些被占，哪些是白空间</caption>
+<thead><tr><th>东方母题</th><th>占位情况</th><th>可用性</th></tr></thead>
 <tbody>
-<tr><td><strong>① 子赛道销售额增速</strong></td><td>中国<strong>设计师品牌</strong>市场 2023 ≈ <strong>794 亿元</strong>，2022–27 <strong>CAGR=18.4%</strong>（注：该口径含服装）<a class="ref" href="#ref-1">[1]</a>；整体箱包市场 2021→2024 年增速仅 <strong>2%–6%/年</strong><a class="ref" href="#ref-12">[12]</a></td><td><a class="ref" href="#ref-1">[1]</a><a class="ref" href="#ref-12">[12]</a></td><td>子赛道增速（18.4%）显著快于母行业（个位数），典型<strong>成长期</strong>特征</td></tr>
-<tr><td><strong>② 玩家数量 / 融资事件</strong></td><td>国产原创包袋品牌密集"卡点登场"（Songmont、古良吉吉 2013，端木良锦 2011）；端木良锦 2018–2021 连获天使轮→Pre-A→千万级 A 轮<a class="ref" href="#ref-8">[8]</a>；行业被描述为"每年数以万计设计师品牌诞生但九死一生、同质化严重"<a class="ref" href="#ref-11">[11]</a></td><td><a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-11">[11]</a></td><td>新玩家与资本持续涌入、但<strong>洗牌/淘汰并存</strong>——成长期早中段</td></tr>
-<tr><td><strong>③ 设计师品牌在头部榜单份额</strong></td><td>2024 年天猫箱包服配销售榜 <strong>TOP20 中国产品牌占 15 席</strong><a class="ref" href="#ref-13">[13]</a>；（另有"国产占 68%"之说，但口径未披露，存疑<a class="ref" href="#ref-4">[4]</a>）</td><td><a class="ref" href="#ref-13">[13]</a><a class="ref" href="#ref-4">[4]</a></td><td>本土玩家已占据线上头部，份额快速抬升——从导入迈入成长</td></tr>
-<tr><td><strong>④ 传统轻奢衰退 vs 本土崛起的"剪刀差"</strong></td><td>见下方专项</td><td>[5][6][10][14][4b]</td><td>替代效应正在发生，本土赛道承接外溢需求——成长期核心驱动</td></tr>
+<tr><td>风 / 山 / 野 / 生长</td><td>品牌反复使用（我自成风、风生·造物、一路有野、远山有声）</td><td>已占，慎用</td></tr>
+<tr><td>月相 / 星宿</td><td>品牌「松月」系列已占</td><td>已占</td></tr>
+<tr><td>云山青松</td><td>品牌老花系列已占</td><td>已占</td></tr>
+<tr><td>祥云 / 水墨 / 龙纹 / 书法</td><td>全行业审美疲劳，被批「表层符号挪用」</td><td>雷区</td></tr>
+<tr><td><strong>针脚 / 手作的人与时间</strong></td><td>几乎无人做透，且只有真做手作的品牌配讲</td><td><strong>白空间</strong></td></tr>
 </tbody>
 </table></div>
+<blockquote class="note"><p>把这份审计放进洞察层，本身就是回应 JD「基于品牌定位开展市场洞察与竞争研究」的证据：创意不是拍脑袋，是先算清楚哪块地能长东西。</p></blockquote>
 
-<h4>替代指标 ④ "剪刀差"专项（本赛道最有说服力的证据）</h4>
-<ul>
-<li><strong>传统国际轻奢一端（萎缩）</strong>：Michael Kors 亚太区 2024 Q1 销售 <strong>-16.2%</strong><a class="ref" href="#ref-14">[14]</a>、北京仅剩 3 家直营精品店<a class="ref" href="#ref-14">[14]</a>；Furla 中国门店从巅峰 <strong>60+ 缩至 40 家</strong><a class="ref" href="#ref-6">[6]</a>；Kate Spade 同期亦双位数承压<a class="ref" href="#ref-14">[14]</a>。轻奢"买菜包"在华集体退潮<a class="ref" href="#ref-6">[6]</a>。</li>
-<li><strong>本土设计师一端（崛起）</strong>：Songmont 天猫双 11 箱包服饰榜 <strong>2023 第 3 → 2024 第 2（仅次于 Coach）→ 2025 第 1（反超 Coach）</strong><a class="ref" href="#ref-10">[10]</a>（名次为天猫单平台口径、历年榜名在"箱包服配/服饰"间略有漂移；另有品牌方口径[36氪转述]称 2024 已居首、2025 蝉联，存在分歧）；其"近 5 亿元"销售额实为 2024 年淘宝+天猫渠道（仅包袋）口径（魔镜数据估算，非官方财报），2025 年公开数据仅为前三季线上销售同比约 <strong>+90%</strong>、双 11 登顶，无经确认的全年销售额<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-10">[10]</a>；古良吉吉 2023 年销 <strong>3 亿元</strong><a class="ref" href="#ref-9">[9]</a>。</li>
-</ul>
-<blockquote class="warn"><p><strong>剪刀差的关键 nuance（必须点出，避免误判）</strong>：并非所有国际轻奢都在衰退——<strong>Coach（蔻驰）2024–25 在华逆势复苏</strong>，大中华区营收占其品牌升至约 <strong>18%</strong>（FY25Q1 口径，非市场份额）、当季中国正增长，母公司 Tapestry 上调指引<a class="ref" href="#ref-4b">[4b]</a>。因此"剪刀差"的准确表述是：<strong>MK/Furla/Kate Spade 等"无叙事、靠 logo"的轻奢在萎缩，其让出的中端需求被 Coach（成功重塑叙事）与本土设计师品牌（东方美学 + 性价比）共同承接</strong>。这说明本赛道处于<strong>成长期的"需求争夺"阶段</strong>，而非成熟期的存量博弈。</p></blockquote>
-<p><strong>综合判定</strong>：4 组替代指标一致指向 <strong>成长期（偏早中段）</strong>——增速远超母行业、新玩家与资本持续进入但淘汰激烈、头部份额快速抬升、替代需求正在被承接。尚未进入成熟期（无寡头格局、无份额见顶、价格仍在上行通道：2022 Q2–2024 Q4 部分国产女包天猫均价翻倍以上，如半坡饰族 ¥541.6→¥1,584.8、食草堂 ¥295.4→¥871.7<a class="ref" href="#ref-12">[12]</a>），也已脱离导入期（已有亿元级、近 5 亿级头部品牌跑出<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-9">[9]</a>）。</p>
-
-<h3>2. 基于阶段的分析重点</h3>
-<ul>
-<li><strong>§五 市场规模、需求与消费者洞察（重中之重）</strong>：成长期的核心问题是"盘子有多大、还能涨多久、被什么驱动"——需重点拆解市场规模测算、增速驱动因子。</li>
-<li><strong>§四 竞争格局变化（次重点）</strong>：成长期是格局未定、份额剧烈再分配的阶段——需重点看玩家进入/淘汰、本土 vs 国际轻奢的份额迁移。</li>
-<li><strong>§六 PEST / §七 景气度</strong>：作为成长期可持续性的外部条件与监测指标，权重次之。</li>
-<li>导入期才关注的"技术/标准成熟度"、成熟期才关注的"存量价格战/集中度见顶"，本报告<strong>不作为重点</strong>。</li>
-</ul>
-
-<h3>3. 矛盾标注</h3>
-<ul>
-<li><strong>"剪刀差"内部存在反向证据</strong>：多数信源强调国际轻奢全面衰退<a class="ref" href="#ref-5">[5]</a><a class="ref" href="#ref-6">[6]</a><a class="ref" href="#ref-14">[14]</a>，但 Coach 逆势复苏<a class="ref" href="#ref-4b">[4b]</a>构成例外。结论不变（赛道仍处成长期），但解读须从"国际轻奢全军覆没"修正为"<strong>无叙事轻奢萎缩、有叙事玩家（含 Coach 与本土设计师）共同承接</strong>"。</li>
-<li><strong>份额数据口径打架</strong>："国产占 68%"<a class="ref" href="#ref-4">[4]</a>与"天猫 TOP20 占 15 席"<a class="ref" href="#ref-13">[13]</a>不在同一口径，本报告以后者（可核口径）为准，68% 仅作旁证并标注存疑。</li>
-<li><strong>母行业增速口径差异</strong>：794 亿/18.4% CAGR 是"设计师品牌"大盘（含服装）<a class="ref" href="#ref-1">[1]</a>，并非纯"设计师包袋"——作为子赛道处于成长期的旁证，而非本赛道精确市场规模。</li>
-</ul>
+<h3>3. 品牌真相：一条抄不走的祖孙三代女性纵线</h3>
+<p>Songmont 手里有一条别的包袋品牌讲不了的真相。2013 年，创始人付崧（清华美院出身、曾在谷歌做设计）因为买不到理想的电脑包，让擅长缝纫的母亲付玉兰缝出了第一只祖母绿托特；创始人的姥姥一辈子做当地非遗虎头帽；2015 年，品牌在山西万荣里望村组建了一支平均年龄六旬的姥姥手作团队。<span class="tag brand">品牌公开口径</span> 从山西乡村一双手，到 2024、2025 连续两年登上巴黎时装周，这条纵线同时装下了文化自信、新中式和中女悦己三重共鸣。</p>
+<blockquote class="finding"><p><strong>洞察落点：</strong>当买包的年轻女性，和缝包的年长女性，在同一道针脚上相遇，「被看见」就从品牌口号变成两代女性互相成全的事实。<strong>一个真实的人，同时解开认知和信任。</strong></p></blockquote>
 </section>
 
 <!-- ===== CH3 ===== -->
 <section id="ch3">
-<h2>三、产业链与价值链</h2>
-<blockquote class="finding"><p><strong>本节核心判断</strong>：设计师包袋不是"硬科技卡脖子"行业——优质皮料、五金、高端代工产能在国内（珠三角）与进口（意大利皮料）市场上都买得到，<strong>没有任何环节存在"造不出来"的技术封锁</strong>。它的真正稀缺资源在产业链的"软端"：<strong>原创设计语言、品牌叙事、用户心智与 DTC 渠道运营能力</strong>。利润池高度集中在品牌+渠道端，制造端薄利内卷——这决定了本赛道的竞争是"叙事与设计之争"，而非"产能之争"。</p></blockquote>
+<h2>三、大主意「见针」</h2>
 
-<h3>1. 产业链全景图</h3>
-<p>设计师包袋产业链可拆为「上游材料/配件 → 中游设计+代工制造 → 品牌端 → 渠道 → 终端消费者」五段。关键稀缺资源沿链条<strong>从硬（材料）向软（设计/品牌/渠道）递增</strong>：</p>
-<div class="viz-card">
-<div class="viz-title">产业链全景图 · 稀缺度从硬向软递增</div>
-<pre>【上游 · 材料与配件】            【中游 · 设计+代工制造】          【品牌端】             【渠道】                     【终端】
-皮料(头层牛皮/植鞣革/PU)  ─►  原创设计(ODM/自有设计)     ─►  品牌叙事/定价/选品 ─►  DTC自营官网/小程序     ─►  中女·静奢·
-五金(扣件/链条/拉链)           珠三角箱包产业带代工             用户心智运营           天猫/抖音/小红书内容电商      新中式审美
-面料/里布/辅料                 (狮岭·花都·东莞·河北)                                  线下直营店/集合店            女性消费者
-   │代表方                        │代表方                        │代表方                 │代表方
-   ·意大利植鞣革(进口高端)        ·广州狮岭"中国皮具之都"         ·Songmont/古良吉吉      ·Songmont 天猫双11箱包榜
-   ·河北白沟辅料/对标YKK拉链       占国内皮具≈80%份额             ·端木良锦(万元级)       2025 第1(反超Coach)
-   ·广东五金代工集群              ·东莞/河北(Songmont自建)        ·个乐GROTTO/裘真        ·小红书种草+抖音直播
-   ▲稀缺度：低(可进口/可国产)      ▲稀缺度：中(高端代工产能)       ▲稀缺度：高(原创设计)   ▲稀缺度：高(DTC+内容运营)</pre>
-<div class="viz-note">引用：意大利植鞣革<a class="ref" href="#ref-24">[24]</a>、白沟辅料对标 YKK<a class="ref" href="#ref-29">[29]</a>、东莞/河北 Songmont 自建供应链<a class="ref" href="#ref-22">[22]</a>、Songmont 天猫双11箱包榜 2025 第1<a class="ref" href="#ref-10">[10]</a>。</div>
+<div class="strat-card">
+  <div class="strat-head"><span class="n">◆</span>见针 · 一针，一个人</div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">大主意</div><div class="val"><p>每一年，Songmont 只讲一位真实手作人和她手里的一道工序，把包上那道看不见的针脚，变成一个有名字、有脸、可溯源的人。见物，也见人。</p></div></div>
+    <div class="strat-row"><div class="lab">母题</div><div class="val"><p>用「针脚 / 手作的时间与温度」替代已被用旧的风与山。针脚是手作的签名，是时间的计量单位（品牌称开发周期 180 到 300 天 <span class="tag assume">品牌称</span>在这里不是营销数字，是一针一针熬出来的），是使用痕迹与陪伴的起点。</p></div></div>
+    <div class="strat-row"><div class="lab">情感主线</div><div class="val"><p>A 文化叙事，落点是「传承与被看见」：把平均六旬、本来无名的姥姥手作团推到台前，让两代女性在一道针脚上相认。</p></div></div>
+    <div class="strat-row"><div class="lab">信任底座</div><div class="val"><p>C 工艺信任：不是在包外面贴叙事，而是把设计和工艺本身推到台前当主角（详见第四章「见针保修」）。</p></div></div>
+    <div class="strat-row"><div class="lab">Slogan</div><div class="val"><p>主句：一针一个名字，把手交给时间。　辅句：见物，也见人。</p></div></div>
+  </div>
 </div>
 
-<p><strong>逐环节关键稀缺资源（"谁卡脖子"）：</strong></p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>环节</th><th>代表方</th><th>关键资源</th><th>稀缺程度 / 是否"卡脖子"</th></tr></thead>
-<tbody>
-<tr><td><strong>上游·皮料</strong></td><td>意大利植鞣革/欧洲头层小牛皮（进口）<a class="ref" href="#ref-24">[24]</a>；国产黄牛皮/二层皮</td><td>优质头层皮、稳定不掉色的染整</td><td><strong>低</strong>。高端皮料靠进口但市场开放可采购，属"软进口依赖"非技术封锁；中低端国产充足</td></tr>
-<tr><td><strong>上游·五金/辅料</strong></td><td>河北白沟辅料集群、保定恒昌拉链（对标 YKK）<a class="ref" href="#ref-29">[29]</a>、广东五金代工</td><td>耐磨电镀五金、不掉漆链条</td><td><strong>低-中</strong>。常规五金国产过剩；高端电镀工艺（如 Songmont 304 不锈钢真空镀）是品牌自定规格<a class="ref" href="#ref-22">[22]</a></td></tr>
-<tr><td><strong>中游·设计</strong></td><td>品牌自有设计团队 / ODM 工厂设计</td><td><strong>原创设计语言、辨识度</strong></td><td><strong>高</strong>。很多奢侈品包实为工厂(ODM)设计<a class="ref" href="#ref-21">[21]</a>，"做得出"不稀缺，"设计得有辨识度"才稀缺</td></tr>
-<tr><td><strong>中游·代工制造</strong></td><td>广州狮岭（占国内皮具≈80%份额）<a class="ref" href="#ref-29">[29]</a>、花都、东莞、河北白沟</td><td><strong>稳定交付高端工艺的代工产能</strong></td><td><strong>中</strong>。低端产能极度过剩内卷<a class="ref" href="#ref-19">[19]</a>；高端产线相对稀缺</td></tr>
-<tr><td><strong>品牌端</strong></td><td>Songmont、古良吉吉、端木良锦、个乐、裘真<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-9">[9]</a></td><td><strong>品牌叙事 + 用户心智</strong></td><td><strong>高</strong>。利润与壁垒的核心</td></tr>
-<tr><td><strong>渠道</strong></td><td>DTC 官网/小程序、天猫、抖音、小红书、线下直营店<a class="ref" href="#ref-23">[23]</a></td><td><strong>DTC + 内容种草运营能力</strong></td><td><strong>高</strong>。直接决定品牌溢价能否兑现</td></tr>
-</tbody>
-</table></div>
-
-<h3>2. 价值链利润分配</h3>
-<p><strong>结论：利润池高度集中在"品牌+渠道"端，制造端薄利。</strong> 一只零售价数千元的设计师包，价值分配大致呈"两头（材料、代工）薄、品牌端厚"的格局：</p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>环节</th><th>毛利/利润水平</th><th>来源</th></tr></thead>
-<tbody>
-<tr><td>上游材料/代工（OEM）</td><td>代工毛利 ≈ <strong>20%–35%</strong>；纯白牌代工因门槛低、产业分散而陷入价格战，利润极薄<a class="ref" href="#ref-19">[19]</a><a class="ref" href="#ref-20">[20]</a></td><td><a class="ref" href="#ref-19">[19]</a><a class="ref" href="#ref-20">[20]</a></td></tr>
-<tr><td>品牌端（OBM）</td><td>品牌商毛利通常 <strong>50%–80%</strong>（含 30%–60% 营销费用）、净利 <strong>10%–20%</strong><a class="ref" href="#ref-20">[20]</a><a class="ref" href="#ref-21">[21]</a></td><td><a class="ref" href="#ref-20">[20]</a><a class="ref" href="#ref-21">[21]</a></td></tr>
-<tr><td>渠道（自营 vs 经销）</td><td>鞋服口径下<strong>线下自营毛利 73.4% &gt; 经销 53.9% &gt; 线上</strong>——自营 DTC 显著高于经销/平台<a class="ref" href="#ref-23">[23]</a></td><td><a class="ref" href="#ref-23">[23]</a></td></tr>
-<tr><td>行业利润链排序</td><td><strong>品牌 &gt; 零售 &gt; ODM &gt; OEM</strong>：越靠近品牌与消费者，利润越大<a class="ref" href="#ref-20">[20]</a></td><td><a class="ref" href="#ref-20">[20]</a></td></tr>
-</tbody>
-</table></div>
-<p><strong>利润池为何集中在品牌/渠道</strong>：成本结构上，国际大牌万元级包的出厂价仅 100–200 元<a class="ref" href="#ref-21">[21]</a>，绝大部分零售价是<strong>品牌溢价 + 渠道与营销成本</strong>，而非材料/工费。设计师包袋复制了同一逻辑——<strong>品牌叙事、设计辨识度、用户信任与 DTC 触达</strong>才是把"几百元工费"放大成"几千元零售价"的杠杆。标杆参照：Coach 母公司 Tapestry FY25Q2 集团毛利率 <strong>77.4%</strong>、Coach 品牌毛利 <strong>76.1%</strong>、营业利润率 <strong>32.4%</strong><a class="ref" href="#ref-30">[30]</a>——成功品牌端可稳定在 75%+ 毛利，是代工端（20%–35%）的两倍以上。</p>
-
-<h3>3. 产业链变化趋势（过去 3–5 年）</h3>
-<ol>
-<li><strong>利润池向"品牌 + DTC + 内容渠道"加速集中</strong>。本土设计师品牌跳过传统经销分销，直接以"小红书种草 + 抖音直播 + 天猫旗舰 + 线下直营/自营官网"的 DTC 内容矩阵触达消费者，把原本被经销商/平台分走的毛利留在品牌端（自营 73.4% vs 经销 53.9%<a class="ref" href="#ref-23">[23]</a>）。Songmont 女包均价从 <strong>¥1,658.6 → ¥2,213</strong><a class="ref" href="#ref-26">[26]</a>，正是品牌溢价能力增强、利润池上移的直接体现。</li>
-<li><strong>头部品牌纵向整合、自建供应链</strong>。代表案例 Songmont 已在东莞与河北建立完善供应链体系、布局国际化生产线；同时把山西"姥姥匠人"留乡负责手工挂件与维修，将"自建产能 + 手工艺叙事"绑定<a class="ref" href="#ref-22">[22]</a>。自建供应链的目的不是"突破技术封锁"，而是<strong>锁定高端产能、保证品控一致性、并为品牌叙事提供可讲的故事</strong>。</li>
-<li><strong>新进入者从"软端"突破，而非制造端</strong>。由于代工产能开放、材料可采购，新玩家几乎不可能靠"造得更好"切入；突破口集中在<strong>设计差异化（东方美学/新中式）、内容种草、人群卡位（中女/静奢）</strong>。这也是为何"每年数以万计设计师品牌诞生却九死一生、同质化严重"<a class="ref" href="#ref-11">[11]</a>。</li>
-</ol>
-
-<h3>4. 关键环节与壁垒（"卡脖子"改写：时尚消费版）</h3>
-<p>设计师包袋<strong>不存在硬科技意义上的"卡脖子"</strong>——没有哪个环节是"国产造不出、被海外垄断"的。真正的关键约束有三类，且都不在材料/产能端：</p>
-<p><strong>① 优质皮料与五金——"软进口依赖"，非技术封锁。</strong> 高端头层皮、意大利植鞣革确实以进口为高端首选<a class="ref" href="#ref-24">[24]</a>，但这是<strong>采购选择</strong>而非供给封锁：市场开放、可自由采购，国产中低端材料供给充足；五金更是国产过剩（白沟辅料集群、对标 YKK 的国产拉链<a class="ref" href="#ref-29">[29]</a>），高端电镀（如 304 不锈钢真空镀<a class="ref" href="#ref-22">[22]</a>）是品牌自设规格。结论：材料/五金<strong>不构成卡脖子</strong>，只构成"想做高端就得多花钱采购优质料"的成本约束。</p>
-<p><strong>② 高端代工产能与品控一致性——真正稀缺的"中游硬约束"。</strong> 低端代工产能极度过剩、价格战内卷<a class="ref" href="#ref-19">[19]</a>，但<strong>能稳定交付高客单品质、且大批量保持品控一致</strong>的高端产线相对稀缺。反例极具说服力：古良吉吉的差评长期集中在<strong>色差、用料一般、掉皮、易褶皱、油边开裂、防水差</strong>等品控问题，创始人公开承认"急需解决供应链与品控"<a class="ref" href="#ref-27">[27]</a>——这说明<strong>"把好设计稳定地造出来并保持一致"比"设计本身"更容易翻车</strong>，是头部品牌纵向整合自建供应链的根本动因。珠三角（狮岭占国内皮具≈80%份额<a class="ref" href="#ref-29">[29]</a>）已具备世界级配套，高端产能可得，难点在"稳定"而非"有无"。</p>
-<p><strong>③ 原创设计、品牌叙事与用户心智——壁垒的真正所在。</strong> 既然材料可买、产能可得、工厂连奢侈品包都能 ODM 设计出来<a class="ref" href="#ref-21">[21]</a>，那么<strong>唯一无法被代工和采购复制的，就是原创设计语言 + 品牌叙事 + 用户心智</strong>。端木良锦把"工艺+文化"做成壁垒的极致案例——一只包 <strong>758 个木构件、22 道工艺、194 道工序，木片磨切至 0.4–0.5mm</strong><a class="ref" href="#ref-28">[28]</a>，靠"传统工艺 + 东方美学 + 数学化精度"构筑别人短期无法复制的稀缺性，支撑万元级定价。这类壁垒掌握在<strong>品牌方</strong>手中，国产玩家正是凭"东方美学/新中式"在此环节实现差异化突破。</p>
-
-<h3>5. 行业关键品质/性能指标体系（KPI）</h3>
-<p>下列指标是消费者真正在意、并直接决定品牌溢价与复购的核心 KPI：</p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>KPI</th><th>含义</th><th>重要性</th><th>行业标杆 / 现状</th><th>关键权衡</th></tr></thead>
-<tbody>
-<tr><td><strong>① 皮质品质</strong></td><td>头层/二层、是否进口植鞣、手感与耐用</td><td>高</td><td>高端用进口植鞣/头层小牛皮<a class="ref" href="#ref-24">[24]</a></td><td>成本 vs 品质</td></tr>
-<tr><td><strong>② 五金品质</strong></td><td>电镀耐磨、不掉漆、链条/扣件手感</td><td>高</td><td>Songmont 用 304 不锈钢真空镀，耐磨度比常规水镀锌合金提升 <strong>30 倍</strong><a class="ref" href="#ref-22">[22]</a></td><td>成本 vs 质感</td></tr>
-<tr><td><strong>③ 工艺做工</strong></td><td>走线、油边、对称、拼接精度</td><td>高（差评高发区）</td><td>端木良锦 194 道工序为极致标杆<a class="ref" href="#ref-28">[28]</a>；古良吉吉曾因油边开裂/掉皮被诟病<a class="ref" href="#ref-27">[27]</a></td><td>工艺深度 vs 量产规模</td></tr>
-<tr><td><strong>④ 设计辨识度</strong></td><td>是否一眼可辨、有原创设计语言</td><td>极高（核心竞争力）</td><td>东方美学/新中式为本土差异化标签</td><td><strong>辨识度 vs 大众接受度</strong></td></tr>
-<tr><td><strong>⑤ 品控一致性</strong></td><td>大批量交付的品质稳定度</td><td>极高</td><td>头部纵向整合自建供应链以保一致<a class="ref" href="#ref-22">[22]</a>；中小品牌普遍痛点<a class="ref" href="#ref-27">[27]</a></td><td>一致性 vs 代工弹性/成本</td></tr>
-<tr><td><strong>⑥ 耐用度</strong></td><td>抗褶皱、抗开裂、防水、耐久</td><td>高</td><td>古良吉吉差评含易褶皱/油边开裂/防水差<a class="ref" href="#ref-27">[27]</a></td><td>轻量软质手感 vs 结构耐用</td></tr>
-<tr><td><strong>⑦ 客单价</strong></td><td>单只成交均价</td><td>高</td><td>Songmont 均价 ¥1,658.6→¥2,213<a class="ref" href="#ref-26">[26]</a>（轻奢主体 ¥1k–5k<a class="ref" href="#ref-15">[15]</a>）</td><td>提价 vs 走量</td></tr>
-<tr><td><strong>⑧ 复购率</strong></td><td>老客重复购买比例</td><td>高</td><td>女性消费 50–70% 复购占比最高（35%），90%+ 仅 8%<a class="ref" href="#ref-25">[25]</a>——忠诚度中等</td><td>上新频率 vs 经典款沉淀</td></tr>
-<tr><td><strong>⑨ 退货率</strong></td><td>退换比例</td><td>中-高</td><td>行业普遍关注（<span class="tag unsourced">无公开赛道精确值</span>[B1]）</td><td>线上体验落差 vs 实物一致</td></tr>
-<tr><td><strong>⑩ 渠道结构/DTC占比</strong></td><td>自营 DTC 占比</td><td>高</td><td>自营毛利 73.4% &gt; 经销 53.9%<a class="ref" href="#ref-23">[23]</a></td><td>自营重资产 vs 经销轻快</td></tr>
-</tbody>
-</table></div>
-<blockquote class="finding"><p><strong>权衡总览</strong>：本赛道最核心的两组权衡是 <strong>(a) 成本 vs 品质</strong>（优质皮料+精细工艺+高端五金会显著推高成本，压缩毛利）与 <strong>(b) 设计辨识度 vs 大众接受度</strong>（过强的东方美学个性带来差异化壁垒，但也可能限制受众规模）。品牌的功力正在于在两组权衡间找到"高溢价又不窄众"的甜点。</p></blockquote>
-
-<h3>6. 行业进入壁垒（≥4 层）</h3>
+<h3>为什么这是从品牌价值出发，而不是蹭热点</h3>
 <ul>
-<li><strong>① 设计/原创力壁垒（最高）</strong>：材料可买、工厂能 ODM<a class="ref" href="#ref-21">[21]</a>，唯独<strong>原创设计语言与辨识度无法外包采购</strong>；东方美学/新中式更需要创始人审美与长期沉淀，端木良锦式"工艺+文化"壁垒<a class="ref" href="#ref-28">[28]</a>短期无法复制。这是新玩家"九死一生、同质化严重"<a class="ref" href="#ref-11">[11]</a>的根因。</li>
-<li><strong>② 供应链/制造与品控壁垒</strong>：低端代工易得，但<strong>稳定交付高端品质、大批量保持品控一致</strong>的能力稀缺；中小品牌普遍栽在品控<a class="ref" href="#ref-27">[27]</a>，头部需自建/深绑供应链才能跨过<a class="ref" href="#ref-22">[22]</a>——这是"看似低门槛、实则高门槛"的环节。</li>
-<li><strong>③ 品牌叙事与用户心智壁垒</strong>：把"几百元工费"放大成"几千元零售价"的杠杆是品牌溢价（品牌毛利 50–80% vs 代工 20–35%<a class="ref" href="#ref-20">[20]</a><a class="ref" href="#ref-21">[21]</a>），而品牌心智需长期内容与口碑沉淀，无法用钱快速买到。</li>
-<li><strong>④ 渠道与规模/资金壁垒</strong>：DTC 自营虽毛利最高（73.4%<a class="ref" href="#ref-23">[23]</a>）但重资产、需持续投入直营店与内容营销；小红书/抖音/天猫的内容种草与流量运营需要专门能力与预算，规模化触达对新进入者形成资金+运营双重门槛。</li>
+<li><strong>母题长在品牌自己的真相里。</strong> 针脚、手作、姥姥团、非遗虎头帽针法，都是 Songmont 已经真实存在的东西，不依赖任何外部热点或生肖流量，就能自我供给三年内容。</li>
+<li><strong>它兑现的是品牌的美学内核和调性。</strong> 「自然、自知」，谦卑、克制、陪伴、平视，不做 logo 炫耀。见针把这套内核变成可看可核的动作，而不是形容词。</li>
+<li><strong>热点会过，针脚会留。</strong> 「把手交给时间」是可连载、越讲越厚的品牌资产，跟追一次流量截然相反。</li>
 </ul>
+<blockquote class="warn"><p><strong>与「重营销轻设计」正面对撞：</strong>这个质疑的要害是「你的营销是不是空的、产品撑不撑得起」。见针的母题就是产品本身那道针脚，信任层就是缝它的那双手来重缝。你讲得越多，越是在讲产品怎么做出来的。这是其他方向做不到的结构性回击。</p></blockquote>
 </section>
 
 <!-- ===== CH4 ===== -->
 <section id="ch4">
-<h2>四、竞争格局</h2>
-<blockquote class="warn"><p><strong>本节透镜与口径提醒</strong>：本赛道处于 §二判定的<strong>成长期（份额剧烈再分配）</strong>，竞争格局的核心不是"存量寡头怎么分蛋糕"，而是"<strong>剪刀差让出的中端需求，正在本土设计师、重塑叙事的 Coach、其他玩家之间被重新争夺</strong>"。下文所有"市占/份额/集中度"均以<strong>天猫单平台头部榜单席位</strong>为可核口径，属<strong>估算</strong>，不等同全渠道全市场真实份额（全市场 CR 需欧睿/灼识付费库，见 §B 缺口）。</p></blockquote>
+<h2>四、信任层 · 见针保修</h2>
+<blockquote class="finding"><p>这一章是整份提案的胜负手。信任层不是口号，是四个真金白银、可被用户长期验证的动作，直接回应品控、假货、涨价三类真实质疑。落地方式是<strong>试点先行</strong>：先在一个城市跑通售后养护的 SOP 与成本模型，再全国放量，避免「承诺大于兑现」的翻车路径。</p></blockquote>
 
-<h3>1. 竞品分组与定位（出身 × 美学 双层）</h3>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>组</th><th>成员</th><th>出身/定位</th><th>在本赛道中的角色</th></tr></thead>
-<tbody>
-<tr><td><strong>A 本土原创设计师</strong>（赛道主体）</td><td>Songmont 山下有松、古良吉吉、端木良锦、个乐 GROTTO、裘真</td><td>设计驱动、有自有品牌叙事</td><td><strong>承接外溢需求的主力</strong>；A 组内再分三簇见下</td></tr>
-<tr><td><strong>B 传统国际轻奢</strong>（参照系/被替代方）</td><td>Coach、Michael Kors、Furla、Kate Spade</td><td>logo 驱动的成熟轻奢</td><td><strong>被替代对象</strong>；但内部分化（Coach 例外<a class="ref" href="#ref-4b">[4b]</a>）</td></tr>
-<tr><td><strong>C 潜在搅局者</strong></td><td>Coach 子线下沉、快时尚/潮牌上攻（如初语等）</td><td>大牌下沉 + 平价上攻的夹击</td><td>尚未主导，但压缩本土玩家两端空间</td></tr>
-</tbody>
-</table></div>
-<p><strong>A 组内按美学定位三簇</strong>（这是"东方美学透镜"的关键切分）：</p>
-<ul>
-<li><strong>东方/新中式簇</strong>：Songmont（中原文化叙事<a class="ref" href="#ref-42">[42]</a>）、端木良锦（木镶嵌中式奢侈<a class="ref" href="#ref-39">[39]</a>）、裘真近年（"小闲/逍遥"取自中式器物、芥子袋<a class="ref" href="#ref-38">[38]</a>）——<strong>东方美学浓度最高</strong>；</li>
-<li><strong>极简植鞣/工艺簇</strong>：古良吉吉（"第二眼美学"复古摩登<a class="ref" href="#ref-41">[41]</a>）、裘真本源（荷兰植鞣小牛皮<a class="ref" href="#ref-38">[38]</a>）、个乐 GROTTO（植鞣牛皮自有工坊<a class="ref" href="#ref-40">[40]</a>）——<strong>以材质与工艺为锚</strong>，东方浓度中等；</li>
-<li><strong>潮流个性簇</strong>：个乐 GROTTO 的联名/老花线<a class="ref" href="#ref-40">[40]</a> 等——东方浓度偏低。</li>
-</ul>
-<blockquote class="note"><p><strong>竞品名单取舍说明</strong>：相比候选池，<strong>删除</strong> SHANG XIA 上下（爱马仕系生活方式品牌，价位与品类口径均不符）、13DE MARZO / UOOYAA（潮牌/服装出身，包袋非主业）；<strong>保留</strong> Songmont、古良吉吉、端木良锦、个乐 GROTTO、裘真五家本土设计师 + 参照系 Coach/MK/Furla/Kate Spade。初语等"快时尚上攻者"仅作 C 组举例，不入正表。</p></blockquote>
+<figure class="fig">
+<div class="fig-title">信任层：四个可验证的动作</div>
+<svg viewBox="0 0 760 250" role="img" aria-label="见针信任层四动作汇聚为信任兑现">
+<defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path class="fill-accent" d="M0 0 L8 4 L0 8 Z"/></marker></defs>
+<rect class="box" x="8" y="14" width="250" height="48" rx="9"/>
+<text class="t-title" x="24" y="43" font-size="14">01　一针一档案</text>
+<rect class="box" x="8" y="72" width="250" height="48" rx="9"/>
+<text class="t-title" x="24" y="101" font-size="14">02　见针保修 · 原团队重缝</text>
+<rect class="box" x="8" y="130" width="250" height="48" rx="9"/>
+<text class="t-title" x="24" y="159" font-size="14">03　验真溯源</text>
+<rect class="box-assume" x="8" y="188" width="250" height="48" rx="9"/>
+<text class="t-title" x="24" y="212" font-size="14">04　澄泥砚慢工物证</text>
+<text class="t-muted" x="246" y="212" text-anchor="end" font-size="10">策略假设</text>
+<rect class="box-accent" x="520" y="78" width="232" height="94" rx="14"/>
+<text class="t-title" x="636" y="112" text-anchor="middle" font-size="16">信任兑现</text>
+<text class="t-muted" x="636" y="135" text-anchor="middle" font-size="12">试点先行，跑通再放量</text>
+<text class="t-accent" x="636" y="156" text-anchor="middle" font-size="12">同时补 认知 × 信任</text>
+<path class="ln" marker-end="url(#ar2)" d="M260 38 C 400 44, 400 110, 516 118"/>
+<path class="ln" marker-end="url(#ar2)" d="M260 96 C 380 104, 400 116, 516 124"/>
+<path class="ln" marker-end="url(#ar2)" d="M260 154 C 380 148, 400 132, 516 130"/>
+<path class="ln" marker-end="url(#ar2)" d="M260 212 C 400 200, 400 140, 516 136"/>
+</svg>
+<figcaption>不是在包外面贴叙事，而是把工艺本身推到台前。四个动作都真金白银、可被用户长期验证。</figcaption>
+</figure>
 
-<h4>定位可视化①：价格带 × 东方美学浓度（2×2 矩阵）</h4>
-<div class="quad-wrap">
-<div class="quad">
-  <div class="axis-x"></div><div class="axis-y"></div>
-  <span class="ax-label top">东方美学浓度 高（新中式）</span>
-  <span class="ax-label bottom">东方美学浓度 低（西方 / logo 驱动）</span>
-  <span class="ax-label left">价格带 低</span>
-  <span class="ax-label right">价格带 高</span>
-  <span class="qbg" style="top:6%;left:6%;">高东方 · 低价</span>
-  <span class="qbg" style="top:6%;right:6%;">高东方 · 高价</span>
-  <span class="qbg" style="bottom:6%;left:6%;">低东方 · 低价</span>
-  <span class="qbg" style="bottom:6%;right:6%;">低东方 · 高价</span>
-  <!-- upper-left: 端木良锦 (high east, very high price but drawn left per source) -->
-  <div class="pt local" style="top:18%;left:24%;"><span class="dot">端木良锦</span><span class="sub">¥7k–5万 · 木镶嵌<br>★万元级设计师精品</span></div>
-  <!-- upper-right: Songmont -->
-  <div class="pt local" style="top:16%;left:68%;"><span class="dot">Songmont</span><span class="sub">¥1.6k–2.2k · 中原叙事<br>★赛道东方美学标杆</span></div>
-  <!-- mid-right cluster -->
-  <div class="pt local" style="top:38%;left:72%;"><span class="dot">裘真</span><span class="sub">¥1.7k–2.8k · 小闲/逍遥</span></div>
-  <div class="pt local" style="top:46%;left:60%;"><span class="dot">古良吉吉 · 个乐</span><span class="sub">均价 ~¥1k+ · 植鞣/联名</span></div>
-  <!-- lower row legacy -->
-  <div class="pt legacy" style="bottom:14%;left:18%;"><span class="dot">Kate Spade</span><span class="sub">退潮中</span></div>
-  <div class="pt legacy" style="bottom:14%;left:40%;"><span class="dot">Furla</span><span class="sub">门店 60→40</span></div>
-  <div class="pt legacy" style="bottom:14%;left:60%;"><span class="dot">Michael Kors</span><span class="sub">-16.2% 萎缩</span></div>
-  <div class="pt legacy" style="bottom:18%;left:80%;"><span class="dot">Coach</span><span class="sub">复苏 · 营收占比18%</span></div>
-</div>
-</div>
-<p class="viz-note"><strong>读图：</strong>横轴价格带（¥1k→万元级），纵轴东方美学浓度（西方 logo 驱动→新中式）。本土设计师整体位于"中高价 × 高东方浓度"右上区，与左下区"低东方浓度 × 退潮中"的传统轻奢（MK/Furla/Kate Spade）形成对角分布——这正是 §二"剪刀差"在竞争地图上的可视化。端木良锦独占左上"高东方 × 万元级"角，Coach 凭复苏卡在右下"低东方 × 中高价"、与本土玩家正面争夺中端。</p>
-
-<h3>2. 市占率与集中度（基于天猫榜单可核口径估算）</h3>
-<blockquote class="warn"><p><strong>强口径警示</strong>：本赛道<strong>无公开权威的全渠道市占率/CR 统计</strong>（见 §B 缺口，需欧睿/灼识付费库）。下文 CR 系基于<strong>天猫单平台头部榜单"席位占比"</strong>的<strong>估算</strong>，仅刻画<strong>线上头部</strong>集中度，<strong>不可外推为全市场真实份额</strong>。</p></blockquote>
-<p><strong>可核口径下的集中度证据：</strong></p>
-<ul>
-<li><strong>2024 年</strong>天猫箱包服配销售榜 <strong>TOP20 中国产品牌占 15 席</strong>（≈75%，但仅头部榜单口径）<a class="ref" href="#ref-13">[13]</a>；</li>
-<li><strong>2025 年 2 月</strong>天猫"千元以上女包"销售榜 <strong>TOP15 中国产占 7 席</strong>，且 <strong>Songmont 与裘真进入前三，仅次于 Coach</strong><a class="ref" href="#ref-36">[36]</a>；</li>
-<li><strong>Songmont 单品牌</strong>天猫双 11 箱包（服饰）榜：<strong>2023 第 3 → 2024 第 2（仅次 Coach）→ 2025 第 1（反超 Coach）</strong><a class="ref" href="#ref-37">[37]</a>；2025 双 11 女包成交速度榜亦居第一，超 Coach/MCM<a class="ref" href="#ref-37">[37]</a>。</li>
-</ul>
-<p><strong>集中度判读（估算）</strong>：从榜单席位看，<strong>头部高度分散而非寡头</strong>——千元档 TOP3 由 Coach + 2 家本土（Songmont、裘真）分享，TOP15 中外品牌各占约半；这与 §二"成长期、格局未定"判定一致。若强行以天猫榜单席位估 CR：千元档线上 <strong>CR3 ≈ 前三品牌（Coach/Songmont/裘真）</strong>、<strong>CR5–CR8 仍由中外混合占据，无任何单一品牌过半</strong>——即<strong>线上头部 CR 低、集中度低</strong>。但须再次强调：这是单平台头部榜单的席位估算，全渠道全市场 CR 数据缺失，本报告不编造精确百分比。</p>
-
-<h3>3. 竞品对标表与护城河四维</h3>
-<p><strong>核心对标表</strong>（5 运营维 + 5 定位维）：</p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>品牌</th><th>成立/创始人</th><th>价格带</th><th>营收/销售规模</th><th>东方美学浓度</th><th>标志单品/工艺</th><th>供应链模式</th><th>渠道打法</th><th>上新节奏</th><th>在赛道的卡位</th></tr></thead>
-<tbody>
-<tr><td><strong>Songmont 山下有松</strong></td><td>2013，付崧(清华美院/前 Google 设计总监)+王捷(央美)<a class="ref" href="#ref-42">[42]</a></td><td>均价 ¥1.66k→2.21k<a class="ref" href="#ref-26">[26]</a></td><td>2024 淘宝+天猫(仅包袋)近5亿<a class="ref" href="#ref-8">[8]</a>；2025线上+90%、双11登顶<a class="ref" href="#ref-10">[10]</a></td><td><strong>高</strong>（中原叙事<a class="ref" href="#ref-42">[42]</a>）</td><td>静奢托特等；五金 304 不锈钢真空镀<a class="ref" href="#ref-22">[22]</a></td><td>自建大湾区供应链+山西姥姥匠人<a class="ref" href="#ref-22">[22]</a></td><td>董洁直播起势→天猫头部<a class="ref" href="#ref-10">[10]</a></td><td>—</td><td><strong>赛道东方美学标杆、线上第一</strong></td></tr>
-<tr><td><strong>古良吉吉</strong></td><td>2013，夫妻档<a class="ref" href="#ref-41">[41]</a></td><td>千元+档<a class="ref" href="#ref-15">[15]</a></td><td>2023 全渠道近 3 亿<a class="ref" href="#ref-9">[9]</a><a class="ref" href="#ref-41">[41]</a></td><td>中（第二眼美学/植鞣<a class="ref" href="#ref-41">[41]</a>）</td><td>烟盒包(累计破亿)<a class="ref" href="#ref-41">[41]</a>；包型立裁<a class="ref" href="#ref-27">[27]</a></td><td>自建工厂+"九宫格"分级供应链，80%订单合作厂、5–7 天出货<a class="ref" href="#ref-41">[41]</a></td><td>李佳琦/全渠道<a class="ref" href="#ref-41">[41]</a></td><td><strong>17–18 款/年</strong><a class="ref" href="#ref-41">[41]</a></td><td>性价比精品慢节奏</td></tr>
-<tr><td><strong>端木良锦</strong></td><td>2011，A 轮千万级<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-39">[39]</a></td><td><strong>¥7k–5 万</strong>，热销 ¥1–2 万<a class="ref" href="#ref-39">[39]</a></td><td class="unsourced">无公开营收 <span class="tag unsourced">UNSOURCED</span>[B]</td><td><strong>最高</strong>（木镶嵌中式奢侈<a class="ref" href="#ref-39">[39]</a>）</td><td>一只包 758 木构件/194 道工序<a class="ref" href="#ref-28">[28]</a></td><td>极精细木作供应链<a class="ref" href="#ref-28">[28]</a></td><td>与爱马仕/LV 同场拍卖<a class="ref" href="#ref-39">[39]</a></td><td>—</td><td><strong>万元级设计师精品天花板</strong></td></tr>
-<tr><td><strong>个乐 GROTTO</strong></td><td>2001，黄柏青(圣马丁)<a class="ref" href="#ref-40">[40]</a></td><td>轻奢档<a class="ref" href="#ref-40">[40]</a></td><td class="unsourced">无公开营收 <span class="tag unsourced">UNSOURCED</span>[B]</td><td>中低（植鞣+联名<a class="ref" href="#ref-40">[40]</a>）</td><td>STONE/WANDER；植鞣牛皮自有工坊<a class="ref" href="#ref-40">[40]</a></td><td>自有工坊<a class="ref" href="#ref-40">[40]</a></td><td>时装周/艺术联名<a class="ref" href="#ref-40">[40]</a></td><td>—</td><td>设计师背书强、规模待证</td></tr>
-<tr><td><strong>裘真</strong></td><td>2015，程宝华<a class="ref" href="#ref-38">[38]</a></td><td>客单 <strong>¥1.7k–2.8k</strong><a class="ref" href="#ref-38">[38]</a></td><td>双 11 进前三<a class="ref" href="#ref-36">[36]</a>；董洁带货销额翻 3–5 倍<a class="ref" href="#ref-38">[38]</a></td><td>中→高（"小闲/逍遥"中式<a class="ref" href="#ref-38">[38]</a>）</td><td>荷兰植鞣小牛皮；芥子袋灵感侧袋<a class="ref" href="#ref-38">[38]</a></td><td>—</td><td>小红书/董洁直播<a class="ref" href="#ref-38">[38]</a></td><td>—</td><td>千元档 TOP7、中女人群卡位</td></tr>
-<tr><td><em>参照系 Coach</em></td><td><em>国际轻奢</em></td><td><em>中高价</em></td><td><em>大中华区营收占 Coach 品牌约 18%（FY25Q1·非市占率）、复苏<a class="ref" href="#ref-4b">[4b]</a></em></td><td><em>低</em></td><td><em>Tabby 等</em></td><td><em>全球供应链</em></td><td><em>重塑叙事+下沉</em></td><td><em>—</em></td><td><em><strong>唯一逆势复苏的轻奢，本土玩家头号正面对手</strong></em></td></tr>
-<tr><td><em>参照系 MK/Furla/Kate Spade</em></td><td><em>国际轻奢</em></td><td><em>中价</em></td><td><em>MK 亚太 -16.2%<a class="ref" href="#ref-14">[14]</a>、Furla 门店 60+→40<a class="ref" href="#ref-6">[6]</a></em></td><td><em>低</em></td><td><em>logo 包</em></td><td><em>—</em></td><td><em>退潮关店</em></td><td><em>—</em></td><td><em><strong>被替代方，让出中端需求</strong></em></td></tr>
-</tbody>
-</table></div>
-<blockquote class="note"><p><strong>营收口径打架提醒</strong>：表内"年销近 5 亿/3 亿"等为媒体转述的品牌口径，非审计数据；个乐、端木良锦<strong>无公开营收</strong>，已标 <span class="tag unsourced">UNSOURCED</span> 并记入 §B 缺口，不编造数字。</p></blockquote>
-
-<p><strong>护城河四维评估</strong>（设计力 / 品牌叙事 / 渠道力 / 供应链；★ 越多越强，为基于上述证据的<strong>定性研判</strong>）：</p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>品牌</th><th>设计力</th><th>品牌叙事</th><th>渠道力</th><th>供应链</th><th>护城河综合点评</th></tr></thead>
-<tbody>
-<tr><td><strong>Songmont</strong></td><td>★★★★</td><td>★★★★★（中原/东方美学最系统<a class="ref" href="#ref-42">[42]</a>）</td><td>★★★★★（线上第一<a class="ref" href="#ref-37">[37]</a>）</td><td>★★★★（自建大湾区<a class="ref" href="#ref-22">[22]</a>）</td><td>叙事+渠道双强，但被质疑"重营销轻设计"<a class="ref" href="#ref-44">[44]</a>——叙事护城河需持续兑现</td></tr>
-<tr><td><strong>古良吉吉</strong></td><td>★★★☆</td><td>★★★☆</td><td>★★★★</td><td>★★★★★（九宫格供应链<a class="ref" href="#ref-41">[41]</a>）</td><td><strong>供应链是真壁垒</strong>；曾受品控差评困扰<a class="ref" href="#ref-27">[27]</a>，靠工艺创新修复</td></tr>
-<tr><td><strong>端木良锦</strong></td><td>★★★★★（木镶嵌工艺<a class="ref" href="#ref-28">[28]</a>）</td><td>★★★★★（中式奢侈<a class="ref" href="#ref-39">[39]</a>）</td><td>★★☆（小众/拍卖<a class="ref" href="#ref-39">[39]</a>）</td><td>★★★★（极精细木作<a class="ref" href="#ref-28">[28]</a>）</td><td><strong>工艺壁垒最深</strong>，但客单价过高、规模天花板明显</td></tr>
-<tr><td><strong>个乐 GROTTO</strong></td><td>★★★★（圣马丁背景<a class="ref" href="#ref-40">[40]</a>）</td><td>★★★☆</td><td>★★★</td><td>★★★</td><td>设计师力强，<strong>规模与渠道待证</strong>，数据稀疏</td></tr>
-<tr><td><strong>裘真</strong></td><td>★★★☆</td><td>★★★☆（东方美学转向中<a class="ref" href="#ref-38">[38]</a>）</td><td>★★★★（董洁/小红书<a class="ref" href="#ref-38">[38]</a>）</td><td>★★★（植鞣材质锚<a class="ref" href="#ref-38">[38]</a>）</td><td>直播红利+中女精准卡位，叙事壁垒仍在建立</td></tr>
-</tbody>
-</table></div>
-<blockquote class="finding"><p><strong>四维结论</strong>：本土设计师的护城河<strong>集中在"品牌叙事 + 供应链"两维，而非短期可被模仿的款式设计</strong>——Songmont 强在叙事+渠道、古良吉吉强在供应链、端木良锦强在工艺。这与 §三"原创设计/品牌端才是真壁垒，工厂工艺并非卡脖子"的结论互相呼应。</p></blockquote>
-
-<h3>4. 格局变化与护城河可持续性（回扣剪刀差）</h3>
-<p><strong>(1) 玩家进入与淘汰</strong>：成长期典型特征——新玩家与资本持续涌入（端木良锦 A 轮千万级<a class="ref" href="#ref-8">[8]</a>），但媒体描述"每年数以万计设计师品牌九死一生、同质化严重"<a class="ref" href="#ref-11">[11]</a>，<strong>进入与淘汰并存</strong>。精品慢节奏成为部分玩家的反淘汰策略（包包树/观意每年仅 10 多款、研发半年至一年、打版最多 20 次<a class="ref" href="#ref-45">[45]</a>；古良吉吉 17–18 款/年<a class="ref" href="#ref-41">[41]</a>）。</p>
-<p><strong>(2) 本土 ↔ 国际轻奢的份额迁移（剪刀差在竞争层面的落地）</strong>：</p>
-<ul>
-<li><strong>被替代方持续让位</strong>：MK 亚太 -16.2%<a class="ref" href="#ref-14">[14]</a>、Furla 门店 60+→40<a class="ref" href="#ref-6">[6]</a>、Kate Spade 双位数承压<a class="ref" href="#ref-14">[14]</a>——"无叙事 logo 轻奢"让出的中端需求是本赛道增量主来源；</li>
-<li><strong>承接方是"本土设计师 + 复苏的 Coach"共同瓜分</strong>，而非本土独吞——Coach 大中华区营收占其品牌约 18%（FY25Q1 口径，非市场份额）、逆势复苏<a class="ref" href="#ref-4b">[4b]</a>，是本土玩家<strong>头号正面对手</strong>；</li>
-<li><strong>可视化的迁移证据</strong>：Songmont 双 11 箱包榜 <strong>2023#3→2024#2→2025#1 反超 Coach</strong><a class="ref" href="#ref-37">[37]</a>、2025 年 2 月千元档 TOP15 国产占 7 席且前三有 2 家本土<a class="ref" href="#ref-36">[36]</a>——这是"需求争夺阶段"而非"存量博弈"的直接体现。</li>
-</ul>
-
-<h4>定位可视化②：竞争格局迁移示意（剪刀差 → 三方争夺）</h4>
-<div class="viz-card">
-<div class="viz-title">剪刀差 → 三方争夺中端需求</div>
-<pre>     【被替代方·萎缩】              【承接方·争夺中端需求】
-  MK(-16.2%)   ┐                  ┌─► 本土设计师组(Songmont/裘真/古良吉吉…)
-  Furla(60→40) ├─ 让出中端需求 ──► ┤        ↑ 东方美学 + 性价比
-  Kate Spade   ┘                  └─► Coach(复苏,营收占比18%,重塑叙事)
-                                         ↑ 唯一逆势复苏的轻奢
-  关键判读：不是"国际轻奢全军覆没"，而是"无叙事者退、有叙事者(含Coach)进"</pre>
+<div class="strat-card">
+  <div class="strat-head"><span class="n">01</span>一针一档案：把针脚变成可核验的人</div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">做什么</div><div class="val"><p>每只当年 IP 联名款附一张手作人卡片：姓名、里望村、这道工序做了多少年、耗时多少针。扫码进「见针档案库」，看她本人缝制的原始视频。五金与皮料以第三方检测报告加工序纪录片透明公开，不做参数轰炸。</p></div></div>
+    <div class="strat-row"><div class="lab">解什么</div><div class="val"><p>同时补认知锚点（这只包背后是谁）和信任缺口（它到底怎么做的）。</p></div></div>
+  </div>
 </div>
 
-<p><strong>(3) 东方美学护城河的可持续性（须双面呈现，不单边吹捧）</strong>：</p>
-<ul>
-<li><strong>支撑面</strong>：东方美学 + 性价比是本土玩家区别于国际轻奢的差异化锚，Songmont/端木良锦/裘真均以此立身<a class="ref" href="#ref-38">[38]</a><a class="ref" href="#ref-39">[39]</a><a class="ref" href="#ref-42">[42]</a>；</li>
-<li><strong>隐忧面</strong>：① "原创难、抄袭易、维权慢"是中国原创设计的共性难题<a class="ref" href="#ref-43">[43]</a>，款式层面的"东方元素"极易被同质化模仿；② 头部品牌已遭质疑——新浪财经 2026 年直指 Songmont "设计趋同、高价低质、假货泛滥、重营销轻设计"<a class="ref" href="#ref-44">[44]</a>。<strong>因此"东方美学"作为护城河，真正可持续的部分是"品牌叙事的系统性 + 供应链/工艺壁垒"，而非容易被抄的视觉符号</strong>——这也是 §八对 Songmont 营销启示的重要伏笔（叙事须不断兑现、避免"虚火"）。</li>
-</ul>
-<blockquote class="finding"><p><strong>本节小结</strong>：本赛道线上头部<strong>集中度低、格局未定</strong>，本土设计师以"东方美学叙事 + 供应链/工艺壁垒"承接传统轻奢（MK/Furla/Kate Spade）让出的中端需求，但须与<strong>逆势复苏的 Coach</strong> 正面争夺，且面临<strong>同质化与"重营销轻设计"质疑</strong>的护城河可持续性考验——典型的<strong>成长期"需求争夺"竞争态势</strong>。</p></blockquote>
+<div class="strat-card">
+  <div class="strat-head"><span class="n">02</span>见针保修：开线，由缝它的那双手重缝</div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">做什么</div><div class="val"><p>针对掉色、开线、掉皮、五金四类真实高频顾虑，给出免费养护与重缝承诺。开线由「缝它的团队」重缝，把售后从成本项变成情感资产。<strong>先一城试点跑通再放量。</strong></p></div></div>
+    <div class="strat-row"><div class="lab">解什么</div><div class="val"><p>一个动作同时兑现信任（可验证售后）和「被看见」（那双手一直在）。这就是本案的核心杠杆。</p></div></div>
+  </div>
+</div>
+
+<div class="strat-card">
+  <div class="strat-head"><span class="n">03</span>验真溯源：每只包唯一编号，一键辨真伪</div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">做什么</div><div class="val"><p>唯一编号绑定手作人与检测批次，官方一键验真。把「假货泛滥」的舆论危机，转成「教你辨真伪 + 正品服务」的信任内容。</p></div></div>
+  </div>
+</div>
+
+<div class="strat-card">
+  <div class="strat-head"><span class="n">04</span>澄泥砚做慢工的第三方物证 <span class="tag assume">策略假设 · 拟合作</span></div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">做什么</div><div class="val"><p>嫁接绛州澄泥砚这项山西非遗：河泥沉淀一到两年才成器，泥比石更坚。把品牌自说自话的「慢」，换成一个有非遗背书、物理上同构于「植鞣皮越养越润」的可触证据，替品牌的时间做一个不自说自话的旁证。</p></div></div>
+    <div class="strat-row"><div class="lab">口径</div><div class="val"><p>此项及后文所有非遗合作均为 <span class="tag assume">策略假设</span>，需真签约、真联名、真出镜方可对外，绝不以贴图借势替代。</p></div></div>
+  </div>
+</div>
+
+<blockquote class="warn"><p><strong>一条纪律贯穿信任层：不为涨价背书。</strong>工艺透明是为了让人看懂价值，不是为溢价找借口。任何调价都逐项拆成可见成本，绝不复制「情怀绑架」话术。</p></blockquote>
 </section>
 
 <!-- ===== CH5 ===== -->
 <section id="ch5">
-<h2>五、市场规模、需求与消费者洞察</h2>
-<blockquote class="warn"><p><strong>本章方法论前置说明</strong>：本赛道（中国·原创设计师·包袋·轻奢）<strong>无任何官方或第三方机构的独立统计口径</strong>。本章所有市场规模数字均为<strong>本报告自下而上/自上而下推算的"测算值"，非官方数据，仅供量级参考</strong>，并配以计算过程与敏感性分析以示透明。凡标注 <span class="tag measured">测算值</span> 者均为本报告估算，凡标注 <a class="ref" href="#appC">[N]</a> 者为可溯源的公开数据。</p></blockquote>
+<h2>五、三年 IP 弧线</h2>
+<p>母题固定：每年一位手作人，加一道工序，加一张可溯源档案。内容逐年长大，IP 具备继续连载多年的骨架。</p>
 
-<h3>1. 多口径市场规模</h3>
-<p>设计师包袋赛道是一个"<strong>从大盘里切子集</strong>"的问题。本报告由宽到窄给出三层口径：</p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>口径层级</th><th>范围定义</th><th>规模 / 增速</th><th>来源与口径说明</th></tr></thead>
-<tbody>
-<tr><td><strong>① 女包大盘（最宽）</strong></td><td>中国全部女士手袋零售额（含国际大牌、轻奢、大众、白牌）</td><td>2020→2024 约 <strong>380 亿→480 亿元</strong>，CAGR≈<strong>6%</strong>；2025 预计突破 <strong>520 亿元</strong><a class="ref" href="#ref-61">[61]</a></td><td>公开行业报告口径，仅"女包"不含旅行硬箱；与 §一"箱包大盘"<a class="ref" href="#ref-12">[12]</a>口径不同，本章女包大盘口径更贴近本赛道</td></tr>
-<tr><td><strong>② 轻奢女包子集（中）</strong></td><td>上述女包中 <strong>¥1,000–5,000</strong> 价位带</td><td><span class="tag measured">测算值</span>约 150–200 亿元</td><td>由女包大盘按价位带结构拆分：2023 年 <strong>¥1,000–1,999 价位占女包消费 40.4%</strong><a class="ref" href="#ref-62">[62]</a>，叠加 ¥2,000–5,000 段，轻奢带合计约占大盘 1/3–2/5</td></tr>
-<tr><td><strong>③ 设计师包袋狭义（最窄，=本赛道）</strong></td><td>轻奢带中"<strong>本土原创设计师/东方美学定位</strong>"包袋</td><td><span class="tag measured">测算值</span>约 40–70 亿元</td><td>本赛道核心口径。以需求导向测算为基准、女包大盘拆分交叉验证、头部营收加总做下限三法互校</td></tr>
-</tbody>
-</table></div>
-<blockquote class="warn"><p><strong>口径警示</strong>：媒体常引用的"中国设计师品牌市场 794 亿元/CAGR 18.4%"<a class="ref" href="#ref-1">[1]</a>是<strong>含服装的设计师品牌大盘</strong>，远宽于本赛道；本章狭义口径（约 40–70 亿）仅为其包袋子集的零头量级，二者<strong>不可混用</strong>。</p></blockquote>
+<figure class="fig">
+<div class="fig-title">三年 IP 弧线：母题固定，内容逐年长大</div>
+<svg viewBox="0 0 760 215" role="img" aria-label="见针三年内容弧线时间轴">
+<path class="area" d="M40 120 L150 106 L390 82 L620 54 L720 46 L720 124 L40 124 Z"/>
+<path class="ln" d="M40 120 L150 106 L390 82 L620 54 L720 46"/>
+<circle class="dot" cx="150" cy="106" r="6"/>
+<text class="t-accent" x="150" y="142" text-anchor="middle" font-size="11">第 1 年</text>
+<text class="t-title" x="150" y="164" text-anchor="middle" font-size="15">见其手</text>
+<text class="t-muted" x="150" y="184" text-anchor="middle" font-size="11">立母题 · 建档案库</text>
+<text class="t-muted" x="150" y="200" text-anchor="middle" font-size="11">认知 0 → 1</text>
+<circle class="dot" cx="390" cy="82" r="6"/>
+<text class="t-accent" x="390" y="142" text-anchor="middle" font-size="11">第 2 年</text>
+<text class="t-title" x="390" y="164" text-anchor="middle" font-size="15">见其名</text>
+<text class="t-muted" x="390" y="184" text-anchor="middle" font-size="11">扩到万荣姥姥团</text>
+<text class="t-muted" x="390" y="200" text-anchor="middle" font-size="11">我背的这只是谁缝的</text>
+<circle class="dot" cx="620" cy="54" r="6"/>
+<text class="t-accent" x="620" y="142" text-anchor="middle" font-size="11">第 3 年</text>
+<text class="t-title" x="620" y="164" text-anchor="middle" font-size="15">见其传</text>
+<text class="t-muted" x="620" y="184" text-anchor="middle" font-size="11">学徒 · 用户参与工序</text>
+<text class="t-muted" x="620" y="200" text-anchor="middle" font-size="11">看见 → 参与手作</text>
+</svg>
+<figcaption>每年一位手作人加一道工序加一张档案，从看见手作走到参与手作，IP 可持续连载。</figcaption>
+</figure>
 
-<h3>2. TAM / SAM / SOM 三层边界</h3>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>层级</th><th>定义</th><th>规模 <span class="tag measured">测算值</span></th><th>含义</th></tr></thead>
-<tbody>
-<tr><td><strong>TAM（潜在总市场）</strong></td><td>中国轻奢女包总盘（¥1k–5k 全部品牌，含国际轻奢 Coach/MK 等）</td><td class="num">约 150–200 亿元</td><td>设计师包袋"理论上可争夺"的需求池上限——即本土设计师与国际轻奢正面争夺的同一块中端蛋糕</td></tr>
-<tr><td><strong>SAM（可服务市场）</strong></td><td>其中"原创设计/东方美学叙事"定位的包袋（本土设计师品牌可触达的细分）</td><td class="num">约 40–70 亿元</td><td>消费者明确为"设计/审美/情绪价值"而非 logo 买单的部分；即本赛道狭义口径</td></tr>
-<tr><td><strong>SOM（可获份额）</strong></td><td>头部本土设计师品牌当前实际占得的份额</td><td class="num">约 12–18 亿元</td><td>Songmont 2024 淘宝+天猫(仅包袋)近 5 亿<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-10">[10]</a>、古良吉吉 2023 约 3 亿<a class="ref" href="#ref-9">[9]</a>、裘真/个乐/端木良锦等合计——头部集中度仍低，长尾分散</td></tr>
-</tbody>
-</table></div>
-
-<h3>3. 测算过程与敏感性分析</h3>
-<p><strong>【方法 A：需求导向 自下而上，基准法】</strong> 目标人群 × 渗透率 × 客单价 × 年购买频次：</p>
-<ul>
-<li><strong>目标人群</strong>：中国城镇 20–45 岁女性约 1.8 亿，其中一二线及新一线"中产/新中产女性"取约 <strong>3,000 万人</strong>作为核心人群<span class="tag measured">测算值，基于城镇女性结构估算</span>；</li>
-<li><strong>渗透率</strong>（买过本土设计师/东方美学包袋者占核心人群比例）：取 <strong>8%–15%</strong>（成长期早中段的渗透假设，无公开数据，区间估）；</li>
-<li><strong>客单价</strong>：本赛道主力 <strong>¥2,000–5,000</strong><a class="ref" href="#ref-15">[15]</a>，取均值约 <strong>¥2,500</strong>；年购买约 <strong>0.8–1.2 件/人</strong>（悦己型低频复购）。</li>
-</ul>
-<blockquote class="finding"><p>中性测算：3,000 万 × 11.5%（渗透中值）× ¥2,500 × 1.0 件 ≈ <strong>86 亿元</strong>——此为"含轻奢带内本土设计/审美溢价"的偏宽结果；剔除非"设计师/东方美学"明确定位、回归狭义口径后下修至 <strong>约 50 亿元</strong> <span class="tag measured">测算值</span>。</p></blockquote>
-<p><strong>【方法 B：自上而下 大盘拆分，交叉验证】</strong> 女包大盘 480 亿<a class="ref" href="#ref-61">[61]</a> × 轻奢带占比约 1/3（由 ¥1k–1.9k 占 40.4%<a class="ref" href="#ref-62">[62]</a>外推 ¥1k–5k 段）≈ <strong>160 亿元（=TAM 中值）</strong>；其中"本土原创设计/东方美学"明确定位占轻奢带约 <strong>25%–40%</strong>（参照天猫千元以上女包 TOP15 国货已占 7 席<a class="ref" href="#ref-63">[63]</a>、TOP20 箱包服配国产占 15 席<a class="ref" href="#ref-13">[13]</a>的头部渗透外推）≈ <strong>40–64 亿元</strong>。与方法 A 狭义结果（约 50 亿）量级吻合，互证可信。</p>
-<p><strong>【方法 C：头部营收加总，下限校验】</strong> Songmont≈5 亿<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-10">[10]</a> + 古良吉吉≈3 亿<a class="ref" href="#ref-9">[9]</a> + 裘真/个乐/端木良锦/COSMILE 等头部合计估约 4–10 亿 ≈ <strong>12–18 亿元（=SOM）</strong>。头部占狭义盘约 1/4–1/3，符合成长期"头部跑出但长尾仍大"特征，构成狭义口径的可信下限。</p>
-<blockquote class="finding"><p><strong>三法收敛</strong>：方法 A（约 50 亿）≈ 方法 B（40–64 亿）&gt; 方法 C 下限（12–18 亿）。本报告取<strong>本赛道狭义规模 ≈ 40–70 亿元</strong> <span class="tag measured">测算值</span>，中枢约 <strong>50 亿元</strong>。</p></blockquote>
-<p><strong>敏感性分析（关键假设 ±20%，以方法 A 中性 86 亿宽口径为基准）：</strong></p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>关键假设</th><th class="num">基准</th><th class="num">-20%</th><th class="num">+20%</th><th>对规模影响（弹性）</th></tr></thead>
-<tbody>
-<tr><td>渗透率</td><td class="num">11.5%</td><td class="num">9.2%→69 亿</td><td class="num">13.8%→103 亿</td><td><strong>线性，弹性最高</strong>——渗透率是本赛道最大不确定来源</td></tr>
-<tr><td>客单价</td><td class="num">¥2,500</td><td class="num">¥2,000→69 亿</td><td class="num">¥3,000→103 亿</td><td>线性，与渗透同权重</td></tr>
-<tr><td>核心人群</td><td class="num">3,000 万</td><td class="num">2,400 万→69 亿</td><td class="num">3,600 万→103 亿</td><td>线性</td></tr>
-</tbody>
-</table></div>
-<blockquote class="note"><p>三参数同向 ±20% 叠加，规模在 <strong>44 亿（全部 -20%）— 149 亿（全部 +20%）</strong> 间摆动——说明本测算的量级（数十亿级）稳健，但精确点值高度依赖渗透/客单假设，故全章坚持以"区间 + <span class="tag measured">测算值</span>"而非单一点值表述。</p></blockquote>
-
-<h3>4. 三情景预测</h3>
-<p>以狭义口径中枢约 50 亿元 <span class="tag measured">测算值</span> 为 2025 基准，给出 2025–2030 三情景（增速锚定女包大盘 6%<a class="ref" href="#ref-61">[61]</a>为下界、设计师品牌大盘 18.4%<a class="ref" href="#ref-1">[1]</a>为上界参照）：</p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>情景</th><th class="num">2025–2030 CAGR</th><th class="num">2030 规模 <span class="tag measured">测算值</span></th><th>核心假设（各一句）</th></tr></thead>
-<tbody>
-<tr><td><strong>保守</strong></td><td class="num">6%–8%</td><td class="num">约 67–73 亿</td><td>轻奢替代外溢见顶、新中式退潮为短期风口、渗透与客单均温和——增速回落至女包大盘水平</td></tr>
-<tr><td><strong>中性</strong></td><td class="num">12%–15%</td><td class="num">约 88–101 亿</td><td>新中式/东方美学趋势延续为中期结构性力量、渗透稳步抬升 + 客单温和上行，量价双驱</td></tr>
-<tr><td><strong>乐观</strong></td><td class="num">18%–22%</td><td class="num">约 114–133 亿</td><td>东方美学成主流审美锚、中女悦己持续深化、内容电商飞轮放大头部，量价齐升、逼近设计师品牌大盘增速</td></tr>
-</tbody>
-</table></div>
-<blockquote class="finding"><p>本报告<strong>倾向中性偏乐观</strong>：§二已判定成长期早中段，叠加量价双驱动证据，<strong>12%–18% 区间最可能</strong>。</p></blockquote>
-
-<h3>5. 增长驱动因子：量价拆解</h3>
-<p><strong>初判：量价双驱，当前阶段「价驱动」更显性。</strong> 量化依据：</p>
-<ul>
-<li><strong>价驱动（当前更显性）</strong>：本土女包近年<strong>均价翻倍</strong>——半坡饰族 ¥541.6→¥1,584.8、食草堂 ¥295.4→¥871.7（2022Q2–2024Q4）<a class="ref" href="#ref-12">[12]</a>，Songmont 均价 ¥1,658.6→¥2,213<a class="ref" href="#ref-26">[26]</a>。国产女包"集体冲千元/破两千"是本阶段规模扩张的主引擎<a class="ref" href="#ref-62">[62]</a><a class="ref" href="#ref-64">[64]</a>。</li>
-<li><strong>量驱动（持续累积、长期主引擎）</strong>：核心人群扩容 + 渗透率抬升——天猫千元以上女包 TOP15 国货占 7 席<a class="ref" href="#ref-63">[63]</a>、双 11 箱包服配国产占 15/20 席<a class="ref" href="#ref-13">[13]</a>，本土玩家<strong>用户基数快速扩张</strong>；新中式人群外溢（服装→配饰）带来增量买家。</li>
-<li><strong>四大驱动因子定性</strong>：① <strong>新中式/东方美学崛起</strong>（小红书"新中式"声量 2023 +390%、月均互动千万级<a class="ref" href="#ref-65">[65]</a><a class="ref" href="#ref-66">[66]</a>；国潮"支持国货"为购买核心动因占 51.8%<a class="ref" href="#ref-67">[67]</a>）；② <strong>轻奢替代外溢</strong>（MK/Furla 退潮让出中端需求<a class="ref" href="#ref-5">[5]</a><a class="ref" href="#ref-6">[6]</a><a class="ref" href="#ref-14">[14]</a>）；③ <strong>中女悦己/对 logo 祛魅</strong>；④ <strong>内容电商飞轮</strong>（小红书种草—天猫成交—复购的闭环）。</li>
-</ul>
-<blockquote class="finding"><p><strong>量价关系小结</strong>：现阶段规模增长以<strong>价驱（溢价兑现）为显性主力、量驱（人群+渗透）为底层托底</strong>；中长期一旦价格上行触顶（千元已成普遍认知<a class="ref" href="#ref-64">[64]</a>），增长将更依赖量驱（渗透率从个位数向双位数爬升）——这是本赛道<strong>可持续性的关键变量</strong>，也是敏感性分析中"渗透率弹性最高"的现实映射。</p></blockquote>
-
-<h3>6. 消费者与需求洞察专节（本章重点）</h3>
-<blockquote class="note"><p>本节是岗位（Songmont 品牌营销）最看重的"市场洞察 + 消费趋势"主战场，交叉<strong>小红书/天猫消费数据 + 人群报告 + 趋势调研</strong>三类证据。</p></blockquote>
-
-<h4>6.1 谁在买：中女 / 新中式 / 静奢人群画像</h4>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>维度</th><th>画像</th><th>证据</th></tr></thead>
-<tbody>
-<tr><td><strong>年龄</strong></td><td>核心 <strong>28–40 岁</strong>，"35 岁是分水岭"——到此年龄段中产女性已对名牌包完成"祛魅"<a class="ref" href="#ref-68">[68]</a></td><td><a class="ref" href="#ref-68">[68]</a></td></tr>
-<tr><td><strong>城市</strong></td><td>一二线 + 强新一线为主；细分含"中产妈妈""收入可观、有房、独立的 Top10% 独立女性""都市名媛"<a class="ref" href="#ref-69">[69]</a></td><td><a class="ref" href="#ref-69">[69]</a></td></tr>
-<tr><td><strong>收入/消费力</strong></td><td>中产/新中产，有轻奢可支配预算但"富到不需要用大牌证明自己"<a class="ref" href="#ref-68">[68]</a>；客单 ¥2k–5k 不眨眼但拒绝为 logo 溢价数万</td><td><a class="ref" href="#ref-68">[68]</a><a class="ref" href="#ref-15">[15]</a></td></tr>
-<tr><td><strong>消费态度</strong></td><td>"<strong>富足而非贫穷</strong>"地不买大牌——审美/品味/消费价值观成熟，不冲动、不跟风，<strong>取悦自己</strong><a class="ref" href="#ref-68">[68]</a><a class="ref" href="#ref-69">[69]</a></td><td><a class="ref" href="#ref-68">[68]</a><a class="ref" href="#ref-69">[69]</a></td></tr>
-</tbody>
-</table></div>
-<blockquote class="finding"><p><strong>一句话画像：</strong>"一二线、28–40 岁、有钱有审美的独立中产女性，买包是为了取悦自己、表达品味，而不是向别人证明什么。"</p></blockquote>
-
-<h4>6.2 为什么买：从「buy logo」转向「买设计 / 审美 / 情绪价值」</h4>
-<ul>
-<li><strong>对名牌 logo 祛魅</strong>：全球奢侈品市场萎缩，"中女"对名牌包<strong>集体祛魅</strong>——"拥有即祛魅"，欲望被满足后光环消散，转而追求真实需求<a class="ref" href="#ref-68">[68]</a>。这是<strong>需求侧的根本转向</strong>：从"符号消费/身份证明"转向"价值消费/自我表达"。</li>
-<li><strong>悦己消费盛行</strong>：中产女性"财富增长 + 自我意识觉醒"双重叠加，更愿忠于内心、取悦自己<a class="ref" href="#ref-68">[68]</a>——包袋从"给别人看的身份标签"变成"给自己的情绪价值/审美愉悦"。</li>
-<li><strong>性价比 + 设计的双重理性</strong>："三四千的国产包平替 Coach""千元国产女包围剿 Coach"成小红书显学<a class="ref" href="#ref-64">[64]</a>——消费者<strong>既要设计独特性、又要去除大牌的智商税溢价</strong>，本土设计师品牌精准卡位（设计感 + 东方审美 + 1/5–1/3 的大牌价格）。</li>
-<li><strong>内容电商种草飞轮</strong>：女性在小红书被"种草"→购买体验→回平台分享"反向种草"，形成自传播闭环<a class="ref" href="#ref-70">[70]</a>；这是本赛道<strong>低预算高转化</strong>的获客结构性优势，也是品牌营销岗最可着力的杠杆。</li>
-</ul>
-
-<h4>6.3 东方美学为何此刻共鸣：文化自信 / 新中式外溢 / 对冲炫耀式消费</h4>
-<ul>
-<li><strong>文化自信是底层逻辑</strong>：国潮消费的底层是"强烈的中华文化认同与文化自信"<a class="ref" href="#ref-67">[67]</a>；购买国潮商品的核心动因中"支持国货"占 <strong>51.8%</strong>、"有文化内涵"占 46.2%、"质量保证"占 42.6%<a class="ref" href="#ref-67">[67]</a>——<strong>审美自信 + 文化认同</strong>取代了过去的"崇洋"心智。</li>
-<li><strong>新中式从服装外溢到配饰</strong>：新中式服装市场 2019→2023 从 <strong>582 亿→1,116 亿元</strong>、预计 2030 达 <strong>2,345 亿元</strong><a class="ref" href="#ref-71">[71]</a>；小红书"新中式"2023 声量 +390%、互动 +188%<a class="ref" href="#ref-71">[71]</a>，2024 月均"中式"种草互动达千万级<a class="ref" href="#ref-66">[66]</a>——<strong>穿上新中式的人，需要东方美学的包来搭配</strong>，配饰是服装风潮的自然外溢承接者。</li>
-<li><strong>对冲炫耀式消费（静奢/quiet luxury 的东方版）</strong>：在"祛魅大牌 + 文化自信"双重作用下，消费者偏好"<strong>低调、有故事、懂的人懂</strong>"的表达，而非显眼 logo 的炫耀式消费——东方美学包袋（含蓄、内敛、有文化叙事）恰好是<strong>中国语境下的"静奢"载体</strong>。</li>
-<li><strong>此刻共鸣的时间窗</strong>：文化自信（宏观）× 新中式风潮（中观，2023–24 爆发）× 中女祛魅悦己（微观）三重力量在 <strong>2023–2025 同时到位</strong>——这正是本赛道处于成长期、且东方美学定位品牌（如 Songmont）快速跑出的深层需求基础。</li>
-</ul>
-<blockquote class="finding"><p><strong>对品牌营销的启示（岗位相关）</strong>：本赛道的消费洞察指向一个清晰的营销母题——<strong>不卖 logo、卖"懂你的审美与情绪"</strong>。营销着力点应是：东方美学叙事（文化共鸣）+ 悦己情绪价值（自我表达）+ 小红书种草飞轮（内容自传播）+ 性价比理性（去溢价的设计），而非传统奢侈品的身份符号叙事。</p></blockquote>
+<div class="arc">
+  <div class="arc-yr"><div class="hd"><span class="y">第 1 年</span><span class="t">见其手</span></div><div class="bd"><p>立母题。主角锁定创始原点：母亲付玉兰缝的第一只祖母绿托特，加姥姥的非遗虎头帽针法。讲一只包如何从一双手里长出来，建好「见针档案库」内容中台与保修承诺，把认知锚点从 0 做到 1。</p></div></div>
+  <div class="arc-yr"><div class="hd"><span class="y">第 2 年</span><span class="t">见其名</span></div><div class="bd"><p>从付家三代扩到万荣姥姥团整体，每季认识一位姥姥。主打「她们本来无名，现在包上有她们的名字」，把 UGC 引向「我背的这只是谁缝的」。</p></div></div>
+  <div class="arc-yr"><div class="hd"><span class="y">第 3 年</span><span class="t">见其传</span></div><div class="bd"><p>姥姥带出的年轻学徒、非遗针法的当代化，甚至邀请用户参与一道可选手工工序（如亲手绑一个虎头帽挂饰）。从看见手作，到参与手作。</p></div></div>
+</div>
 </section>
 
 <!-- ===== CH6 ===== -->
 <section id="ch6">
-<h2>六、外部因素（PEST）</h2>
-<blockquote class="finding"><p><strong>本节核心判断</strong>：本赛道的外部环境<strong>整体顺风、局部有刺</strong>。政策（文化自信/国潮/提振消费）、社会文化（中女祛魅 + 静奢 + 新中式）、渠道技术（小红书种草飞轮）三股力量是<strong>明确的增长驱动</strong>；而知识产权/设计侵权（维权慢）、出海关税（145%）、AI 生成设计对原创壁垒的潜在稀释，则是<strong>需要主动管理的风险</strong>。下文逐项标出「驱动 ↑」或「风险 ↓」。</p></blockquote>
+<h2>六、战役节奏与内容日历</h2>
 
-<h3>1. 政治-政策（Political）</h3>
-<p><strong>① 文化自信 + 国潮入政（驱动 ↑，本赛道最重要的政策顺风）</strong></p>
-<p>《提振消费专项行动方案》（中共中央办公厅、国务院办公厅印发，<strong>2025-03-16</strong>，无对外文号<a class="ref" href="#ref-72">[72]</a>）明确提出「<strong>将中华优秀传统文化融入产品设计</strong>」「<strong>开拓国货'潮品'国内外增量市场</strong>」「<strong>支持开发原创知识产权（IP）品牌</strong>」<a class="ref" href="#ref-72">[72]</a>。这是党政最高层面把「传统文化融入设计 + 国货潮品」写入消费促进行动方案——<strong>直接为「东方美学 + 原创设计」定位的包袋品牌提供了顶层叙事正当性与政策托底</strong>。该方案<strong>已印发施行</strong>（非征求意见稿）。政策不直接给本赛道补贴，但通过「文化自信」的舆论场与消费导向，<strong>降低了消费者为「中国原创设计」付费的心理门槛</strong>。</p>
-<p><strong>② 知识产权 / 外观设计侵权治理（驱动 ↑ 但落地仍慢，是本赛道的核心痛点）</strong></p>
-<p>《2025 年知识产权行政保护工作方案》（国家知识产权局印发，<strong>2025-03-17</strong>，无对外文号<a class="ref" href="#ref-75">[75]</a>）提出：加强对「<strong>利用外观设计专利对他人在先注册商标实施侵权</strong>」等隐蔽性侵权的监管；「加强国家级知识产权保护中心和<strong>快速维权中心</strong>运行管理」；「加强对<strong>电商平台</strong>、商超、专业市场的监管」<a class="ref" href="#ref-75">[75]</a>。原创设计师品牌的核心资产是<strong>外观设计</strong>，而 §四已指出「<strong>原创难、抄袭易、维权慢</strong>」是中国原创共性难题<a class="ref" href="#ref-43">[43]</a>。政策方向利好原创方，<strong>但风险在于落地速度</strong>——故此项是「<strong>方向性利好、兑现待观察</strong>」。</p>
-<p><strong>③ 出海 / 关税（风险 ↓，但对本赛道是「次要风险」）</strong></p>
-<p>2025-04 美国对华额外关税升至 <strong>145%</strong>，并取消 800 美元以下小额豁免（T86）<a class="ref" href="#ref-76">[76]</a>。低附加值品类利润被压至 5% 以下<a class="ref" href="#ref-76">[76]</a>。本赛道<strong>当前以国内市场为主</strong>，出口敞口小，故关税对<strong>当下基本盘冲击有限</strong>。但对<strong>未来出海路径</strong>构成约束：①低价直邮模式已死，<strong>唯有「品牌溢价 + 东方美学叙事」能对冲关税成本</strong><a class="ref" href="#ref-76">[76]</a>——这与本赛道定位天然契合，反而是<strong>相对优势</strong>；②若未来出海，需优先布局<strong>非美市场（东南亚/欧洲/中东）</strong>。</p>
+<h3>1. 全年节奏：两轴四段</h3>
+<p>以巴黎时装周做 prestige 声量峰值，双 11 做转化收口，中间用女性节点和物候内容把节奏填满，不留空窗。</p>
 
-<h3>2. 经济（Economic）</h3>
-<p><strong>① 居民收入温和增长 + 消费分级（驱动 ↑）</strong></p>
-<p>国家统计局：2024 年全国居民人均可支配收入 <strong>41,314 元</strong>（实际 +5.1%）<a class="ref" href="#ref-73">[73]</a>；2025 年人均可支配收入 <strong>43,377 元</strong>（实际 +5.0%）<a class="ref" href="#ref-74">[74]</a>。其中 2025 年五等份分组<strong>高收入组人均 103,778 元、中间偏上组 55,586 元</strong><a class="ref" href="#ref-74">[74]</a>。本赛道核心客单价 ¥1k–5k 对应<strong>中等偏上及以上收入人群</strong>，这部分人群收入持续温和增长（实际增速约 5%）——不是「消费下行」，而是「<strong>消费分级 + 结构升级</strong>」：钱没变少，而是从「炫耀式大牌」转向「悦己式设计」。</p>
-<p><strong>② 国际轻奢遇冷 + 本土承接外溢（驱动 ↑，剪刀差的经济侧证据）</strong></p>
-<p>2024 年中国境内奢侈品市场销售额<strong>下降约 17%–20%</strong>（贝恩/机构口径，约 5,127 亿元）<a class="ref" href="#ref-80">[80]</a>；消费者倾向「<strong>降级消费</strong>」。高端奢侈品「降级消费」让出的中端需求，<strong>正是 ¥1k–5k 设计师包袋的承接区间</strong>。注意 nuance：「降级」不等于「不买」，而是从「为 logo 溢价」转向「为设计/性价比付费」。</p>
-<p><strong>③ 汇率与进口皮料成本（中性偏稳，非当前主要变量）</strong></p>
-<p>进口高端皮料是设计师包袋的「软进口依赖」<a class="ref" href="#ref-24">[24]</a>。2024 年人民币兑美元仅贬值约 <strong>2.0%</strong><a class="ref" href="#ref-80">[80]</a>。因贬幅小 + 皮料仅占成本一部分，当前<strong>传导压力有限</strong>。<strong>风险提示</strong>：若人民币大幅贬值或意大利皮料涨价，用进口皮料的高端线首当其冲；<strong>用国产皮料的中端线则相对免疫</strong>——这也是「供应链国产化」对本赛道的一层隐性对冲价值。</p>
+<figure class="fig">
+<div class="fig-title">全年节奏：巴黎立势，双 11 收口</div>
+<svg viewBox="0 0 760 235" role="img" aria-label="全年营销节奏声量曲线">
+<line class="ln-soft" x1="40" y1="196" x2="736" y2="196"/>
+<path class="area" d="M50 196 L112 186 L174 152 L236 176 L297 142 L359 148 L421 176 L483 166 L544 108 L575 74 L606 106 L668 96 L730 168 L730 196 L50 196 Z"/>
+<path class="ln" d="M50 196 L112 186 L174 152 L236 176 L297 142 L359 148 L421 176 L483 166 L544 108 L575 74 L606 106 L668 96 L730 168"/>
+<circle class="dot" cx="575" cy="74" r="5"/>
+<text class="t-muted" x="575" y="46" text-anchor="middle" font-size="10">9–10 月 · 声量峰值</text>
+<text class="t-accent" x="575" y="62" text-anchor="middle" font-size="13">巴黎时装周</text>
+<circle class="dot" cx="668" cy="96" r="5"/>
+<text class="t-muted" x="676" y="72" text-anchor="middle" font-size="10">转化收口</text>
+<text class="t-data" x="676" y="88" text-anchor="middle" font-size="13">双 11</text>
+<circle class="dot" cx="174" cy="152" r="4"/>
+<text class="t-muted" x="174" y="140" text-anchor="middle" font-size="10">三八</text>
+<circle class="dot" cx="297" cy="142" r="4"/>
+<text class="t-muted" x="297" y="130" text-anchor="middle" font-size="10">母亲节</text>
+<circle class="dot" cx="359" cy="148" r="4"/>
+<text class="t-muted" x="359" y="136" text-anchor="middle" font-size="10">618</text>
+<text class="t-muted" x="50" y="214" text-anchor="middle" font-size="9">1月</text>
+<text class="t-muted" x="174" y="214" text-anchor="middle" font-size="9">3月</text>
+<text class="t-muted" x="297" y="214" text-anchor="middle" font-size="9">5月</text>
+<text class="t-muted" x="421" y="214" text-anchor="middle" font-size="9">7月</text>
+<text class="t-muted" x="544" y="214" text-anchor="middle" font-size="9">9月</text>
+<text class="t-muted" x="668" y="214" text-anchor="middle" font-size="9">11月</text>
+</svg>
+<figcaption>纵轴为品牌声量节律。女性节点与物候内容托底，巴黎做年度最高声量峰值，双 11 承接为成交。</figcaption>
+</figure>
 
-<h3>3. 社会-文化（Social）</h3>
-<p><strong>① 中女祛魅 + 悦己消费（驱动 ↑，本赛道最深层的需求引擎）</strong></p>
-<p>95 后、00 后女生<strong>花在自己身上的消费占比高达 70%</strong>（同年龄段最高）<a class="ref" href="#ref-77">[77]</a>；英敏特《2025 中国消费者》指出消费在「理性基调中深耕价值、悦己」<a class="ref" href="#ref-77">[77]</a>。消费动机从「<strong>Logo 崇拜 → 价值观认同</strong>」迁移<a class="ref" href="#ref-77">[77]</a>——女性买包不再是「向外证明身份」，而是「<strong>向内取悦自己</strong>」。</p>
-<p><strong>② 静奢（Quiet Luxury）东方版 + Z 世代审美换挡（驱动 ↑）</strong></p>
-<p>中国奢侈品包袋市场中 <strong>Z 世代（95 后）占比已达 28%</strong>，且更愿为「有故事、有态度」的品牌买单<a class="ref" href="#ref-77">[77]</a>。Z 世代<strong>对显眼 logo 的祛魅 + 对文化叙事的偏好</strong>，恰好是东方美学包袋的天然受众——为本赛道提供了<strong>接棒中女、延续成长期的人口结构红利</strong>。</p>
-<p><strong>③ 新中式 / 文化自信（驱动 ↑，与 §五共鸣母题一致）</strong></p>
-<p>新中式从服装外溢到配饰（新中式服装 2023 已达 1,116 亿元、2030 预计 2,345 亿元<a class="ref" href="#ref-71">[71]</a>）；小红书「中式」种草 2024 月均互动达千万级<a class="ref" href="#ref-66">[66]</a>；国潮购买核心动因「支持国货」51.8%<a class="ref" href="#ref-67">[67]</a>。文化自信是一种<strong>自上而下（政策）与自下而上（消费）双向奔赴</strong>的社会情绪——它把「东方美学」从小众审美变成<strong>大众可消费的潮流符号</strong>。</p>
+<div class="flight">
+  <div class="q"><div class="qh">Q1 · 埋线</div><div class="qb"><b>见其手上线</b><br>档案库内容中台搭建；三八妇女节切入「被看见的女性」；启动首城见针保修试点</div></div>
+  <div class="q"><div class="qh">Q2 · 蓄势</div><div class="qb"><b>母亲节高光</b><br>付玉兰「零号员工」真实手作叙事；618 店播 + 种草承接，走松弛不煽情</div></div>
+  <div class="q"><div class="qh">Q3–Q4 · 立势</div><div class="qb"><b>巴黎时装周为轴</b><br>把里望村手作现场搬进巴黎「见针·万荣」章；六旬姥姥被巴黎看见，产出高质量 PGC 反哺小红书</div></div>
+  <div class="q"><div class="qh">双 11 · 收口</div><div class="qb"><b>转化 + 蓄客</b><br>见针年度限量款带编号档案卡；以养代换，首购赠养护权益，承接天猫箱包第一</div></div>
+</div>
+<blockquote class="note"><p>稀缺性来自「这位姥姥今年只做这么多针」，真实而非人造饥饿。双 11 落地页嵌档案库与验真溯源，正面回应价格质疑，用信任内容而非降价冲榜。</p></blockquote>
 
-<h3>4. 技术-外部（Technological）</h3>
-<blockquote class="note"><p><strong>与 §三的分工</strong>：§三谈的是行业<strong>内部</strong>技术（材料工艺、五金、供应链）；本节谈<strong>外部</strong>技术因子——即「<strong>渠道技术</strong>」与「<strong>AI 技术外溢</strong>」如何从行业之外改变本赛道的竞争规则。</p></blockquote>
-<p><strong>① 内容电商 / 小红书种草飞轮（驱动 ↑，本赛道增长的「渠道技术」底座）</strong></p>
-<p>2024 年小红书月活 <strong>2.8 亿</strong>、电商 GMV 突破 <strong>4,000 亿元（同比 +45%）</strong>，<strong>60% 交易由站内笔记直接引导完成</strong>、电商复购率 43%<a class="ref" href="#ref-78">[78]</a>；「成交百万元的单品，100% 站内有种草」<a class="ref" href="#ref-78">[78]</a>；2025 年发布 <strong>AIPS 人群资产模型</strong><a class="ref" href="#ref-78">[78]</a>。小红书的「内容种草 → 算法分发 → 转化 → 反向种草」闭环<a class="ref" href="#ref-70">[70]</a>，让「无大牌预算」的设计师品牌可以靠<strong>内容质量而非投放预算</strong>起量。<strong>风险侧</strong>：平台算法与流量规则一旦变化，种草飞轮的获客成本将被动抬升——渠道技术既是红利，也是<strong>外部依赖性风险</strong>。</p>
-<p><strong>② AI 设计 / AI 营销 / 数字试戴（机会与威胁并存）</strong></p>
-<ul>
-<li><strong>机会 ↑</strong>：生成式 AI 虚拟试戴已能单张照片秒级试穿、AI 加速设计周期、AI 辅助营销内容生产<a class="ref" href="#ref-79">[79]</a>——可降低设计师品牌的内容生产与选品成本。</li>
-<li><strong>威胁 ↓（对「原创壁垒」的潜在稀释）</strong>：AI 可批量生成「类设计师风格」的包袋外观，<strong>理论上削弱原创设计的稀缺性与抄袭门槛</strong>。</li>
-<li><strong>但关键 nuance（威胁被高估）</strong>：① 司法已划线——<strong>北京互联网法院 2023 年「AI 文生图」案确认：使用 AI 但有实质性创作投入者可被认定为「作者」、享有著作权</strong><a class="ref" href="#ref-79">[79]</a>；苏州中院 2025 年反向认定「缺乏人类创作投入的 AI 生成内容不受保护」<a class="ref" href="#ref-79">[79]</a>——即 AI 不会自动消解「人类原创」的法律保护。② 本赛道的真壁垒是「<strong>品牌叙事 + 用户心智 + 供应链工艺</strong>」，<strong>AI 能仿图样，仿不了「Songmont 的中原叙事 + 姥姥匠人 + 实体质感」</strong>。故 AI 对本赛道是「<strong>威胁有限、机会可用</strong>」：威胁主要落在腰尾部白牌，头部设计师品牌反而可借 AI 提效。</li>
-</ul>
-
-<h3>5. PEST 小结：驱动 vs 风险一览</h3>
+<h3>2. 内容日历骨架：借七十二候排格子</h3>
+<p>为了解决三年连载最怕的「内容断粮」，用物候节律给内容排一张长期日历，每个节点对应一类可复用的内容母版，而不是一次性追热点。</p>
 <div class="table-scroll"><table class="data-table">
-<thead><tr><th>维度</th><th>驱动 ↑（顺风）</th><th>风险 ↓（逆风）</th><th>呼应</th></tr></thead>
+<caption>全年文化时刻 · 内容日历（骨架，节气 + 传统节日 + 女性主题）</caption>
+<thead><tr><th>时段</th><th>可用节点</th><th>内容母版方向</th></tr></thead>
 <tbody>
-<tr><td><strong>政治 P</strong></td><td>文化自信/国潮入政（提振消费方案<a class="ref" href="#ref-72">[72]</a>）；知识产权快速维权方向<a class="ref" href="#ref-75">[75]</a></td><td>设计侵权维权落地仍慢<a class="ref" href="#ref-75">[75]</a><a class="ref" href="#ref-43">[43]</a>；出海关税 145%<a class="ref" href="#ref-76">[76]</a>（次要）</td><td>§二/§五</td></tr>
-<tr><td><strong>经济 E</strong></td><td>中等偏上收入温和增长<a class="ref" href="#ref-73">[73]</a><a class="ref" href="#ref-74">[74]</a>；轻奢遇冷外溢被本土承接<a class="ref" href="#ref-80">[80]</a></td><td>汇率贬值推高进口皮料成本（当前贬幅小、压力有限<a class="ref" href="#ref-80">[80]</a>）</td><td>§二 剪刀差</td></tr>
-<tr><td><strong>社会 S</strong></td><td>中女祛魅悦己<a class="ref" href="#ref-77">[77]</a><a class="ref" href="#ref-68">[68]</a>；Z 世代 28% 接棒<a class="ref" href="#ref-77">[77]</a>；新中式/文化自信<a class="ref" href="#ref-71">[71]</a><a class="ref" href="#ref-67">[67]</a></td><td>「炫耀式消费」对冲是双刃——若审美风潮退烧则需求承压</td><td>§五 三重共鸣</td></tr>
-<tr><td><strong>技术-外部 T</strong></td><td>小红书种草飞轮（GMV +45%、百万单品 100% 有种草<a class="ref" href="#ref-78">[78]</a>）；AI 提效</td><td>平台算法/流量规则外部依赖；AI 稀释外观壁垒（但司法已护原创<a class="ref" href="#ref-79">[79]</a>）</td><td>§三 内部技术</td></tr>
+<tr><td>1–2 月</td><td>春节、立春、雨水</td><td>若参与用山西 / 中原非遗差异化，不追生肖流量明星</td></tr>
+<tr><td>3 月</td><td>三八妇女节、惊蛰、春分</td><td>女性悦己主场，走「为自己 / 松弛」，严禁贤妻良母口吻</td></tr>
+<tr><td>4 月</td><td>清明、谷雨</td><td>时间、自然、慢的东方体感词，接「把手交给时间」</td></tr>
+<tr><td>5 月</td><td>立夏、母亲节</td><td>付玉兰与姥姥团真实手作叙事天然契合，松弛不煽情</td></tr>
+<tr><td>6 月</td><td>端午、夏至、618</td><td>电商大促，店播 + 种草承接，见针保修做卖点</td></tr>
+<tr><td>7–8 月</td><td>小暑、七夕、立秋</td><td>旅行 / 出走延展场景，一包一段路的使用痕迹</td></tr>
+<tr><td>9–10 月</td><td>白露、秋分、中秋、<strong>巴黎时装周</strong></td><td>年度声量峰值，「见针·万荣」巴黎章，姥姥被看见</td></tr>
+<tr><td>11 月</td><td>立冬、<strong>双 11</strong></td><td>全年最大转化收口，限量档案卡 + 以养代换</td></tr>
+<tr><td>12 月</td><td>冬至、年终</td><td>回顾与礼赠，为次年主角埋叙事线</td></tr>
 </tbody>
 </table></div>
-<blockquote class="finding"><p><strong>总判断</strong>：本赛道处于「<strong>政策、社会、渠道技术三重顺风</strong>」的窗口期，与 §二「成长期（偏早中段）」判定一致；主要风险（设计侵权、关税、AI 稀释）<strong>均非颠覆性</strong>。<strong>对品牌营销岗的启示</strong>：应<strong>顺势绑定政策叙事（文化自信/国潮）+ 重仓小红书种草飞轮 + 用 AI 提效内容生产</strong>，同时<strong>主动登记外观设计专利、建设防抄袭的法律护城河</strong>。</p></blockquote>
 </section>
 
 <!-- ===== CH7 ===== -->
 <section id="ch7">
-<h2>七、景气度指标体系</h2>
-<blockquote class="warn"><p><strong>本节定位与方法论提醒</strong>：本赛道<strong>无官方景气指数、无第三方独立监测口径</strong>。据 §三判定，本赛道利润与壁垒集中在<strong>"品牌端 + 内容渠道端"</strong>，故景气度监测的重心不在"上游产能/原料"，而在<strong>"品牌端的量价表现 + 内容渠道端的声量与转化 + 需求侧的结构性趋势"</strong>。本节指标分三层：<strong>纵向（先行）→ 横向（同步/滞后）→ 未来 12–24 月重点监测清单</strong>，并严格区分"可核数据 <a class="ref" href="#appC">[N]</a>"与"取不到的留空/<span class="tag unsourced">UNSOURCED</span>"。</p></blockquote>
+<h2>七、整合渠道打法</h2>
+<blockquote class="finding"><p><strong>打法总纲：</strong>不是多渠道铺量，而是「小红书种草飞轮为主阵地，买手 / 店播做成交，线下策展造声量峰值，抖音做破圈，播客与 PR 做深度与背书」的组合。全链路一句话：巴黎立势，小红书养草，抖音播客扩声，双 11 收口。依据是品牌自有数据，内容质量比投放预算更能起量。</p></blockquote>
 
-<h3>1. 纵向指标：品牌端 + 内容渠道端高频先行指标</h3>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>先行指标</th><th>含义 / 为何先行</th><th>当前可核证据（含取数日期与源）</th><th>读法</th></tr></thead>
-<tbody>
-<tr><td><strong>① 头部品牌天猫均价（季度）</strong></td><td>品牌端"价驱动"的直接体现；均价上行=品牌溢价兑现、景气向上</td><td>魔镜数据天猫口径：<strong>Songmont 女包均价 ¥1,658.6（2022Q2）→ ¥2,213（2024Q4）；个乐 GROTTO ¥2,487.4 → ¥2,807.8</strong><a class="ref" href="#ref-96">[96]</a></td><td>均价持续上行=溢价兑现、景气扩张；一旦见顶回落=价驱动力衰竭</td></tr>
-<tr><td><strong>② 设计师品牌天猫/双11 头部榜单位次（月度/大促）</strong></td><td>内容渠道端"量+心智"的兑现；位次上升=本土份额抬升、替代加速</td><td>蝉魔方：<strong>2025 年 2 月天猫"千元以上女包"TOP15 国货占 7 席，Songmont、裘真居第 2/3</strong><a class="ref" href="#ref-97">[97]</a>；Songmont 双11箱包服配榜 <strong>2023 第 3→2024 第 2→2025 第 1</strong><a class="ref" href="#ref-10">[10]</a></td><td>国货席位数、Songmont 位次连续抬升=景气向上；停滞/回落=拐点预警</td></tr>
-<tr><td><strong>③ 新中式/东方美学内容声量（月度）</strong></td><td>需求侧趋势的最前端信号；声量领先于成交，是"趋势风口"温度计</td><td>小红书"新中式"<strong>2023 声量 +390%、互动 +188%</strong><a class="ref" href="#ref-71">[71]</a>；2024 月均"中式"种草互动达<strong>千万级</strong><a class="ref" href="#ref-66">[66]</a>；2025 上半年小红书日均新增笔记 <strong>700 万篇</strong>（大盘）</td><td>声量增速放缓/回落=新中式风潮退潮的最早预警（领先成交 1–2 季）</td></tr>
-</tbody>
-</table></div>
-<blockquote class="note"><p><strong>③ 的口径诚实说明</strong>：小红书"日均新增笔记 700 万篇"为<strong>全平台大盘</strong>口径，<strong>非"新中式包/设计师包"细分品类</strong>的精确声量；本赛道细分品类的月度声量精确序列取不到（需千瓜/果集/蝉小红付费库），已记 §B 缺口。本节用"新中式"大类声量<a class="ref" href="#ref-66">[66]</a><a class="ref" href="#ref-71">[71]</a>作为趋势温度计的可核代理，不臆造细分品类数字。</p></blockquote>
-<blockquote class="finding"><p><strong>纵向指标小结</strong>：三类先行指标当前<strong>一致指向景气向上</strong>——头部均价持续上行、国货榜单位次连年抬升、新中式声量高位。但 ①② 的"价/位次"已处高位（Songmont 已登顶、均价破两千），后续向上空间收窄，景气可持续性更取决于 ③ 声量能否维持与渗透率（量）能否接棒。</p></blockquote>
+<figure class="fig">
+<div class="fig-title">整合渠道：小红书种草飞轮</div>
+<svg viewBox="0 0 760 300" role="img" aria-label="小红书种草飞轮与整合渠道">
+<defs><marker id="ar5" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path class="fill-accent" d="M0 0 L8 4 L0 8 Z"/></marker></defs>
+<circle class="box-accent" cx="380" cy="158" r="60"/>
+<text class="t-title" x="380" y="152" text-anchor="middle" font-size="15">小红书</text>
+<text class="t-accent" x="380" y="174" text-anchor="middle" font-size="13">种草飞轮</text>
+<rect class="box-brand" x="300" y="18" width="160" height="52" rx="10"/>
+<text class="t-title" x="380" y="42" text-anchor="middle" font-size="13">① 内容种草</text>
+<text class="t-muted" x="380" y="60" text-anchor="middle" font-size="10.5">见针档案库 · 达人金字塔</text>
+<rect class="box-brand" x="470" y="230" width="170" height="52" rx="10"/>
+<text class="t-title" x="555" y="254" text-anchor="middle" font-size="13">② 成交</text>
+<text class="t-muted" x="555" y="272" text-anchor="middle" font-size="10.5">买手 · 店播 · 双11</text>
+<rect class="box-brand" x="120" y="230" width="170" height="52" rx="10"/>
+<text class="t-title" x="205" y="254" text-anchor="middle" font-size="13">③ 反向种草</text>
+<text class="t-muted" x="205" y="272" text-anchor="middle" font-size="10.5">UGC · 顾客原声</text>
+<path class="ln" marker-end="url(#ar5)" d="M446 78 C 520 110, 540 172, 528 226"/>
+<path class="ln" marker-end="url(#ar5)" d="M470 262 C 400 286, 320 286, 292 264"/>
+<path class="ln" marker-end="url(#ar5)" d="M212 226 C 200 168, 224 110, 314 78"/>
+<rect class="box" x="600" y="120" width="150" height="52" rx="10"/>
+<text class="t-title" x="675" y="143" text-anchor="middle" font-size="12">抖音 · 播客</text>
+<text class="t-muted" x="675" y="160" text-anchor="middle" font-size="10.5">破圈扩声</text>
+<path class="ln-soft" marker-end="url(#ar5)" d="M598 150 C 520 150, 500 152, 444 154"/>
+<rect class="box" x="10" y="120" width="150" height="52" rx="10"/>
+<text class="t-title" x="85" y="143" text-anchor="middle" font-size="12">巴黎 · 线下策展</text>
+<text class="t-muted" x="85" y="160" text-anchor="middle" font-size="10.5">立势 · PR 声量</text>
+<path class="ln-soft" marker-end="url(#ar5)" d="M162 150 C 240 150, 262 156, 316 158"/>
+</svg>
+<figcaption>小红书为主阵地，种草到成交到反向种草自转。巴黎与线下策展在左侧立势注入声量，抖音与播客在右侧破圈扩声。</figcaption>
+</figure>
 
-<h3>2. 横向指标：行业自有同步/滞后指标</h3>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th>指标名</th><th>更新频率</th><th>数据源</th><th>当前最新值</th><th class="num">同比</th><th class="num">环比</th></tr></thead>
-<tbody>
-<tr><td><strong>限额以上服装鞋帽针纺织品类零售额</strong></td><td>月度/年度</td><td>国家统计局<a class="ref" href="#ref-92">[92]</a></td><td>2025 全年（口径为增速）</td><td class="num">+3.2%</td><td class="num">—</td></tr>
-<tr><td><strong>社会消费品零售总额（大盘背景）</strong></td><td>月度/年度</td><td>国家统计局<a class="ref" href="#ref-92">[92]</a></td><td><strong>501,202 亿元</strong>（2025 全年）</td><td class="num">+3.7%</td><td class="num">—</td></tr>
-<tr><td><strong>"新中式"大市场规模（含服饰/珠宝/香妆/茶饮）</strong></td><td>年度</td><td>瞭望/北京日报<a class="ref" href="#ref-93">[93]</a></td><td><strong>&gt;9,500 亿元</strong>（2024）</td><td class="num">近 5 年快增</td><td class="num">—</td></tr>
-<tr><td><strong>国潮（新中式）服饰市场规模</strong></td><td>年度</td><td>中新网/光明网<a class="ref" href="#ref-94">[94]</a></td><td>2024 <strong>&gt;2,200 亿元</strong>；2025 预计 <strong>2,500 亿元</strong></td><td class="num">成交 +120%</td><td class="num">—</td></tr>
-<tr><td><strong>新中式服装市场规模</strong></td><td>年度</td><td>华龙网/华经<a class="ref" href="#ref-71">[71]</a></td><td><strong>1,115.51 亿元</strong>（2023）；2030 预计 2,345.30 亿</td><td class="num">582→1116 亿(19→23)</td><td class="num">—</td></tr>
-<tr><td><strong>女包大盘零售额（赛道母市场）</strong></td><td>年度</td><td>格隆汇/报告大厅<a class="ref" href="#ref-61">[61]</a></td><td>约 <strong>480 亿元</strong>（2024）；2025 预计破 520 亿</td><td class="num">CAGR≈6%</td><td class="num">—</td></tr>
-<tr><td><strong>优质皮料成本（熟皮价格指数）</strong></td><td>半月度</td><td>中国皮革协会<a class="ref" href="#ref-99">[99]</a></td><td>熟皮价格指数（2025 年 2 月下半月）</td><td class="num">−4.89%</td><td class="num">−0.56%</td></tr>
-<tr><td><strong>国际轻奢在华关店（供给收缩）</strong></td><td>不定期</td><td>腾讯/Capri 财报<a class="ref" href="#ref-95">[95]</a></td><td>Capri 计划未来两年全球关约 75 家 MK 门店；MK 北京仅剩 <strong>3 家</strong>；Furla 中国 <strong>60+→40 家</strong><a class="ref" href="#ref-6">[6]</a></td><td class="num">MK/Coach/KS −9.7/−2.3/−4.7%</td><td class="num">—</td></tr>
-<tr><td><strong>Coach 大中华区表现（中端争夺对手）</strong></td><td>季度</td><td>华丽志/21财经<a class="ref" href="#ref-100">[100]</a></td><td>大中华区营收占 Coach 品牌约 <strong>18%</strong>（FY25Q1 口径·非市占率）；Coach 品牌大中华区 FY26Q1 <strong>+20%</strong>、FY26Q2 <strong>+37%</strong>（大中华区整体约 +34%）；计划 3 年内中国开约 <strong>100 家</strong>门店</td><td class="num">强劲转正</td><td class="num">—</td></tr>
-<tr><td><strong>头部品牌客单价/复购率</strong></td><td>—</td><td>—</td><td class="unsourced"><strong>[部分留空]</strong>：客单价以均价<a class="ref" href="#ref-96">[96]</a>替代；复购率仅有大盘"50–70% 复购占比最高 35%"<a class="ref" href="#ref-25">[25]</a>，无赛道精确序列[B-§2.6]</td><td class="num">—</td><td class="num">—</td></tr>
-<tr><td><strong>赛道退货率</strong></td><td>—</td><td>—</td><td class="unsourced"><span class="tag unsourced">UNSOURCED</span>：无公开权威值（沿用 §三 [B1]），未编造</td><td class="num">—</td><td class="num">—</td></tr>
-</tbody>
-</table></div>
-<blockquote class="note"><p><strong>横向指标读法</strong>：宏观背景<strong>温和</strong>（社零 +3.7%、服装鞋帽针纺 +3.2%——大盘平淡，反衬本赛道"子赛道快于母行业"的成长期特征）；趋势侧<strong>强劲</strong>（新中式/国潮服饰 +120% 成交）；供给侧<strong>国际轻奢收缩</strong>但 <strong>Coach 强势复苏</strong>（FY26Q2 +37%、3 年开 100 店）——这一"一退一进"正是 §四竞争格局判断的景气注脚：<strong>中端需求争夺正在加剧，而非本土单边吃下</strong>。成本端（皮料）温和下行/持平<a class="ref" href="#ref-99">[99]</a>，对品牌端毛利构成短期友好。</p></blockquote>
+<h3>1. 小红书：绝对主场，见针档案库做内容中台</h3>
+<ul>
+<li><strong>人群反漏斗 + AIPS 分层</strong>，先卡「28 到 40 中女、悦己、通勤、新中式」核心人群再外扩。品牌现有 67.1% 声量在小红书 <span class="tag brand">品牌公开口径</span>。</li>
+<li><strong>达人金字塔</strong>：3 到 5 位垂类头部背书，加数十位腰部场景实测，加大批 KOC 铺真实感。</li>
+<li><strong>搜索卡位单列</strong>：搜索转化显著高于推荐 <span class="tag brand">第三方口径</span>，建品牌词、品类词、长尾词库，狙击「平替」竞品词。</li>
+<li><strong>内容中台</strong>：以「见针档案库」为选题源，产出手作人肖像故事、工序慢直播、「猜猜这只是谁缝的」互动、「我的包背后的姥姥」UGC 征集。</li>
+</ul>
 
-<h3>3. 未来 12–24 月重点监测清单</h3>
-<p>精选 <strong>8 个</strong>对本赛道景气拐点最敏感的信号，<strong>指标覆盖 §五 四大增长因子</strong>：</p>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th class="num">#</th><th>监测信号</th><th>盯什么（数据源）</th><th>预警阈值（拐点信号）</th><th>对应增长因子</th></tr></thead>
-<tbody>
-<tr><td class="num">1</td><td><strong>头部线上增速放缓</strong></td><td>Songmont 等头部天猫/抖音月度 GMV 增速、双11/618 位次（蝉魔方/魔镜）</td><td>头部线上增速<strong>连续 2–3 个季度放缓</strong>或双11位次<strong>首次回落</strong> → 需求见顶</td><td>量价双驱（主引擎）</td></tr>
-<tr><td class="num">2</td><td><strong>头部均价见顶</strong></td><td>Songmont/个乐天猫季度均价（魔镜）<a class="ref" href="#ref-96">[96]</a></td><td>季度均价<strong>环比连续 2 季持平或回落</strong>（当前已破 ¥2,200） → 溢价兑现触顶，增长须转靠"量"</td><td>中女悦己（溢价支付意愿）</td></tr>
-<tr><td class="num">3</td><td><strong>新中式声量回落</strong></td><td>小红书"新中式/新中式包"月度声量与互动（千瓜/果集）</td><td>声量同比由 +390%<a class="ref" href="#ref-71">[71]</a> 大幅收敛至<strong>个位数增长或转负</strong> → 趋势退潮</td><td>新中式/东方美学崛起</td></tr>
-<tr><td class="num">4</td><td><strong>国潮服饰成交增速降挡</strong></td><td>国潮/新中式服饰大促成交同比（光明网/平台战报）<a class="ref" href="#ref-94">[94]</a></td><td>由 +120%<a class="ref" href="#ref-94">[94]</a> <strong>腰斩至 +30% 以下</strong> → 服装风潮见顶，配饰外溢动能减弱</td><td>新中式外溢（服装→配饰）</td></tr>
-<tr><td class="num">5</td><td><strong>国际轻奢关店放缓 / Coach 加速</strong></td><td>MK/Furla/Kate Spade 在华门店净变动；Coach 大中华区季度增速与开店数<a class="ref" href="#ref-95">[95]</a><a class="ref" href="#ref-100">[100]</a></td><td>国际轻奢<strong>关店明显放缓</strong>、或 Coach <strong>维持 +20% 以上高增 + 落地 100 店</strong> → 中端争夺加剧</td><td>轻奢替代外溢（争夺对手）</td></tr>
-<tr><td class="num">6</td><td><strong>新品牌融资骤减 / 资本退场</strong></td><td>设计师包袋品牌年度融资事件数（IT桔子/烯牛/天眼查）</td><td>近年新融资本已稀疏（多集中 2018–2021<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-98">[98]</a>）；若<strong>连续 12 个月零新融资</strong> → 资本对赛道祛魅</td><td>玩家/资本进入</td></tr>
-<tr><td class="num">7</td><td><strong>客单价触顶后的复购/退货背离</strong></td><td>头部复购率、退货率季度序列（蝉魔方/生意参谋，<strong>当前缺[B-§2.6]</strong>）</td><td>客单价已高位<a class="ref" href="#ref-96">[96]</a> 但<strong>复购率下行 + 退货率上行</strong> → 高价低质口碑反噬<a class="ref" href="#ref-44">[44]</a></td><td>中女悦己（口碑/LTV）</td></tr>
-<tr><td class="num">8</td><td><strong>内容电商飞轮转化衰减</strong></td><td>小红书种草→天猫成交的转化效率、达人投放 ROI（蝉小红/平台）</td><td>声量高但<strong>成交转化率持续下滑</strong> → 内容飞轮失灵、获客成本上行</td><td>内容电商飞轮</td></tr>
-</tbody>
-</table></div>
-<blockquote class="finding"><p><strong>监测清单优先级</strong>：以<strong>信号 1（头部线上增速）+ 信号 3（新中式声量）+ 信号 5（Coach/国际轻奢动向）</strong> 为<strong>三大核心拐点哨兵</strong>——分别对应"品牌端量价、需求侧趋势、竞争侧争夺"三条最关键的景气主线。信号 7、8 因数据高频序列暂缺（§B 缺口），属"应建未建"的监测短板，建议优先补齐高频复购/退货与转化率数据源。</p></blockquote>
-<blockquote class="warn"><p><strong>⚠ 数据可得性总评（反幻觉声明）</strong>：本赛道<strong>无任何官方景气指数</strong>，本节先行指标依赖<strong>第三方电商数据机构（魔镜/蝉魔方）的零散披露</strong> + <strong>国家统计局宏观零售背景数据</strong><a class="ref" href="#ref-92">[92]</a> + <strong>趋势侧国潮/新中式规模</strong><a class="ref" href="#ref-93">[93]</a><a class="ref" href="#ref-94">[94]</a>。凡取不到精确序列者已如实标 <span class="tag unsourced">UNSOURCED</span> 或留空并记 §B 缺口，<strong>未以"约/大约"蒙混、未臆造任何点值</strong>。</p></blockquote>
+<h3>2. 线下：策展式限时展，巴黎峰值 + 国内巡展前置</h3>
+<p>复用已跑通的策展模型（远山有声、风生·造物）。巴黎做年度峰值，国内一线城市巡回小展做转化前置。每场展都是「可拍照加有文化叙事」的素材源，前置 KOC 分发反哺飞轮。</p>
+
+<h3>3. 抖音 · 播客 · PR</h3>
+<ul>
+<li><strong>抖音</strong>：承接情感短纪录片破圈，把小红书爆款单品叙事在兴趣电商重做。抖音声量占比低但互动贡献高 <span class="tag brand">品牌公开口径</span>，适合大事件撬互动。</li>
+<li><strong>播客《山下声》</strong>：走「被看见的女性 / 手作与时间」深度对谈，触达高知女性。</li>
+<li><strong>PR</strong>：主打「六旬姥姥登巴黎」文化叙事稿；信任状矩阵（连续两年巴黎时装周、创始人入选 BoF 500）系统化成海外社媒资产。</li>
+</ul>
+
+<h3>4. 代言假设 <span class="tag assume">策略假设</span></h3>
+<p>选角逻辑锁定气质派、影后路线（如吴彦姝这类年龄气质与姥姥团呼应者），在巴黎现场做「两代女性对话」共创，而非顶流带货。依据是品牌已验证 PGC 少量声量撬动多数互动、代言走气质派而非流量的路径 <span class="tag brand">品牌公开口径</span>。此为策略假设，落地需实际签约。</p>
 </section>
 
 <!-- ===== CH8 ===== -->
 <section id="ch8">
-<h2>八、对 Songmont 的品牌营销启示（岗位定制章）</h2>
-<blockquote class="finding"><p>本章是岗位定制章：把前七章的赛道/竞争/消费者/趋势洞察，翻译成对 Songmont 品牌营销的 <strong>5 条可执行策略</strong>。每条按【洞察依据】→【策略】→【呼应 JD】→【可落地动作】展开。贯穿原则与 JD 一致——<strong>从品牌价值出发，而非追逐热点</strong>。</p></blockquote>
-<blockquote class="note"><p>说明：本章为行业研究的延伸应用，含基于公开信息的策略建议，不代表 Songmont 内部立场；具体执行需结合公司实际资源与数据。</p></blockquote>
-
-<div class="strat-card">
-  <div class="strat-head"><span class="n">01</span>把"东方美学"从视觉符号升级为"可持续的叙事系统"</div>
-  <div class="strat-body">
-    <div class="strat-row"><div class="lab">洞察依据</div><div class="val"><p>§三/§四：东方美学作为护城河，<strong>易被抄的是视觉符号，真正护城的是"叙事系统性"</strong>；而 Songmont 已遭"设计趋同、重营销轻设计"质疑<a class="ref" href="#ref-44">[44]</a>。</p></div></div>
-    <div class="strat-row"><div class="lab">策略</div><div class="val"><p>不停留在"国风元素"的表层热点，而是把"中原质感 / 姥姥匠人 / 中式生活方式"沉淀成一套<strong>可长期复用的品牌叙事母题与内容母版</strong>，让每个 Campaign 都为同一个叙事添砖，而非追当下流行。</p></div></div>
-    <div class="strat-row"><div class="lab">呼应 JD</div><div class="val"><p>"基于品牌定位及东方美学理念开展研究" + "从品牌价值出发而非追热点"。</p></div></div>
-    <div class="strat-row"><div class="lab">可落地</div><div class="val"><p>建立品牌叙事白皮书 + 季度内容母题日历；新品发布绑定一个<strong>文化叙事点</strong>而非单纯产品卖点。</p></div></div>
-  </div>
-</div>
-
-<div class="strat-card">
-  <div class="strat-head"><span class="n">02</span>传播主轴打"悦己情绪"——不卖 logo，卖"懂你的审美"</div>
-  <div class="strat-body">
-    <div class="strat-row"><div class="lab">洞察依据</div><div class="val"><p>§五.6：核心人群是 28–40 岁、对名牌祛魅、为悦己而非炫耀买单的独立中产女性<a class="ref" href="#ref-68">[68]</a><a class="ref" href="#ref-69">[69]</a>；决策动因是<strong>自我表达 / 情绪价值</strong>。</p></div></div>
-    <div class="strat-row"><div class="lab">策略</div><div class="val"><p>传播从"产品材质/参数"转向"情绪与身份认同"——讲"懂自己的女性选择 Songmont"，与中女"向内取悦自己"的心智同频。</p></div></div>
-    <div class="strat-row"><div class="lab">呼应 JD</div><div class="val"><p>"持续提升品牌影响力及用户认知" + "品牌传播"。</p></div></div>
-    <div class="strat-row"><div class="lab">可落地</div><div class="val"><p>用户故事型 Campaign（真实中女的"包与人生"）；KOC 共创真实表达，而非硬广堆参数。</p></div></div>
-  </div>
-</div>
-
-<div class="strat-card">
-  <div class="strat-head"><span class="n">03</span>把小红书种草飞轮做成"系统能力"，而非一次性投放</div>
-  <div class="strat-body">
-    <div class="strat-row"><div class="lab">洞察依据</div><div class="val"><p>§六 技术 / §五：种草飞轮（小红书电商 GMV +45%、百万成交单品 100% 站内有种草<a class="ref" href="#ref-78">[78]</a>）是本赛道"<strong>低预算高转化</strong>"的结构性优势，内容质量而非预算起量。</p></div></div>
-    <div class="strat-row"><div class="lab">策略</div><div class="val"><p>建"内容种草 → 成交 → 反向种草"的<strong>可复用内容工厂 + 达人分层运营</strong>，沉淀 AIPS 人群资产，而非追单条爆文热点。</p></div></div>
-    <div class="strat-row"><div class="lab">呼应 JD</div><div class="val"><p>"策划并执行线上 Campaign" + "关注营销效果及用户反馈，优化传播策略"。</p></div></div>
-    <div class="strat-row"><div class="lab">可落地</div><div class="val"><p>KOC/KOL 分层矩阵 + 内容效果看板（声量→互动→成交转化→复购），用数据反哺选题。</p></div></div>
-  </div>
-</div>
-
-<div class="strat-card">
-  <div class="strat-head"><span class="n">04</span>正面应对 Coach——用"东方美学/文化叙事"打差异化，不比 logo、不比价</div>
-  <div class="strat-body">
-    <div class="strat-row"><div class="lab">洞察依据</div><div class="val"><p>§四/§七：Coach 是<strong>逆势复苏的头号正面对手</strong>（大中华区 FY26Q2 +37%、3 年开 100 店<a class="ref" href="#ref-100">[100]</a>），中端争夺加剧，本土并非单边吃下。</p></div></div>
-    <div class="strat-row"><div class="lab">策略</div><div class="val"><p>不与 Coach 在"经典轻奢 / logo"维度硬刚，而是放大"<strong>只有中国品牌能讲的东方美学与文化共鸣</strong>"这一 Coach 无法复制的差异点。</p></div></div>
-    <div class="strat-row"><div class="lab">呼应 JD</div><div class="val"><p>"开展市场洞察与竞争研究" + "持续提升品牌影响力"。</p></div></div>
-    <div class="strat-row"><div class="lab">可落地</div><div class="val"><p>建竞品监测机制（Coach 动向哨兵，对接 §七监测清单信号 5）+ 差异化心智战役（"东方的表达，别人讲不了"）。</p></div></div>
-  </div>
-</div>
-
-<div class="strat-card">
-  <div class="strat-head"><span class="n">05</span>用"品质兑现"对冲"高价低质"口碑风险，并守住设计护城河</div>
-  <div class="strat-body">
-    <div class="strat-row"><div class="lab">洞察依据</div><div class="val"><p>§三/§四/§七：Songmont 已被点名"高价低质 / 假货泛滥 / 重营销轻设计"<a class="ref" href="#ref-44">[44]</a>；<strong>品控一致性是中游真壁垒</strong><a class="ref" href="#ref-27">[27]</a>；设计侵权"抄袭易、维权慢"<a class="ref" href="#ref-43">[43]</a>。</p></div></div>
-    <div class="strat-row"><div class="lab">策略</div><div class="val"><p>营销侧主动把"品质与工艺"透明化叙事（304 五金真空镀 / 自建大湾区供应链 / 手工艺<a class="ref" href="#ref-22">[22]</a>）来<strong>兑现高价</strong>，把"重营销"质疑转为"营销与品质并重"；同时配合法务<strong>登记外观设计专利</strong>建防抄护城河。</p></div></div>
-    <div class="strat-row"><div class="lab">呼应 JD</div><div class="val"><p>"协同设计、内容、公关团队推进项目落地" + "关注用户反馈优化策略"。</p></div></div>
-    <div class="strat-row"><div class="lab">可落地</div><div class="val"><p>品质溯源内容（供应链/工艺纪录片式内容）+ 用户口碑监测与负面响应机制 + 外观专利布局（呼应 §六政策红利）。</p></div></div>
-  </div>
-</div>
-
-<blockquote class="finding"><p><strong>一句话总纲</strong>：Songmont 品牌营销的胜负手，是把"<strong>东方美学叙事 + 悦己情绪 + 种草飞轮</strong>"做成系统能力，同时用"<strong>品质兑现 + 法律护城河</strong>"补住"重营销轻设计"的口碑短板——<strong>从品牌价值出发，而非追逐热点</strong>，正是这份 JD 反复强调、也是本赛道成长期可持续制胜的关键。</p></blockquote>
+<h2>八、跨团队协同</h2>
+<p>这份提案要落地，靠的是把设计、内容、公关、供应链、客服拧成一条线。下表是各团队在「见针」里的角色分工，回应 JD「协同设计、内容、公关等团队共同推进项目落地」。</p>
+<div class="table-scroll"><table class="data-table">
+<caption>见针 · 跨团队分工（R 主责 / S 支持）</caption>
+<thead><tr><th>团队</th><th>角色</th><th>在见针里具体做什么</th></tr></thead>
+<tbody>
+<tr><td><strong>品牌 / 市场</strong>（本岗位）</td><td>R 总统筹</td><td>母题守门、年度节奏、巴黎与双 11 双轴、跨团队排期与预算、效果复盘</td></tr>
+<tr><td>设计团队</td><td>S</td><td>把「针脚」母题转成 IP 视觉体系、限量款、档案卡设计，确保叙事与产品一致</td></tr>
+<tr><td>内容 / 社媒</td><td>R 执行</td><td>运营见针档案库内容中台、达人金字塔、小红书搜索卡位、UGC 征集</td></tr>
+<tr><td>公关 PR</td><td>S</td><td>「姥姥登巴黎」文化稿、信任状矩阵、舆情响应 SOP</td></tr>
+<tr><td>供应链 / 品控</td><td>S 前置</td><td>见针保修的 SOP 与成本、开线重缝产能、验真溯源系统，是信任层能否兑现的地基</td></tr>
+<tr><td>客服 / 会员</td><td>S</td><td>把「求人买变赶人走」的服务差评转成养护与关系运营，承接首购养护权益</td></tr>
+</tbody>
+</table></div>
+<blockquote class="warn"><p><strong>协同的关键前提写在明处：</strong>信任层承诺一旦对外，就必须真兑现。供应链品控要先过关，任何一次翻车都会因为高调透明而被放大。所以本案把供应链定为「前置」团队，而非事后配合。</p></blockquote>
 </section>
 
-<hr class="div">
-
-<!-- ===== APPENDIX A ===== -->
-<section id="appA">
-<h2>附录 A：数据矛盾与不确定性</h2>
+<!-- ===== CH9 ===== -->
+<section id="ch9">
+<h2>九、效果衡量</h2>
+<p>剔除虚荣指标，用三层加双口径来衡量，既看声量也看沉淀，既看转化也看关系。</p>
 <div class="table-scroll"><table class="data-table">
-<thead><tr><th class="num">#</th><th>指标/议题</th><th>来源 A（含数值）</th><th>来源 B（含数值）</th><th>本报告采用</th><th>选用理由 / 备注</th></tr></thead>
+<caption>见针 · 效果衡量体系</caption>
+<thead><tr><th>层级</th><th>指标</th><th>看什么</th></tr></thead>
 <tbody>
-<tr><td class="num">1</td><td>中国箱包/包袋市场规模口径</td><td>21经济网/观研：2023 包袋市场 = 2,039 亿元（+12%）</td><td>报告大厅：2024 箱包零售总额 = 2,318.9 亿元；华经：2023 = 2,349 亿；格隆汇：2023 = 3,100 亿（+17%）</td><td>正文以「设计师品牌 794 亿」为主锚，箱包总盘仅作背景且标注口径分歧</td><td>箱包（含旅行硬箱）≠ 包袋（手袋）≠ 设计师包袋，三口径混用导致数值打架</td></tr>
-<tr><td class="num">2</td><td>国产包袋市场份额</td><td>21经济网：「国产品牌占 68% 市场份额」（口径不明）<a class="ref" href="#ref-4">[4]</a></td><td>CBNData：2024 天猫箱包服配 TOP20 国产占 15 席（≈75%，仅头部榜单口径）<a class="ref" href="#ref-13">[13]</a></td><td>正文用 CBNData 可核口径，对 21经济网 68% 标注「口径未披露[存疑]」</td><td>68% 缺一手出处与统计口径，CBNData「TOP20 占 15 席」为可核口径</td></tr>
-<tr><td class="num">3</td><td>「剪刀差」内 Coach 复苏反例</td><td>多数信源：MK 亚太 -16.2%<a class="ref" href="#ref-14">[14]</a>、Furla 门店 60+→40<a class="ref" href="#ref-6">[6]</a>——国际轻奢全面退潮</td><td>21经济网<a class="ref" href="#ref-4b">[4b]</a>：Coach 大中华区营收占其品牌约 18%（FY25Q1 口径，非市场份额）、逆势复苏</td><td>正文双面呈现，将「剪刀差」修正为「无叙事轻奢萎缩、有叙事玩家（含 Coach 与本土设计师）共同承接」</td><td>避免误判为「国际轻奢全军覆没」；Coach 复苏是「需求争夺」而非「存量博弈」的关键 nuance</td></tr>
-<tr><td class="num">4</td><td>Songmont 设计/品牌评价</td><td>多数信源记其为东方美学标杆·静奢崛起<a class="ref" href="#ref-8">[8]</a><a class="ref" href="#ref-10">[10]</a><a class="ref" href="#ref-42">[42]</a></td><td>新浪财经 2026<a class="ref" href="#ref-44">[44]</a>：质疑「设计趋同·高价低质·假货泛滥·重营销轻设计」</td><td>正文双面呈现，在 §四护城河可持续性中明确点出头部品牌的「同质化/重营销」隐忧</td><td>护城河四维须避免单边吹捧，东方美学标签是否真壁垒存争议</td></tr>
-<tr><td class="num">5</td><td>本赛道精确市场规模</td><td>无任何官方/第三方独立统计口径</td><td>—（同上，仅来源 A 一侧）</td><td>全章规模数字均标 <span class="tag measured">测算值</span>，三法互校，收敛于约 40–70 亿元（中枢约 50 亿）</td><td>设计师包袋无干净统计；严禁把「设计师品牌大盘 794 亿（含服装）」或「女包大盘 480 亿」当作本赛道规模</td></tr>
-<tr><td class="num">6</td><td>女包大盘 vs 箱包大盘口径</td><td>女包大盘 380→480 亿<a class="ref" href="#ref-61">[61]</a>（仅女士手袋，不含硬箱）</td><td>§一箱包大盘 2,039/2,318.9/2,640–2,990 亿<a class="ref" href="#ref-12">[12]</a>（含箱 + 出口 + 男包）</td><td>§五测算用女包大盘口径（更贴近本赛道）</td><td>箱包大盘含旅行硬箱与出口代工，口径过宽</td></tr>
-<tr><td class="num">7</td><td>利润率跨口径类比</td><td>代工毛利 20–35% vs 品牌毛利 60–80%；奢侈品包出厂价 100–200 元、品牌毛利 50–70%<a class="ref" href="#ref-20">[20]</a><a class="ref" href="#ref-21">[21]</a></td><td>—（非纯设计师包袋直接统计）</td><td>正文已标注口径来源并以「大致水平」表述，未当作赛道精确值</td><td>属合理跨口径引用，不计为重大矛盾</td></tr>
-<tr><td class="num">8</td><td>中国境内奢侈品市场 2024 跌幅</td><td>贝恩/新浪：销售额降 17% 至约 5,127 亿元<a class="ref" href="#ref-80">[80]</a></td><td>另有「预计下降 20%」口径</td><td>正文用「降约 17%–20%」区间表述并标注</td><td>不同机构口径/时点差异，取区间避免单点失真</td></tr>
-<tr><td class="num">9</td><td>政策文号</td><td>《提振消费专项行动方案》<a class="ref" href="#ref-72">[72]</a>、《2025 年知识产权行政保护工作方案》<a class="ref" href="#ref-75">[75]</a> 均为正式印发但无对外公开文号</td><td>—（状况说明，无对立来源）</td><td>正文标「无文号，以发文机关 + 印发日期 + 官方链接溯源」，区分已落地 vs 征求意见稿</td><td>党政联合行动方案类文件常无〔〕字号，不强造文号</td></tr>
-<tr><td class="num">10</td><td>新中式规模口径递窄</td><td>「新中式大市场 9,500 亿」<a class="ref" href="#ref-93">[93]</a>（含服饰/珠宝/香妆/茶饮全品类）</td><td>「国潮服饰 2,200–2,500 亿」<a class="ref" href="#ref-94">[94]</a>（仅服饰）≠ §五新中式服装 1,116 亿<a class="ref" href="#ref-71">[71]</a></td><td>正文标注区分三层口径，不混用</td><td>三者口径递窄，混用会高估本赛道相关市场</td></tr>
-<tr><td class="num">11</td><td>§二「数以万计设计师品牌九死一生」<span class="tag unsourced">UNSOURCED</span></td><td>界面《十年一梦》<a class="ref" href="#ref-11">[11]</a>：媒体定性表述</td><td>缺一手精确统计/年度计数</td><td>正文标<a class="ref" href="#ref-11">[11]</a>来源但注明为定性，不作精确玩家计数</td><td>媒体定性表述，非精确统计，作玩家数量替代指标的定性证据</td></tr>
-<tr><td class="num">12</td><td>目标人群「3,000 万核心中产女性」<span class="tag unsourced">UNSOURCED</span></td><td>本报告基于城镇女性结构的估算</td><td>缺单一权威来源</td><td>已在 §五.3 标 <span class="tag measured">测算值，基于城镇女性结构估算</span></td><td>TAM/SAM/SOM 三层规模、轻奢带占女包大盘 1/3、设计师定位占轻奢带 25%–40% 均为外推系数，已在正文标 <span class="tag measured">测算值</span> 并给出外推依据<a class="ref" href="#ref-62">[62]</a><a class="ref" href="#ref-63">[63]</a><a class="ref" href="#ref-13">[13]</a></td></tr>
-<tr><td class="num">13</td><td>个乐 GROTTO / 端木良锦年度营收<span class="tag unsourced">UNSOURCED</span></td><td>表内两家仅有定价区间，无公开营收数据<a class="ref" href="#ref-40">[40]</a><a class="ref" href="#ref-39">[39]</a></td><td>缺一手营收出处</td><td>正文标 <span class="tag unsourced">UNSOURCED</span> 并记入 §B 缺口，不编造数字</td><td>§四对标表两家仅有定价无营收，需天眼查/IT桔子/品牌官方</td></tr>
-<tr><td class="num">14</td><td>赛道退货率<span class="tag unsourced">UNSOURCED</span></td><td>仅有定性「行业普遍关注退货/客服环节」[B1]</td><td>缺公开权威赛道精确序列</td><td>正文标[B1]、未编造数字</td><td>设计师包袋赛道退货率无公开权威值</td></tr>
-<tr><td class="num">15</td><td>赛道复购率精确序列[留空]</td><td>女性消费大盘「50–70% 复购占比最高 35%，90%+ 高复购仅 8%」<a class="ref" href="#ref-25">[25]</a></td><td>缺赛道精确复购率时间序列</td><td>§七.2 客单价以均价<a class="ref" href="#ref-96">[96]</a>替代，复购率仅用大盘代理，标[B-§2.6]</td><td>无赛道级精确复购率序列，需蝉魔方/生意参谋付费</td></tr>
+<tr><td><strong>品牌资产层</strong></td><td>品牌词搜索指数、声量、媒体曝光、NPS</td><td>搜索指数是先行指标，认知锚点是否被建起来</td></tr>
+<tr><td><strong>种草层（AIPS）</strong></td><td>A 认知 → I 兴趣 → TI 深度兴趣 → P 购买 → S 分享 的人群流转、A3 种草人群、爆文数、PGC 撬动互动比</td><td>长决策品类看人群资产沉淀，而非单条爆文</td></tr>
+<tr><td><strong>生意层（双 11 双口径）</strong></td><td>口径一 转化：GMV、客单、种草到成交（小红星归因）；口径二 蓄客：开档数、养护权益领取、续圈复购</td><td>大促既要成交，也要沉淀长期关系</td></tr>
+<tr><td><strong>沉淀 / 舆情层</strong></td><td>见针档案库开档数、UGC 打卡量、正面情感占比、品质负面词下降</td><td>信任层是否真的把差评转成了口碑</td></tr>
+</tbody>
+</table></div>
+<blockquote class="note"><p>口径诚实说明：所有引用的品牌数据（如 67.1% 声量、PGC 撬动互动比、天猫箱包第一）均为 <span class="tag brand">品牌公开口径</span> 或第三方口径，非本案战报。落地时以品牌内部真实数据重新校准目标值。</p></blockquote>
+</section>
+
+<!-- ===== CH10 ===== -->
+<section id="ch10">
+<h2>十、风险与应对</h2>
+<div class="table-scroll"><table class="data-table">
+<thead><tr><th>风险</th><th>说明</th><th>应对</th></tr></thead>
+<tbody>
+<tr><td><strong>姥姥上镜的伦理风险（最高）</strong></td><td>真人出镜的知情同意、署名、报酬，稍有不慎「平视」人设反噬最重</td><td>前置知情同意与合理报酬规范，绝不做成悲情素材，署名与收益共享写进流程</td></tr>
+<tr><td><strong>承诺即债务</strong></td><td>见针保修、重缝、验真一旦落地必须真兑现，品控翻车会被高调透明放大</td><td>试点先行，一城跑通 SOP 与成本再放量；供应链品控作为前置团队先过关</td></tr>
+<tr><td><strong>限量档案卡被读成变相溢价</strong></td><td>稀缺叙事可能被解读为涨价借口</td><td>严守「透明为看懂价值、不为涨价辩护」口径，调价逐项拆成本</td></tr>
+<tr><td><strong>非遗合作落空</strong></td><td>澄泥砚等为策略假设，签不下来则信任道具缺位</td><td>见针主叙事不依赖第三方非遗，澄泥砚是加分而非命门；签不下则不写</td></tr>
+<tr><td><strong>三年内容断粮</strong></td><td>连载对内容持续供给要求高</td><td>先搭好档案库内容中台，用七十二候日历骨架排期，避免第 2 年断粮</td></tr>
 </tbody>
 </table></div>
 </section>
 
-<!-- ===== APPENDIX B ===== -->
-<section id="appB">
-<h2>附录 B：待补充资料清单（请用户手查）</h2>
-<div class="table-scroll"><table class="data-table">
-<thead><tr><th class="num">#</th><th>需要的数据</th><th>建议查询渠道</th><th>优先级</th><th>对哪个板块的结论影响</th></tr></thead>
-<tbody>
-<tr><td class="num">1</td><td>中国设计师包袋品牌「精确玩家数量/年度新增/年度融资事件数」时间序列</td><td>天眼查 / IT桔子 / 烯牛数据付费库</td><td>中</td><td>§二 替代指标②的定量化</td></tr>
-<tr><td class="num">2</td><td>设计师包袋占整体手袋/箱包市场份额的精确百分比时间序列</td><td>灼识 CIC / 欧睿 Euromonitor 付费</td><td>中</td><td>§二 替代指标③</td></tr>
-<tr><td class="num">3</td><td>设计师包袋赛道全渠道精确市占率 / CR3-5-8</td><td>欧睿 Euromonitor / 灼识 CIC 付费库</td><td>高</td><td>§四 集中度只能用天猫榜单席位估算，无全市场 CR</td></tr>
-<tr><td class="num">4</td><td>个乐 GROTTO / 端木良锦的年度营收数据</td><td>天眼查 / IT桔子 / 品牌官方</td><td>中</td><td>§四 对标表两家仅有定价无营收，含 <span class="tag unsourced">UNSOURCED</span></td></tr>
-<tr><td class="num">5</td><td>本赛道核心人群精确规模 + 实际渗透率时间序列</td><td>欧睿 / 灼识 / 天猫服饰白皮书付费库</td><td>高</td><td>§五.3 测算（渗透率弹性最高，当前为区间估）</td></tr>
-<tr><td class="num">6</td><td>¥1k–5k 轻奢带中「设计师/东方美学定位」包袋的精确占比</td><td>艺恩 / 蝉魔方 / 天猫品类数据</td><td>中</td><td>§五.1 狭义口径②→③的拆分系数</td></tr>
-<tr><td class="num">7</td><td>进口皮料占设计师包袋成本的精确比例 + 汇率每贬值 1% 对终端定价的传导系数</td><td>海关 HS4203 / 行业协会 / 品牌 BOM</td><td>中</td><td>§六.2 汇率传导链当前仅定性</td></tr>
-<tr><td class="num">8</td><td>外观设计专利在「包袋」细分的年度侵权诉讼/快速维权处置量</td><td>国知局年报 / 中国裁判文书网检索</td><td>中</td><td>§六.1 设计侵权「维权慢」痛点当前为定性</td></tr>
-<tr><td class="num">9</td><td>设计师包袋精确「退货率」公开权威值</td><td>电商平台女包退货率行业均值（生意参谋/平台战报）</td><td>中</td><td>§三 KPI 退货率仅有定性[B1]</td></tr>
-<tr><td class="num">10</td><td>设计师包袋赛道「退货率/复购率」月度或季度时间序列</td><td>蝉魔方 / 魔镜 / 生意参谋付费</td><td>中</td><td>§七.2 横向指标多为年度，缺高频景气先行的退货/复购</td></tr>
-<tr><td class="num">11</td><td>小红书「设计师包/新中式包」精确笔记数与声量月度序列</td><td>千瓜 / 果集 / 蝉小红付费</td><td>中</td><td>§七.1 纵向声量指标仅有定性大盘，无细分品类精确声量</td></tr>
-<tr><td class="num">12</td><td>抖音平台女包/箱包月度销售榜与设计师品牌位次</td><td>蝉妈妈 / 飞瓜付费</td><td>中</td><td>§七.1 抖音端先行指标缺位次数据</td></tr>
-</tbody>
-</table></div>
-</section>
-
-<!-- ===== APPENDIX C ===== -->
-<section id="appC">
-<h2>附录 C：参考资料</h2>
-<blockquote class="note"><p>编号 [1]–[100] 与正文内联引用一致；编号段间的跳号（[32]–[35]、[46]–[60]、[81]–[91] 等未使用）系预分配编号段所致，保持与正文一致，不重编号。带子编号者（如 [4b]）保留。正文中的 <a class="ref" href="#appC">[N]</a> 可点击跳转至此处对应条目。</p></blockquote>
-<div class="refs-block">
-<ol>
-<li id="ref-1"><span class="rid">[1]</span><span class="rtxt">灼识咨询(CIC) 转引自界面新闻《商业头条No.46｜中国独立设计师：十年一梦》, 2024. <a href="https://www.jiemian.com/article/11845676.html">链接</a></span></li>
-<li id="ref-2"><span class="rid">[2]</span><span class="rtxt">国家统计局《国民经济行业分类 GB/T 4754-2017》, 2017. <a href="https://www.stats.gov.cn/sj/tjbz/gmjjhyfl/202501/P020250116506795831658.pdf">链接</a></span></li>
-<li id="ref-3"><span class="rid">[3]</span><span class="rtxt">标普道琼斯《全球行业分类标准(GICS)编制方法》中文版. <a href="https://www.spglobal.com/spdji/zh/documents/index-policies/methodology-gics-chinese.pdf">链接</a></span></li>
-<li id="ref-4"><span class="rid">[4]</span><span class="rtxt">21世纪经济报道《中国箱包业再突围》, 2025. <a href="https://www.21jingji.com/article/20250504/herald/ca5f31165f162869948fc50b7f876f53.html">链接</a></span></li>
-<li id="ref-4b"><span class="rid">[4b]</span><span class="rtxt">21经济网《COACH大中华区市场份额升至18%》, 2024. <a href="https://www.21jingji.com/article/20241111/herald/aade9990f6cb0016f314831b7ee120ef.html">链接</a></span></li>
-<li id="ref-5"><span class="rid">[5]</span><span class="rtxt">界面新闻《轻奢退潮，Michael Kors垫底》, 2023. <a href="https://www.jiemian.com/article/10453602.html">链接</a></span></li>
-<li id="ref-6"><span class="rid">[6]</span><span class="rtxt">新浪财经《Coach MK FURLA 轻奢买菜包商场大逃杀》, 2023. <a href="https://finance.sina.com.cn/wm/2023-12-04/doc-imzwwars7818799.shtml">链接</a></span></li>
-<li id="ref-7"><span class="rid">[7]</span><span class="rtxt">知萌《2025消费趋势：中式新韵》转引北京日报, 2025. <a href="https://news.bjd.com.cn/2025/04/19/11136178.shtml">链接</a></span></li>
-<li id="ref-8"><span class="rid">[8]</span><span class="rtxt">36氪《十年翻山，何为Songmont山下有松的中原质感？厚雪公司》. <a href="https://36kr.com/p/3570653778705540">链接</a></span></li>
-<li id="ref-9"><span class="rid">[9]</span><span class="rtxt">腾讯新闻《古良吉吉能接住不买国际大牌的本土顾客吗？》, 2024. <a href="https://news.qq.com/rain/a/20240626A04GON00">链接</a></span></li>
-<li id="ref-10"><span class="rid">[10]</span><span class="rtxt">数英/搜狐《1000块的山下有松，拿捏中女》+新浪科技, 2025. <a href="https://finance.sina.com.cn/tech/roll/2025-03-21/doc-ineqkqss3046754.shtml">链接</a></span></li>
-<li id="ref-11"><span class="rid">[11]</span><span class="rtxt">界面新闻《十年一梦》+ELLE/NOWRE, 2024. <a href="https://m.jiemian.com/article/10234555.html">链接</a></span></li>
-<li id="ref-12"><span class="rid">[12]</span><span class="rtxt">知乎/观研《2021时尚箱包2640亿→2024预计2990亿》. <a href="https://zhuanlan.zhihu.com/p/18017981332">链接</a></span></li>
-<li id="ref-13"><span class="rid">[13]</span><span class="rtxt">CBNData《祛魅爱马仕，国产包袋被买爆了》, 2024. <a href="https://www.cbndata.com/information/294253">链接</a></span></li>
-<li id="ref-14"><span class="rid">[14]</span><span class="rtxt">腾讯新闻/36氪《中国顾客撒手，轻奢挨个扑街》, 2024. <a href="https://news.qq.com/rain/a/20240605A010XI00">链接</a></span></li>
-<li id="ref-15"><span class="rid">[15]</span><span class="rtxt">DoNews/新浪《山下有松：中国人的静奢风》+知乎轻奢女包推荐, 2024. <a href="https://www.donews.com/news/detail/1/4634192.html">链接</a></span></li>
-<li id="ref-16"><span class="rid">[16]</span><span class="rtxt">前瞻产业研究院《我国箱包制造行业产业集群分布》, 2024. <a href="https://x.qianzhan.com/xcharts/detail/bdff871f5e5fd3fe.html">链接</a></span></li>
-<li id="ref-17"><span class="rid">[17]</span><span class="rtxt">21经济网《年产7亿只包，广州狮岭"箱包王国"的数字化试验》, 2024. <a href="https://www.21jingji.com/article/20241011/herald/d0d6f430438878442eeda7a1e1e1e6bc.html">链接</a></span></li>
-<li id="ref-18"><span class="rid">[18]</span><span class="rtxt">广东省情网《广东省皮革皮具特色产业镇——狮岭镇》, 2023. <a href="https://dfz.gd.gov.cn/gdcy/zyz/gz/content/mpost_3536346.html">链接</a></span></li>
-<li id="ref-19"><span class="rid">[19]</span><span class="rtxt">第一财经yicai《困在代工模式里的箱包制造工厂》, 2024. <a href="https://www.yicai.com/news/102355297.html">链接</a></span></li>
-<li id="ref-20"><span class="rid">[20]</span><span class="rtxt">letschuhai《隐秘的代工厂，笑看品牌内卷》, 2023. <a href="https://letschuhai.com/oem-brand-consumer-manufacture">链接</a></span></li>
-<li id="ref-21"><span class="rid">[21]</span><span class="rtxt">新浪财经《万元奢侈品包成本仅150》, 2021. <a href="https://finance.sina.cn/chanjing/gdxw/2021-02-16/detail-ikftssap6044922.d.html">链接</a></span></li>
-<li id="ref-22"><span class="rid">[22]</span><span class="rtxt">新浪/品牌星球《山下有松：以本土工艺为歌》《十年翻山》, 2025-2026. <a href="https://mil.sina.cn/2026-03-05/detail-inhpxfxt6626975.d.html">链接</a></span></li>
-<li id="ref-23"><span class="rid">[23]</span><span class="rtxt">新浪财经/同花顺(开润股份300577)《本土54家鞋服品牌业绩汇总》, 2023. <a href="https://finance.sina.com.cn/wm/2023-11-17/doc-imzuwuqu5875411.shtml">链接</a></span></li>
-<li id="ref-24"><span class="rid">[24]</span><span class="rtxt">知乎《世界主要真皮皮革原料生产国》/皮小匠, 2020. <a href="https://www.zhihu.com/question/20739533">链接</a></span></li>
-<li id="ref-25"><span class="rid">[25]</span><span class="rtxt">尚普咨询《消费趋势系列报告》, 2026. <a href="https://survey.shangpu-china.com/uploadfile/202602/a95e1ed05bee706.pdf">链接</a></span></li>
-<li id="ref-26"><span class="rid">[26]</span><span class="rtxt">知乎《年销5亿！火出圈的国产爱马仕，山下有松》, 2025. <a href="https://zhuanlan.zhihu.com/p/1895062390397195214">链接</a></span></li>
-<li id="ref-27"><span class="rid">[27]</span><span class="rtxt">CBNData《古良吉吉创始人：二次爆发的设计师品牌》, 2024. <a href="https://www.cbndata.com/information/236157">链接</a></span></li>
-<li id="ref-28"><span class="rid">[28]</span><span class="rtxt">数英/知乎《一个包卖15w，端木良锦》, 2021. <a href="https://www.digitaling.com/articles/842988.html">链接</a></span></li>
-<li id="ref-29"><span class="rid">[29]</span><span class="rtxt">新华网/人民日报/澎湃《白沟箱包》《小镇出海·世界包都》, 2023-2024. <a href="http://paper.people.com.cn/rmrbhwb/html/2023-07/07/content_26003613.htm">链接</a></span></li>
-<li id="ref-30"><span class="rid">[30]</span><span class="rtxt">华丽志《Tapestry集团财报》, 2025. <a href="https://luxe.co/post/389243">链接</a></span></li>
-<li id="ref-31"><span class="rid">[31]</span><span class="rtxt">新浪科技《从"一包通用"到"千包千面"·千亿箱包市场》, 2025. <a href="https://finance.sina.com.cn/tech/roll/2025-09-26/doc-infruzvs0630009.shtml">链接</a></span></li>
-<li id="ref-36"><span class="rid">[36]</span><span class="rtxt">新浪财经/新浪科技《三四千块的国产包，开始平替Coach》, 2025. <a href="https://finance.sina.com.cn/tech/roll/2025-03-21/doc-ineqkqss3046754.shtml">链接</a></span></li>
-<li id="ref-37"><span class="rid">[37]</span><span class="rtxt">新浪科技/腾讯《Songmont双十一热卖背后，国货包袋的崛起与隐忧》, 2024-2025. <a href="https://news.qq.com/rain/a/20241102A05QIH00">链接</a></span></li>
-<li id="ref-38"><span class="rid">[38]</span><span class="rtxt">品牌星球/网易《裘真：用十年，重述植鞣美学》, 2024-2025. <a href="https://www.brandstar.com.cn/in-depth/7374">链接</a></span></li>
-<li id="ref-39"><span class="rid">[39]</span><span class="rtxt">36氪《与爱马仕LV同场，端木良锦如何把中国包卖到15万》/腾讯, 2024. <a href="https://36kr.com/p/1926024259289984">链接</a></span></li>
-<li id="ref-40"><span class="rid">[40]</span><span class="rtxt">百度百科/华丽志/凤凰网《GROTTO个乐》, 2024. <a href="https://luxe.co/brand/grotto%E4%B8%AA%E4%B9%90">链接</a></span></li>
-<li id="ref-41"><span class="rid">[41]</span><span class="rtxt">数英/新浪/百度百科《古良吉吉创业10年/九宫格供应链》, 2024. <a href="https://www.digitaling.com/articles/1070334.html">链接</a></span></li>
-<li id="ref-42"><span class="rid">[42]</span><span class="rtxt">百度百科/品牌星球《十年翻山，何为Songmont中原质感》, 2024. <a href="https://www.brandstar.com.cn/in-depth/6571">链接</a></span></li>
-<li id="ref-43"><span class="rid">[43]</span><span class="rtxt">新华社/澎湃《原创设计岂能撞衫，如何破解山寨时尚》, 2017. <a href="https://www.thepaper.cn/newsDetail_forward_4966292">链接</a></span></li>
-<li id="ref-44"><span class="rid">[44]</span><span class="rtxt">新浪财经《设计趋同、高价低质、假货泛滥，山下有松的虚火还能撑多久》, 2026. <a href="https://finance.sina.cn/tech/2026-01-04/detail-inhfawkt2002869.d.html">链接</a></span></li>
-<li id="ref-45"><span class="rid">[45]</span><span class="rtxt">36氪/CBNData《王铁梅背的千元国产女包》/《祛魅爱马仕》, 2024. <a href="https://36kr.com/p/3252461721919750">链接</a></span></li>
-<li id="ref-61"><span class="rid">[61]</span><span class="rtxt">格隆汇/报告大厅《中国女包市场发展分析与前景调研报告》, 2024. <a href="https://m.gelonghui.com/p/1407424">链接</a></span></li>
-<li id="ref-62"><span class="rid">[62]</span><span class="rtxt">腾讯新闻/新浪《2000多的国产女包到底谁在买》, 2025. <a href="https://news.qq.com/rain/a/20250401A0612Q00">链接</a></span></li>
-<li id="ref-63"><span class="rid">[63]</span><span class="rtxt">新浪财经《千元国产女包围剿COACH》《三四千国产包平替Coach》, 2025. <a href="https://finance.sina.com.cn/jjxw/2025-04-22/doc-inetzepc5533819.shtml">链接</a></span></li>
-<li id="ref-64"><span class="rid">[64]</span><span class="rtxt">新浪科技/新浪财经《三四千块国产包开始平替Coach》《冲进千元的国产女包谁在买》, 2025. <a href="https://finance.sina.com.cn/tech/roll/2025-03-21/doc-ineqkqss3046754.shtml">链接</a></span></li>
-<li id="ref-65"><span class="rid">[65]</span><span class="rtxt">果集数据《2023新中式潮流生活数据报告》, 2023. <a href="https://www.fxbaogao.com/detail/4136562">链接</a></span></li>
-<li id="ref-66"><span class="rid">[66]</span><span class="rtxt">果集/千瓜数据《2024中式营销洞察报告(小红书平台)》, 2024. <a href="https://www.guoji.pro/Report/ReportDetail?marketingId=406">链接</a></span></li>
-<li id="ref-67"><span class="rid">[67]</span><span class="rtxt">光明网/科创板日报《国潮消费的底层逻辑是文化自信》, 2025. <a href="https://politics.gmw.cn/2025-03/10/content_37895156.htm">链接</a></span></li>
-<li id="ref-68"><span class="rid">[68]</span><span class="rtxt">网易/搜狐/腾讯《中产女性奢侈品消费新趋势：对名牌包祛魅，悦己消费盛行》, 2026. <a href="https://c.m.163.com/news/a/KO7NDU2005118O92.html">链接</a></span></li>
-<li id="ref-69"><span class="rid">[69]</span><span class="rtxt">界面新闻/36氪《拿什么取悦中产女性》《2019中产女性消费报告》, 2019. <a href="https://www.jiemian.com/article/3057429.html">链接</a></span></li>
-<li id="ref-70"><span class="rid">[70]</span><span class="rtxt">网易/CBNData《中产女性悦己消费》《年轻人购物车8成中国品牌》, 2024. <a href="https://www.cbndata.com/information/274378">链接</a></span></li>
-<li id="ref-71"><span class="rid">[71]</span><span class="rtxt">华龙网/华经《新中式服装市场规模》, 2024. <a href="https://news.cqnews.net/1/detail/1205446599884427264/app/content_1205446599884427264.html">链接</a></span></li>
-<li id="ref-72"><span class="rid">[72]</span><span class="rtxt">中共中央办公厅 国务院办公厅《提振消费专项行动方案》, 2025-03-16(无文号). <a href="https://www.gov.cn/zhengce/202503/content_7013808.htm">链接</a></span></li>
-<li id="ref-73"><span class="rid">[73]</span><span class="rtxt">国家统计局《2024年居民收入和消费支出情况》, 2025-01-17. <a href="https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958325.html">链接</a></span></li>
-<li id="ref-74"><span class="rid">[74]</span><span class="rtxt">国家统计局《2025年居民收入和消费支出情况》, 2026-01-19. <a href="https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962321.html">链接</a></span></li>
-<li id="ref-75"><span class="rid">[75]</span><span class="rtxt">国家知识产权局《2025年知识产权行政保护工作方案》, 2025-03-17(无文号). <a href="https://www.cta.org.cn/ldjh/202503/t20250325_55054.html">链接</a></span></li>
-<li id="ref-76"><span class="rid">[76]</span><span class="rtxt">TMO Group/新浪财经/界面《关税变局下的跨境电商：告别低价搏杀品牌》, 2025. <a href="https://www.jiemian.com/article/13867162.html">链接</a></span></li>
-<li id="ref-77"><span class="rid">[77]</span><span class="rtxt">杭州新闻/知乎/秒针/英敏特《悦己成消费新风向/2025奢侈品Z世代拆解/2025中国消费者》, 2025. <a href="https://china.mintel.com/press-centre/mintel-releases-2025-chinese-consumer/">链接</a></span></li>
-<li id="ref-78"><span class="rid">[78]</span><span class="rtxt">网易/腾讯/中国国际电子商务中心研究院《2025小红书风口/直播电商高质量发展报告2024》, 2024-2025. <a href="https://www.163.com/dy/article/JJHRMFI20511DBV1.html">链接</a></span></li>
-<li id="ref-79"><span class="rid">[79]</span><span class="rtxt">新浪财经/网易/北京互联网法院《AI虚拟试穿/AI文生图著作权案》, 2023-2025. <a href="https://finance.sina.com.cn/stock/usstock/c/2025-07-01/doc-infcxncv5679070.shtml">链接</a></span></li>
-<li id="ref-80"><span class="rid">[80]</span><span class="rtxt">新浪财经/界面/虎嗅《关税冲击全球奢侈品涨价潮/2024奢侈品市场遇冷/强美元下人民币汇率》, 2024-2025. <a href="https://finance.sina.com.cn/jjxw/2025-02-08/doc-ineitvck6722919.shtml">链接</a></span></li>
-<li id="ref-92"><span class="rid">[92]</span><span class="rtxt">国家统计局《中华人民共和国2025年国民经济和社会发展统计公报》, 2026-02-28. <a href="https://www.stcn.com/article/detail/3654944.html">链接</a></span></li>
-<li id="ref-93"><span class="rid">[93]</span><span class="rtxt">瞭望/北京日报《"新中式"撬动万亿级消费市场》, 2025. <a href="https://news.bjd.com.cn/2025/04/19/11136178.shtml">链接</a></span></li>
-<li id="ref-94"><span class="rid">[94]</span><span class="rtxt">中新网/光明网/新浪财经《新中式国潮服饰市场规模预计达2500亿元》, 2025. <a href="https://www.chinanews.com.cn/cj/2025/05-02/10409490.shtml">链接</a></span></li>
-<li id="ref-95"><span class="rid">[95]</span><span class="rtxt">腾讯新闻/澎湃《中国顾客撒手，轻奢挨个扑街》+Capri财报, 2024. <a href="https://news.qq.com/rain/a/20240605A010XI00">链接</a></span></li>
-<li id="ref-96"><span class="rid">[96]</span><span class="rtxt">腾讯/36氪/澎湃《王铁梅背的千元国产女包》+魔镜数据, 2025. <a href="https://news.qq.com/rain/a/20250418A05PO300">链接</a></span></li>
-<li id="ref-97"><span class="rid">[97]</span><span class="rtxt">新浪科技/新浪财经《三四千块国产包平替Coach》+蝉魔方, 2025. <a href="https://finance.sina.com.cn/tech/roll/2025-03-21/doc-ineqkqss3046754.shtml">链接</a></span></li>
-<li id="ref-98"><span class="rid">[98]</span><span class="rtxt">36氪/阿里云创投《端木良锦获千万级A轮融资》, 2021. <a href="https://36kr.com/p/1171885496370564">链接</a></span></li>
-<li id="ref-99"><span class="rid">[99]</span><span class="rtxt">中国皮革协会《行业数据·熟皮价格指数》, 2025. <a href="https://www.chinaleather.org/industry">链接</a></span></li>
-<li id="ref-100"><span class="rid">[100]</span><span class="rtxt">华丽志/21财经《Coach大中华区增长》, 2025-2026. <a href="https://luxe.co/post/451465">链接</a></span></li>
-</ol>
-</div>
-<blockquote class="note"><p>✔ 交叉核对结果：正文实际内联引用的全部编号（[1]–[15]、[19]–[31]、[36]–[45]、[61]–[80]、[92]–[100] 及子编号 [4b]）均已在上表登记，<strong>无「正文引用但 §C 未登记」的缺漏编号</strong>；[16]–[18]、[31] 等少数已登记来源正文未直接内联，正常列出。无 ⚠ 待补来源。</p></blockquote>
+<!-- ===== CH11 ===== -->
+<section id="ch11">
+<h2>十一、口径与诚信声明</h2>
+<blockquote class="finding">
+<p>本提案为品牌营销求职作品，基于公开信息与前置行业研究撰写，不代表 Songmont 内部立场，具体执行需结合公司实际资源与数据。</p>
+<p><strong>三条口径纪律：</strong></p>
+<p>一、凡标 <span class="tag brand">品牌公开口径</span> 者，为品牌或第三方已公开数据，非本案自制战报；落地时以内部真实数据重校。</p>
+<p>二、凡标 <span class="tag assume">策略假设</span> 或 <span class="tag assume">拟合作</span> 者（如澄泥砚等非遗合作、代言人选角、品牌称工艺参数），均为演示性假设，未写成既成事实，需真实签约核实后方可对外。</p>
+<p>三、信任层的任何承诺，先小范围试点验证可兑现，再对外放量，绝不承诺大于兑现。</p>
+</blockquote>
 </section>
 
 <footer>
-  <p><strong>中国原创设计师包袋赛道 × 东方美学消费趋势 — 行业研究报告</strong></p>
-  <p>报告日期 2026-06-30 ｜ 模式：基础技术分析（消费/时尚行业）</p>
-  <p>本报告为 AI 辅助研究产出：所有数字、结论与引用均来自报告原文，凡 <span class="tag measured">测算值</span> 为本报告估算、凡 <span class="tag unsourced">UNSOURCED</span> 为无公开权威源，已如实标注；锚定品牌仅作行业锚点，不构成投资建议或公司估值。</p>
+  <p><strong>见针 · 一针，一个人 ｜ Songmont 品牌营销 Campaign 提案</strong></p>
+  <p>提案日期 2026-07-01 ｜ 承接《中国原创设计师包袋赛道 × 东方美学消费趋势 行业研究报告》</p>
+  <p>本提案为求职作品，所有品牌数据均标注口径，策略假设均已如实标记，不构成对品牌的既成事实陈述。</p>
 </footer>
 
 </div>
@@ -982,7 +633,7 @@ footer{max-width:880px;margin:4rem 0 0;padding-top:1.5rem;border-top:2px solid v
 <script>
 (function(){
   var root=document.documentElement;
-  var saved=localStorage.getItem('bagreport-theme');
+  var saved=localStorage.getItem('jianzhen-theme');
   if(saved){root.setAttribute('data-theme',saved);document.body.setAttribute('data-theme',saved);}
   var tb=document.getElementById('themeBtn');
   function syncBtn(){var d=root.getAttribute('data-theme')==='dark';tb.textContent=d?'☀ 浅色':'◑ 深色';}
@@ -990,9 +641,8 @@ footer{max-width:880px;margin:4rem 0 0;padding-top:1.5rem;border-top:2px solid v
   tb.addEventListener('click',function(){
     var d=root.getAttribute('data-theme')==='dark'?'light':'dark';
     root.setAttribute('data-theme',d);document.body.setAttribute('data-theme',d);
-    localStorage.setItem('bagreport-theme',d);syncBtn();
+    localStorage.setItem('jianzhen-theme',d);syncBtn();
   });
-  // TOC active highlight
   var links=Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
   var map={};links.forEach(function(a){var id=a.getAttribute('href').slice(1);map[id]=a;});
   var targets=Object.keys(map).map(function(id){return document.getElementById(id);}).filter(Boolean);
@@ -1005,13 +655,11 @@ footer{max-width:880px;margin:4rem 0 0;padding-top:1.5rem;border-top:2px solid v
     });
   },{rootMargin:'-15% 0px -75% 0px',threshold:0});
   targets.forEach(function(t){obs.observe(t);});
-  // back to top
   var tt=document.getElementById('toTop');
   window.addEventListener('scroll',function(){
     if(window.scrollY>300)tt.classList.add('show');else tt.classList.remove('show');
   });
   tt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
-  // mobile toc
   var toc=document.getElementById('toc'),btn=document.getElementById('tocBtn');
   if(btn){btn.addEventListener('click',function(){toc.classList.toggle('open');});}
   toc.addEventListener('click',function(e){if(e.target.tagName==='A')toc.classList.remove('open');});
