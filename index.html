@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>见针 · 一针，一个人 ｜ Songmont 品牌营销 Campaign 提案</title>
+<style>
+:root{
+  --font-heading:'Noto Serif SC','Source Han Serif SC','STSong',Georgia,serif;
+  --font-body:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  --font-mono:'JetBrains Mono','Cascadia Code','SF Mono',Consolas,monospace;
+  --font-data:'Inter',-apple-system,sans-serif;
+  --bg:#f7f3ec;--card:#fffefb;--h1:#2b2420;--body:#4d453c;--muted:#9a8f7f;
+  --accent:#8c5e36;--accent-soft:#8c5e361a;--data:#a04b30;--thead:#f0e9dc;
+  --line:#e7decf;--assume-bg:#f6e8ce;--assume-fg:#8a5a1e;
+  --finding-bg:#f5efe4;--warn-bg:#fbf4e6;--warn-border:#c08a3e;--warn-fg:#7a5320;
+  --brand-bg:#ede7dc;--brand-fg:#6b4e2e;--row-alt:#faf6ef;--shadow:0 1px 3px rgba(60,42,28,.07),0 1px 2px rgba(60,42,28,.05);
+  --row-hover:#f3ecdf;
+}
+html[data-theme="dark"]{
+  --bg:#1b1714;--card:#262019;--h1:#f1e9dc;--body:#cfc4b4;--muted:#9e9384;
+  --accent:#c9a37a;--accent-soft:#c9a37a1f;--data:#e0a06e;--thead:#2e261d;
+  --line:#3a3026;--assume-bg:#3a2a12;--assume-fg:#e5c58a;
+  --finding-bg:#241d14;--warn-bg:#2a2110;--warn-border:#c08a3e;--warn-fg:#e5c58a;
+  --brand-bg:#2a2318;--brand-fg:#d8c3a0;--row-alt:#221b14;--shadow:0 1px 3px rgba(0,0,0,.4);
+  --row-hover:#2e261d;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:18px;}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font-body);font-size:1rem;line-height:1.8;-webkit-font-smoothing:antialiased;}
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1.5rem;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);}
+.topbar .brand{font-family:var(--font-heading);font-weight:700;color:var(--h1);font-size:1rem;letter-spacing:.01em;display:flex;align-items:center;}
+.topbar .brand small{color:var(--muted);font-weight:400;font-family:var(--font-body);}
+.tb-actions{display:flex;gap:.5rem;}
+.tb-actions button{font-family:var(--font-body);font-size:.82rem;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--body);padding:.35rem .8rem;border-radius:6px;transition:all .15s;}
+.tb-actions button:hover{border-color:var(--accent);color:var(--accent);}
+.xnav{font-family:var(--font-body);font-size:.82rem;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--body);padding:.35rem .8rem;border-radius:6px;transition:all .15s;text-decoration:none;display:inline-flex;align-items:center;white-space:nowrap;}
+.xnav:hover{border-color:var(--accent);color:var(--accent);}
+.xnav.cur{background:var(--accent-soft);color:var(--accent);border-color:var(--accent);cursor:default;}
+@media(max-width:640px){.xnav .lbl{display:none;}}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1240px;margin:0 auto;}
+nav.toc{position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);overflow-y:auto;padding:1.5rem 1rem 3rem;border-right:1px solid var(--line);font-size:.86rem;}
+nav.toc h4{font-family:var(--font-body);text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;color:var(--muted);margin:.2rem 0 .8rem;}
+nav.toc a{display:block;color:var(--muted);text-decoration:none;padding:.32rem .6rem;border-radius:6px;border-left:2px solid transparent;line-height:1.4;transition:all .12s;}
+nav.toc a:hover{color:var(--body);background:var(--accent-soft);}
+nav.toc a.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-soft);font-weight:600;}
+main{padding:2.5rem 3rem 5rem;min-width:0;}
+.content-wrap{max-width:900px;}
+h1.deck-title{font-family:var(--font-heading);font-weight:700;font-size:2.5rem;line-height:1.25;color:var(--h1);margin:.2rem 0 .5rem;letter-spacing:.02em;}
+h2{font-family:var(--font-heading);font-weight:600;font-size:1.55rem;line-height:1.3;color:var(--h1);margin:3rem 0 1rem;padding-top:.6rem;scroll-margin-top:70px;border-top:2px solid var(--line);}
+h2:first-of-type{border-top:none;}
+h3{font-family:var(--font-heading);font-weight:600;font-size:1.2rem;color:var(--h1);margin:2rem 0 .8rem;scroll-margin-top:70px;}
+h4{font-weight:600;font-size:1.02rem;color:var(--h1);margin:1.4rem 0 .6rem;}
+p{margin:0 0 1.1rem;max-width:780px;}
+strong{color:var(--h1);font-weight:600;}
+hr.div{border:none;border-top:1px solid var(--line);margin:2.5rem 0;}
+ul,ol{max-width:800px;padding-left:1.4rem;}
+li{margin:.45rem 0;}
+.cover{padding:1rem 0 1.5rem;border-bottom:2px solid var(--line);margin-bottom:1rem;}
+.cover .meta{font-size:.92rem;color:var(--muted);line-height:1.95;}
+.cover .meta b{color:var(--body);}
+.kicker{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.6rem;}
+.cover-mark{color:var(--accent);line-height:0;margin:.4rem 0 1.2rem;}
+.cover-mark svg{width:96px;height:auto;}
+.cover-tagline{font-family:var(--font-heading);font-size:1.15rem;letter-spacing:.14em;color:var(--accent);font-weight:500;margin:.4rem 0 1.3rem;}
+.cover-tagline::after{content:"";display:block;width:46px;height:2px;background:var(--accent);opacity:.5;margin:.9rem 0 0;}
+.brand-mark{color:var(--accent);display:inline-flex;vertical-align:-4px;margin-right:.55rem;}
+.brand-mark svg{width:28px;height:auto;display:block;}
+.setup-box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:1rem 1.3rem;margin:1.4rem 0;box-shadow:var(--shadow);font-size:.92rem;}
+.setup-box .r{display:grid;grid-template-columns:8.5rem 1fr;gap:.5rem;padding:.35rem 0;border-bottom:1px dashed var(--line);}
+.setup-box .r:last-child{border-bottom:none;}
+.setup-box .r .k{font-weight:700;color:var(--accent);font-size:.82rem;}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0;}
+.kpi-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.2rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.3rem;}
+.kpi-value{font-family:var(--font-heading);font-weight:700;font-size:1.35rem;color:var(--data);line-height:1.2;}
+.kpi-label{font-size:.86rem;color:var(--body);font-weight:500;}
+.kpi-source{font-size:.74rem;color:var(--muted);}
+blockquote.finding{margin:1.4rem 0;background:var(--finding-bg);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:1rem 1.3rem;max-width:820px;}
+blockquote.finding p{margin:.4rem 0;}blockquote.finding p:first-child{margin-top:0;}blockquote.finding p:last-child{margin-bottom:0;}
+blockquote.warn{margin:1.4rem 0;background:var(--warn-bg);border-left:4px solid var(--warn-border);border-radius:0 8px 8px 0;padding:1rem 1.3rem;color:var(--warn-fg);max-width:820px;}
+blockquote.warn p{margin:.4rem 0;}blockquote.warn p:first-child{margin-top:0;}blockquote.warn p:last-child{margin-bottom:0;}blockquote.warn strong{color:var(--warn-fg);}
+blockquote.note{margin:1.3rem 0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--muted);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;color:var(--muted);font-size:.92rem;max-width:820px;}
+blockquote.note p{margin:.3rem 0;}blockquote.note p:first-child{margin-top:0;}blockquote.note p:last-child{margin-bottom:0;}
+.concl-lead{font-family:var(--font-heading);font-size:1.18rem;line-height:1.7;color:var(--h1);background:var(--finding-bg);border:1px solid var(--accent);border-radius:12px;padding:1.4rem 1.6rem;margin:1.2rem 0 2rem;max-width:none;}
+.pillars{counter-reset:cc;list-style:none;padding:0;display:grid;gap:1rem;max-width:none;}
+.pillars li{counter-increment:cc;position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.3rem 1.1rem 3.4rem;box-shadow:var(--shadow);margin:0;}
+.pillars li::before{content:counter(cc);position:absolute;left:1.1rem;top:1.1rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--font-data);font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;}
+html[data-theme="dark"] .pillars li::before{color:#2b2118;}
+.tag{display:inline-block;font-size:.7rem;font-weight:600;padding:.05em .5em;border-radius:4px;font-family:var(--font-body);white-space:nowrap;line-height:1.5;vertical-align:.08em;}
+.tag.brand{background:var(--brand-bg);color:var(--brand-fg);}
+.tag.assume{background:var(--assume-bg);color:var(--assume-fg);border-bottom:1px dashed currentColor;}
+.table-scroll{overflow-x:auto;margin:1.4rem 0;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);}
+table.data-table{border-collapse:collapse;width:100%;font-size:.88rem;background:var(--card);min-width:600px;}
+table.data-table caption{caption-side:top;text-align:left;font-size:.82rem;color:var(--muted);padding:.6rem .9rem;font-weight:500;}
+table.data-table thead th{position:sticky;top:0;background:var(--thead);color:var(--h1);font-weight:600;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--line);white-space:nowrap;z-index:2;}
+table.data-table td{padding:.6rem .8rem;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6;}
+table.data-table tbody tr:nth-child(even){background:var(--row-alt);}
+table.data-table tbody tr:hover{background:var(--row-hover);}
+.strat-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0;margin:1.4rem 0;box-shadow:var(--shadow);overflow:hidden;}
+.strat-head{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:.9rem 1.3rem;font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1.08rem;display:flex;gap:.7rem;align-items:baseline;}
+.strat-head .n{font-family:var(--font-data);font-weight:700;color:var(--accent);font-size:1.2rem;}
+.strat-body{padding:.4rem 1.3rem 1.1rem;}
+.strat-row{display:grid;grid-template-columns:8rem 1fr;gap:.6rem;padding:.7rem 0;border-bottom:1px dashed var(--line);}
+.strat-row:last-child{border-bottom:none;}
+.strat-row .lab{font-size:.78rem;font-weight:700;color:var(--accent);padding-top:.1rem;}
+.strat-row .val{font-size:.94rem;line-height:1.7;}
+.strat-row .val p{margin:0 0 .5rem;}.strat-row .val p:last-child{margin-bottom:0;}
+.arc{display:grid;gap:1rem;margin:1.4rem 0;}
+.arc-yr{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;}
+.arc-yr .hd{display:flex;gap:.8rem;align-items:baseline;background:var(--brand-bg);padding:.7rem 1.2rem;border-bottom:1px solid var(--line);}
+.arc-yr .hd .y{font-family:var(--font-data);font-weight:700;color:var(--accent);font-size:.8rem;letter-spacing:.06em;}
+.arc-yr .hd .t{font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1.05rem;}
+.arc-yr .bd{padding:.9rem 1.2rem;font-size:.94rem;}
+.arc-yr .bd p{margin:0;}
+.flight{display:flex;gap:.5rem;margin:1.4rem 0;flex-wrap:wrap;}
+.flight .q{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);overflow:hidden;}
+.flight .q .qh{background:var(--accent-soft);padding:.5rem .8rem;font-weight:700;color:var(--accent);font-size:.82rem;border-bottom:1px solid var(--line);}
+.flight .q .qb{padding:.7rem .8rem;font-size:.84rem;line-height:1.55;}
+.flight .q .qb b{color:var(--h1);}
+.viz-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;margin:1.5rem 0;box-shadow:var(--shadow);}
+.viz-card .viz-title{font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1rem;margin-bottom:1rem;}
+.viz-card pre{font-family:var(--font-mono);font-size:.76rem;line-height:1.5;color:var(--body);overflow-x:auto;margin:0;white-space:pre;}
+.viz-note{font-size:.82rem;color:var(--muted);margin-top:1rem;line-height:1.7;}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.3rem 1.3rem 1.1rem;margin:1.6rem 0;box-shadow:var(--shadow);}
+.fig .fig-title{font-family:var(--font-heading);font-weight:600;color:var(--h1);font-size:1.02rem;margin-bottom:1rem;text-align:center;}
+.fig svg{display:block;width:100%;height:auto;overflow:visible;}
+.fig figcaption{font-size:.82rem;color:var(--muted);margin-top:1rem;line-height:1.65;text-align:center;max-width:640px;margin-left:auto;margin-right:auto;}
+.fig svg text{font-family:var(--font-body);}
+.fig svg .t-body{fill:var(--body);}
+.fig svg .t-title{fill:var(--h1);font-weight:600;}
+.fig svg .t-accent{fill:var(--accent);font-weight:600;}
+.fig svg .t-data{fill:var(--data);font-weight:700;}
+.fig svg .t-muted{fill:var(--muted);}
+.fig svg .box{fill:var(--card);stroke:var(--line);stroke-width:1.2;}
+.fig svg .box-accent{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.4;}
+.fig svg .box-brand{fill:var(--brand-bg);stroke:var(--line);stroke-width:1.2;}
+.fig svg .box-assume{fill:var(--warn-bg);stroke:var(--warn-border);stroke-width:1.2;}
+.fig svg .ln{stroke:var(--accent);stroke-width:1.7;fill:none;}
+.fig svg .ln-soft{stroke:var(--muted);stroke-width:1.3;fill:none;stroke-dasharray:4 3;opacity:.7;}
+.fig svg .area{fill:var(--accent-soft);stroke:none;}
+.fig svg .dot{fill:var(--accent);}
+.fig svg .fill-accent{fill:var(--accent);}
+footer{max-width:900px;margin:4rem 0 0;padding-top:1.5rem;border-top:2px solid var(--line);font-size:.82rem;color:var(--muted);line-height:1.85;}
+#toTop{position:fixed;right:1.5rem;bottom:1.5rem;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--accent);font-size:1.1rem;cursor:pointer;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s;z-index:60;}
+#toTop.show{opacity:1;pointer-events:auto;}
+#toTop:hover{border-color:var(--accent);}
+.toc-toggle{display:none;}
+@media(max-width:1024px){
+  .layout{grid-template-columns:1fr;}
+  nav.toc{position:fixed;top:0;left:0;height:100vh;width:280px;background:var(--bg);z-index:80;transform:translateX(-100%);transition:transform .25s;box-shadow:var(--shadow);padding-top:3.5rem;}
+  nav.toc.open{transform:translateX(0);}
+  .toc-toggle{display:inline-block;}
+  main{padding:1.8rem 1.3rem 4rem;}
+  h1.deck-title{font-size:1.9rem;}
+}
+@media(max-width:560px){.strat-row{grid-template-columns:1fr;gap:.2rem;}main{padding:1.4rem 1rem 4rem;}}
+@media print{
+  @page{size:A4;margin:16mm 14mm;}
+  .topbar,nav.toc,#toTop,.toc-toggle{display:none!important;}
+  .layout{display:block;max-width:none;}main{padding:0;}
+  .content-wrap,p,ul,ol{max-width:none;}
+  body{background:#fff;color:#2b2420;font-size:11pt;}
+  h2{break-after:avoid;border-top:1px solid #d8cdbb;}h3,h4{break-after:avoid;}
+  .kpi-card,.viz-card,.strat-card,.arc-yr,blockquote,.table-scroll,.flight .q,.setup-box{break-inside:avoid;box-shadow:none;}
+  table.data-table{font-size:8.5pt;}
+}
+</style>
+</head>
+<body data-theme="light">
+<div class="topbar">
+  <div class="brand">
+    <span class="toc-toggle"><button id="tocBtn" aria-label="目录">☰</button></span>
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 80 44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38 L60 10"/><circle cx="57" cy="11.5" r="2.4"/><path d="M8 38 C 22 26, 30 42, 44 30 S 58 22, 66 30"/></svg></span>见针 <small>· Songmont 品牌营销提案</small>
+  </div>
+  <div class="tb-actions">
+    <a class="xnav" href="https://kayali123.github.io/china-designer-bag-report/" title="配套：中国原创设计师包袋赛道行研报告">◂<span class="lbl"> 赛道行研报告</span></a>
+    <button id="themeBtn">◑ 深色</button>
+    <button onclick="window.print()">⎙ 打印 / PDF</button>
+  </div>
+</div>
+
+<div class="layout">
+<nav class="toc" id="toc">
+  <h4>目录</h4>
+  <a href="#cover">封面 · 本案设定</a>
+  <a href="#summary">一页纸 · 战役总纲</a>
+  <a href="#ch1">一、背景与挑战</a>
+  <a href="#ch2">二、洞察</a>
+  <a href="#ch3">三、大主意「见针」</a>
+  <a href="#ch4">四、信任层 · 见针保修</a>
+  <a href="#ch5">五、三年 IP 弧线</a>
+  <a href="#ch6">六、战役节奏与内容日历</a>
+  <a href="#ch7">七、整合渠道打法</a>
+  <a href="#ch8">八、跨团队协同</a>
+  <a href="#ch9">九、效果衡量</a>
+  <a href="#ch10">十、风险与应对</a>
+  <a href="#ch11">十一、口径与诚信声明</a>
+</nav>
+<main>
+<div class="content-wrap" id="content">
+
+<!-- ===== COVER ===== -->
+<section id="cover" class="cover">
+  <div class="cover-mark" aria-hidden="true"><svg viewBox="0 0 80 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38 L60 10"/><circle cx="57" cy="11.5" r="2.6"/><path d="M8 38 C 22 26, 30 42, 44 30 S 58 22, 66 30"/></svg></div>
+  <span class="kicker">Songmont 山下有松 · 品牌营销 Campaign 提案 · 多年连载品牌 IP</span>
+  <h1 class="deck-title">见针 · 一针，一个人</h1>
+  <p class="cover-tagline">一针一个名字，把手交给时间</p>
+  <div class="meta">
+    <b>提案日期：</b>2026-07-01　｜　<b>提案类型：</b>可连载三年的品牌内容 IP（非一次性战役）<br>
+    <b>情感主线：</b>A 文化叙事（传承与被看见）　·　<b>底层机制：</b>C 工艺信任兑现<br>
+    <b>战役节奏：</b>巴黎时装周（9–10 月）为声量轴　+　双 11 为转化收口<br>
+    <b>承接研究：</b>《中国原创设计师包袋赛道 × 东方美学消费趋势 行业研究报告》→ 本案为其洞察的品牌侧落地
+  </div>
+  <div class="setup-box">
+    <div class="r"><span class="k">本案设定</span><span>以下为演示参数，供评审快速定位口径，可按实际调整。</span></div>
+    <div class="r"><span class="k">概念</span><span>见针为主，嫁接澄泥砚信任道具、气质派选角、七十二候内容日历、以养代换收口、母题占位审计</span></div>
+    <div class="r"><span class="k">信任层</span><span>试点先行，一城跑通售后养护 SOP 与成本模型后再放量</span></div>
+    <div class="r"><span class="k">预算 / KPI</span><span>按千万级 campaign 演示；双 11 双口径（转化 GMV + 关系蓄客）</span></div>
+    <div class="r"><span class="k">真实性口径</span><span>非遗合作与代言均为 <span class="tag assume">策略假设</span>，未写成既成事实；品牌自有数据均标 <span class="tag brand">品牌公开口径</span></span></div>
+  </div>
+</section>
+
+<!-- ===== SUMMARY ===== -->
+<section id="summary">
+  <h2 style="border-top:none;margin-top:1.5rem;">一页纸 · 战役总纲</h2>
+  <div class="concl-lead">
+    <strong>一句话：</strong>Songmont 眼下的死结不是不够美，而是「没人认识」加「配不上价」两个心结叠在一起，又被舆论点名「重营销轻设计」。<strong>「见针」把答案收进一个动作</strong>：每年只讲一位真实的手作人和她手里的一道工序，把包上那道看不见的针脚，变成一个有名字、有脸、可溯源的人。讲得越多，越是在讲这只包到底怎么做出来的。这是对「重营销轻设计」最结构性的回击。
+  </div>
+
+  <ol class="pillars">
+    <li><strong>母题是「针脚」，不是又一座「山」。</strong> 品牌自己的风、山、野、生长已经用得很密，月相被松月占了、云山被老花占了。针脚是包上真实存在、却从没被讲透的东方切口，它天生只有真做手作的品牌配讲，同行抄不走。</li>
+    <li><strong>一个动作解两个死结。</strong> 「见针保修」既是可验证的售后（治信任），又是「缝它的那双手为你重缝」的情感兑现（治认知）。一个动作，两个 KPI，这是品牌营销岗要看的杠杆思维。</li>
+    <li><strong>不押任何外部资源。</strong> 主角是品牌已有的万荣姥姥手作团和付家三代女性，故事自我供给三年。澄泥砚、代言是加分嫁接，不是命门。</li>
+    <li><strong>巴黎立势，双 11 收口。</strong> 复用已跑通两年的巴黎「远山有声」展做 prestige 声量峰值，把「六旬姥姥被巴黎看见」推到最高潮；双 11 用信任内容而非降价承接转化，守住天猫箱包第一。</li>
+  </ol>
+
+  <div class="kpi-row">
+    <div class="kpi-card"><span class="kpi-value">见针保修</span><span class="kpi-label">开线由缝它的团队重缝，把售后变成情感资产</span><span class="kpi-source">试点先行落地</span></div>
+    <div class="kpi-card"><span class="kpi-value">一针一档案</span><span class="kpi-label">每只 IP 款绑定手作人姓名 + 工序 + 验真码</span><span class="kpi-source">见针档案库为内容中台</span></div>
+    <div class="kpi-card"><span class="kpi-value">2 个声量峰值</span><span class="kpi-label">巴黎时装周（9–10 月）+ 双 11</span><span class="kpi-source">立势 + 收口双轴</span></div>
+    <div class="kpi-card"><span class="kpi-value">3 年连载</span><span class="kpi-label">见其手 → 见其名 → 见其传</span><span class="kpi-source">母题固定，内容逐年长大</span></div>
+  </div>
+
+  <figure class="fig">
+  <div class="fig-title">一个动作，解开两个死结</div>
+  <svg viewBox="0 0 760 250" role="img" aria-label="见针如何同时解决认知与信任双死结">
+  <defs><marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path class="fill-accent" d="M0 0 L8 4 L0 8 Z"/></marker></defs>
+  <rect class="box" x="8" y="24" width="212" height="68" rx="10"/>
+  <text class="t-accent" x="114" y="55" text-anchor="middle" font-size="15">认知死结</text>
+  <text class="t-muted" x="114" y="76" text-anchor="middle" font-size="12">「没人认识这个牌子」</text>
+  <rect class="box" x="8" y="158" width="212" height="68" rx="10"/>
+  <text class="t-accent" x="114" y="189" text-anchor="middle" font-size="15">信任死结</text>
+  <text class="t-muted" x="114" y="210" text-anchor="middle" font-size="12">「配不上这个价」</text>
+  <rect class="box-accent" x="290" y="90" width="180" height="70" rx="12"/>
+  <text class="t-title" x="380" y="120" text-anchor="middle" font-size="16">见针 · 一个动作</text>
+  <text class="t-muted" x="380" y="142" text-anchor="middle" font-size="12">见针保修 + 一针一档案</text>
+  <rect class="box-brand" x="548" y="24" width="204" height="68" rx="10"/>
+  <text class="t-accent" x="650" y="55" text-anchor="middle" font-size="15">被看见</text>
+  <text class="t-muted" x="650" y="76" text-anchor="middle" font-size="12">建立认知锚点</text>
+  <rect class="box-brand" x="548" y="158" width="204" height="68" rx="10"/>
+  <text class="t-accent" x="650" y="189" text-anchor="middle" font-size="15">可验证</text>
+  <text class="t-muted" x="650" y="210" text-anchor="middle" font-size="12">补上信任缺口</text>
+  <path class="ln" marker-end="url(#ar1)" d="M222 62 C 258 78, 262 96, 286 108"/>
+  <path class="ln" marker-end="url(#ar1)" d="M222 188 C 258 172, 262 154, 286 142"/>
+  <path class="ln" marker-end="url(#ar1)" d="M472 108 C 500 96, 512 78, 544 62"/>
+  <path class="ln" marker-end="url(#ar1)" d="M472 142 C 500 154, 512 172, 544 188"/>
+  </svg>
+  <figcaption>认知问「你是谁」，信任问「你配吗」。见针把答案收进一个动作，两问一起松开。</figcaption>
+  </figure>
+</section>
+
+<hr class="div">
+
+<!-- ===== CH1 ===== -->
+<section id="ch1">
+<h2>一、背景与挑战</h2>
+
+<h3>1. 品牌处境：登了顶，但被追，也被质疑</h3>
+<p>行业研究已经判定：中国原创设计师包袋处在成长期偏早中段，价值在软端（设计、叙事、DTC 内容），Songmont 已经在 2025 双 11 反超 Coach 登上天猫箱包第一 <span class="tag brand">品牌公开口径</span>。但两件事同时在发生。一是 Coach 逆势复苏，大中华区强劲增长、计划三年开约 100 店，中端需求是被争夺而不是被本土单边吃下。二是 2026 年初品牌被媒体点名「设计趋同、高价低质、假货泛滥、重营销轻设计」，这不是可以回避的噪音，而是这份提案必须正面回应的题目。</p>
+
+<blockquote class="warn"><p><strong>真正的挑战不是声量不够，是信任不够。</strong>一个已经登顶的品牌，继续砸声量的边际收益在递减，而「重营销轻设计」的质疑恰恰会被越高调的营销放大。这份提案的任务，是把营销从「制造声量」转向「兑现信任」，让每一次传播都在替产品说话。</p></blockquote>
+
+<h3>2. 两个心结，其实同源</h3>
+<p>回到顾客那一端，中女买 Songmont 时反复出现两句话。一句是「没有必要花几千元买一个大家都不认识的包」，这是认知锚点缺失。另一句是「花三四千买它，就像花奢侈品的钱买快时尚」，这是信任缺失。表面是两个问题，根子是同一个：这只包背后到底站着谁、值不值，用户看不见。</p>
+<blockquote class="finding"><p><strong>把死结说清楚：</strong>认知问题问的是「你是谁」，信任问题问的是「你配吗」。只要让用户看见包背后那个真实的人和那道真实的工序，两个问题一起松开。<strong>答案不在讲一个更玄的东方美学，而在把人推到台前。</strong></p></blockquote>
+</section>
+
+<!-- ===== CH2 ===== -->
+<section id="ch2">
+<h2>二、洞察</h2>
+
+<h3>1. 人群：要的是被看见，不是被定义</h3>
+<p>核心人群是一二线 25 到 40 岁的高知中产女性，律师、策展人、花艺师、旅行博主。她们对大牌 logo 祛魅，为「自我价值导向、听从内心」买单。顾客原声里最稳定的三条情绪母题是：松弛不被定义、内核稳定的力量、自我和解与治愈。她们不是炫富人群，是内核稳定人群。购买触发很理性，能装、有调性、保值百搭；最大的顾虑就是前面那两个心结。</p>
+<blockquote class="note"><p>顾客原声取样（供文案定调，非逐字硬引）：看代言短片「有种被温柔的女性友人拥抱了一下」；加购纠结「反复加购是因为反复被打动，删除是因为价格」；品质差评「售价三千的包，不到半个月开线掉皮」。这几句同时给出了情感开关和信任缺口。</p></blockquote>
+
+<h3>2. 母题占位审计：为什么必须绕开「风」和「山」</h3>
+<p>要做一个能连载三年的东方母题，先得确认这块地没被占。我们对品牌自有母题和同行做了一次占位审计，结论很清楚：Songmont 自己已经把风、山、野、成风、生长用得很密，月相被「松月」占了，云山青松被老花系列占了，同行也都在抢自然意象。<strong>再用一次风山，就是自我重复加同质化。</strong></p>
+<div class="table-scroll"><table class="data-table">
+<caption>母题占位审计（节选）：哪些被占，哪些是白空间</caption>
+<thead><tr><th>东方母题</th><th>占位情况</th><th>可用性</th></tr></thead>
+<tbody>
+<tr><td>风 / 山 / 野 / 生长</td><td>品牌反复使用（我自成风、风生·造物、一路有野、远山有声）</td><td>已占，慎用</td></tr>
+<tr><td>月相 / 星宿</td><td>品牌「松月」系列已占</td><td>已占</td></tr>
+<tr><td>云山青松</td><td>品牌老花系列已占</td><td>已占</td></tr>
+<tr><td>祥云 / 水墨 / 龙纹 / 书法</td><td>全行业审美疲劳，被批「表层符号挪用」</td><td>雷区</td></tr>
+<tr><td><strong>针脚 / 手作的人与时间</strong></td><td>几乎无人做透，且只有真做手作的品牌配讲</td><td><strong>白空间</strong></td></tr>
+</tbody>
+</table></div>
+<blockquote class="note"><p>把这份审计放进洞察层，本身就是回应 JD「基于品牌定位开展市场洞察与竞争研究」的证据：创意不是拍脑袋，是先算清楚哪块地能长东西。</p></blockquote>
+
+<h3>3. 品牌真相：一条抄不走的祖孙三代女性纵线</h3>
+<p>Songmont 手里有一条别的包袋品牌讲不了的真相。2013 年，创始人付崧（清华美院出身、曾在谷歌做设计）因为买不到理想的电脑包，让擅长缝纫的母亲付玉兰缝出了第一只祖母绿托特；创始人的姥姥一辈子做当地非遗虎头帽；2015 年，品牌在山西万荣里望村组建了一支平均年龄六旬的姥姥手作团队。<span class="tag brand">品牌公开口径</span> 从山西乡村一双手，到 2024、2025 连续两年登上巴黎时装周，这条纵线同时装下了文化自信、新中式和中女悦己三重共鸣。</p>
+<blockquote class="finding"><p><strong>洞察落点：</strong>当买包的年轻女性，和缝包的年长女性，在同一道针脚上相遇，「被看见」就从品牌口号变成两代女性互相成全的事实。<strong>一个真实的人，同时解开认知和信任。</strong></p></blockquote>
+</section>
+
+<!-- ===== CH3 ===== -->
+<section id="ch3">
+<h2>三、大主意「见针」</h2>
+
+<div class="strat-card">
+  <div class="strat-head"><span class="n">◆</span>见针 · 一针，一个人</div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">大主意</div><div class="val"><p>每一年，Songmont 只讲一位真实手作人和她手里的一道工序，把包上那道看不见的针脚，变成一个有名字、有脸、可溯源的人。见物，也见人。</p></div></div>
+    <div class="strat-row"><div class="lab">母题</div><div class="val"><p>用「针脚 / 手作的时间与温度」替代已被用旧的风与山。针脚是手作的签名，是时间的计量单位（品牌称开发周期 180 到 300 天 <span class="tag assume">品牌称</span>在这里不是营销数字，是一针一针熬出来的），是使用痕迹与陪伴的起点。</p></div></div>
+    <div class="strat-row"><div class="lab">情感主线</div><div class="val"><p>A 文化叙事，落点是「传承与被看见」：把平均六旬、本来无名的姥姥手作团推到台前，让两代女性在一道针脚上相认。</p></div></div>
+    <div class="strat-row"><div class="lab">信任底座</div><div class="val"><p>C 工艺信任：不是在包外面贴叙事，而是把设计和工艺本身推到台前当主角（详见第四章「见针保修」）。</p></div></div>
+    <div class="strat-row"><div class="lab">Slogan</div><div class="val"><p>主句：一针一个名字，把手交给时间。　辅句：见物，也见人。</p></div></div>
+  </div>
+</div>
+
+<h3>为什么这是从品牌价值出发，而不是蹭热点</h3>
+<ul>
+<li><strong>母题长在品牌自己的真相里。</strong> 针脚、手作、姥姥团、非遗虎头帽针法，都是 Songmont 已经真实存在的东西，不依赖任何外部热点或生肖流量，就能自我供给三年内容。</li>
+<li><strong>它兑现的是品牌的美学内核和调性。</strong> 「自然、自知」，谦卑、克制、陪伴、平视，不做 logo 炫耀。见针把这套内核变成可看可核的动作，而不是形容词。</li>
+<li><strong>热点会过，针脚会留。</strong> 「把手交给时间」是可连载、越讲越厚的品牌资产，跟追一次流量截然相反。</li>
+</ul>
+<blockquote class="warn"><p><strong>与「重营销轻设计」正面对撞：</strong>这个质疑的要害是「你的营销是不是空的、产品撑不撑得起」。见针的母题就是产品本身那道针脚，信任层就是缝它的那双手来重缝。你讲得越多，越是在讲产品怎么做出来的。这是其他方向做不到的结构性回击。</p></blockquote>
+</section>
+
+<!-- ===== CH4 ===== -->
+<section id="ch4">
+<h2>四、信任层 · 见针保修</h2>
+<blockquote class="finding"><p>这一章是整份提案的胜负手。信任层不是口号，是四个真金白银、可被用户长期验证的动作，直接回应品控、假货、涨价三类真实质疑。落地方式是<strong>试点先行</strong>：先在一个城市跑通售后养护的 SOP 与成本模型，再全国放量，避免「承诺大于兑现」的翻车路径。</p></blockquote>
+
+<figure class="fig">
+<div class="fig-title">信任层：四个可验证的动作</div>
+<svg viewBox="0 0 760 250" role="img" aria-label="见针信任层四动作汇聚为信任兑现">
+<defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path class="fill-accent" d="M0 0 L8 4 L0 8 Z"/></marker></defs>
+<rect class="box" x="8" y="14" width="250" height="48" rx="9"/>
+<text class="t-title" x="24" y="43" font-size="14">01　一针一档案</text>
+<rect class="box" x="8" y="72" width="250" height="48" rx="9"/>
+<text class="t-title" x="24" y="101" font-size="14">02　见针保修 · 原团队重缝</text>
+<rect class="box" x="8" y="130" width="250" height="48" rx="9"/>
+<text class="t-title" x="24" y="159" font-size="14">03　验真溯源</text>
+<rect class="box-assume" x="8" y="188" width="250" height="48" rx="9"/>
+<text class="t-title" x="24" y="212" font-size="14">04　澄泥砚慢工物证</text>
+<text class="t-muted" x="246" y="212" text-anchor="end" font-size="10">策略假设</text>
+<rect class="box-accent" x="520" y="78" width="232" height="94" rx="14"/>
+<text class="t-title" x="636" y="112" text-anchor="middle" font-size="16">信任兑现</text>
+<text class="t-muted" x="636" y="135" text-anchor="middle" font-size="12">试点先行，跑通再放量</text>
+<text class="t-accent" x="636" y="156" text-anchor="middle" font-size="12">同时补 认知 × 信任</text>
+<path class="ln" marker-end="url(#ar2)" d="M260 38 C 400 44, 400 110, 516 118"/>
+<path class="ln" marker-end="url(#ar2)" d="M260 96 C 380 104, 400 116, 516 124"/>
+<path class="ln" marker-end="url(#ar2)" d="M260 154 C 380 148, 400 132, 516 130"/>
+<path class="ln" marker-end="url(#ar2)" d="M260 212 C 400 200, 400 140, 516 136"/>
+</svg>
+<figcaption>不是在包外面贴叙事，而是把工艺本身推到台前。四个动作都真金白银、可被用户长期验证。</figcaption>
+</figure>
+
+<div class="strat-card">
+  <div class="strat-head"><span class="n">01</span>一针一档案：把针脚变成可核验的人</div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">做什么</div><div class="val"><p>每只当年 IP 联名款附一张手作人卡片：姓名、里望村、这道工序做了多少年、耗时多少针。扫码进「见针档案库」，看她本人缝制的原始视频。五金与皮料以第三方检测报告加工序纪录片透明公开，不做参数轰炸。</p></div></div>
+    <div class="strat-row"><div class="lab">解什么</div><div class="val"><p>同时补认知锚点（这只包背后是谁）和信任缺口（它到底怎么做的）。</p></div></div>
+  </div>
+</div>
+
+<div class="strat-card">
+  <div class="strat-head"><span class="n">02</span>见针保修：开线，由缝它的那双手重缝</div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">做什么</div><div class="val"><p>针对掉色、开线、掉皮、五金四类真实高频顾虑，给出免费养护与重缝承诺。开线由「缝它的团队」重缝，把售后从成本项变成情感资产。<strong>先一城试点跑通再放量。</strong></p></div></div>
+    <div class="strat-row"><div class="lab">解什么</div><div class="val"><p>一个动作同时兑现信任（可验证售后）和「被看见」（那双手一直在）。这就是本案的核心杠杆。</p></div></div>
+  </div>
+</div>
+
+<div class="strat-card">
+  <div class="strat-head"><span class="n">03</span>验真溯源：每只包唯一编号，一键辨真伪</div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">做什么</div><div class="val"><p>唯一编号绑定手作人与检测批次，官方一键验真。把「假货泛滥」的舆论危机，转成「教你辨真伪 + 正品服务」的信任内容。</p></div></div>
+  </div>
+</div>
+
+<div class="strat-card">
+  <div class="strat-head"><span class="n">04</span>澄泥砚做慢工的第三方物证 <span class="tag assume">策略假设 · 拟合作</span></div>
+  <div class="strat-body">
+    <div class="strat-row"><div class="lab">做什么</div><div class="val"><p>嫁接绛州澄泥砚这项山西非遗：河泥沉淀一到两年才成器，泥比石更坚。把品牌自说自话的「慢」，换成一个有非遗背书、物理上同构于「植鞣皮越养越润」的可触证据，替品牌的时间做一个不自说自话的旁证。</p></div></div>
+    <div class="strat-row"><div class="lab">口径</div><div class="val"><p>此项及后文所有非遗合作均为 <span class="tag assume">策略假设</span>，需真签约、真联名、真出镜方可对外，绝不以贴图借势替代。</p></div></div>
+  </div>
+</div>
+
+<blockquote class="warn"><p><strong>一条纪律贯穿信任层：不为涨价背书。</strong>工艺透明是为了让人看懂价值，不是为溢价找借口。任何调价都逐项拆成可见成本，绝不复制「情怀绑架」话术。</p></blockquote>
+</section>
+
+<!-- ===== CH5 ===== -->
+<section id="ch5">
+<h2>五、三年 IP 弧线</h2>
+<p>母题固定：每年一位手作人，加一道工序，加一张可溯源档案。内容逐年长大，IP 具备继续连载多年的骨架。</p>
+
+<figure class="fig">
+<div class="fig-title">三年 IP 弧线：母题固定，内容逐年长大</div>
+<svg viewBox="0 0 760 215" role="img" aria-label="见针三年内容弧线时间轴">
+<path class="area" d="M40 120 L150 106 L390 82 L620 54 L720 46 L720 124 L40 124 Z"/>
+<path class="ln" d="M40 120 L150 106 L390 82 L620 54 L720 46"/>
+<circle class="dot" cx="150" cy="106" r="6"/>
+<text class="t-accent" x="150" y="142" text-anchor="middle" font-size="11">第 1 年</text>
+<text class="t-title" x="150" y="164" text-anchor="middle" font-size="15">见其手</text>
+<text class="t-muted" x="150" y="184" text-anchor="middle" font-size="11">立母题 · 建档案库</text>
+<text class="t-muted" x="150" y="200" text-anchor="middle" font-size="11">认知 0 → 1</text>
+<circle class="dot" cx="390" cy="82" r="6"/>
+<text class="t-accent" x="390" y="142" text-anchor="middle" font-size="11">第 2 年</text>
+<text class="t-title" x="390" y="164" text-anchor="middle" font-size="15">见其名</text>
+<text class="t-muted" x="390" y="184" text-anchor="middle" font-size="11">扩到万荣姥姥团</text>
+<text class="t-muted" x="390" y="200" text-anchor="middle" font-size="11">我背的这只是谁缝的</text>
+<circle class="dot" cx="620" cy="54" r="6"/>
+<text class="t-accent" x="620" y="142" text-anchor="middle" font-size="11">第 3 年</text>
+<text class="t-title" x="620" y="164" text-anchor="middle" font-size="15">见其传</text>
+<text class="t-muted" x="620" y="184" text-anchor="middle" font-size="11">学徒 · 用户参与工序</text>
+<text class="t-muted" x="620" y="200" text-anchor="middle" font-size="11">看见 → 参与手作</text>
+</svg>
+<figcaption>每年一位手作人加一道工序加一张档案，从看见手作走到参与手作，IP 可持续连载。</figcaption>
+</figure>
+
+<div class="arc">
+  <div class="arc-yr"><div class="hd"><span class="y">第 1 年</span><span class="t">见其手</span></div><div class="bd"><p>立母题。主角锁定创始原点：母亲付玉兰缝的第一只祖母绿托特，加姥姥的非遗虎头帽针法。讲一只包如何从一双手里长出来，建好「见针档案库」内容中台与保修承诺，把认知锚点从 0 做到 1。</p></div></div>
+  <div class="arc-yr"><div class="hd"><span class="y">第 2 年</span><span class="t">见其名</span></div><div class="bd"><p>从付家三代扩到万荣姥姥团整体，每季认识一位姥姥。主打「她们本来无名，现在包上有她们的名字」，把 UGC 引向「我背的这只是谁缝的」。</p></div></div>
+  <div class="arc-yr"><div class="hd"><span class="y">第 3 年</span><span class="t">见其传</span></div><div class="bd"><p>姥姥带出的年轻学徒、非遗针法的当代化，甚至邀请用户参与一道可选手工工序（如亲手绑一个虎头帽挂饰）。从看见手作，到参与手作。</p></div></div>
+</div>
+</section>
+
+<!-- ===== CH6 ===== -->
+<section id="ch6">
+<h2>六、战役节奏与内容日历</h2>
+
+<h3>1. 全年节奏：两轴四段</h3>
+<p>以巴黎时装周做 prestige 声量峰值，双 11 做转化收口，中间用女性节点和物候内容把节奏填满，不留空窗。</p>
+
+<figure class="fig">
+<div class="fig-title">全年节奏：巴黎立势，双 11 收口</div>
+<svg viewBox="0 0 760 235" role="img" aria-label="全年营销节奏声量曲线">
+<line class="ln-soft" x1="40" y1="196" x2="736" y2="196"/>
+<path class="area" d="M50 196 L112 186 L174 152 L236 176 L297 142 L359 148 L421 176 L483 166 L544 108 L575 74 L606 106 L668 96 L730 168 L730 196 L50 196 Z"/>
+<path class="ln" d="M50 196 L112 186 L174 152 L236 176 L297 142 L359 148 L421 176 L483 166 L544 108 L575 74 L606 106 L668 96 L730 168"/>
+<circle class="dot" cx="575" cy="74" r="5"/>
+<text class="t-muted" x="575" y="46" text-anchor="middle" font-size="10">9–10 月 · 声量峰值</text>
+<text class="t-accent" x="575" y="62" text-anchor="middle" font-size="13">巴黎时装周</text>
+<circle class="dot" cx="668" cy="96" r="5"/>
+<text class="t-muted" x="676" y="72" text-anchor="middle" font-size="10">转化收口</text>
+<text class="t-data" x="676" y="88" text-anchor="middle" font-size="13">双 11</text>
+<circle class="dot" cx="174" cy="152" r="4"/>
+<text class="t-muted" x="174" y="140" text-anchor="middle" font-size="10">三八</text>
+<circle class="dot" cx="297" cy="142" r="4"/>
+<text class="t-muted" x="297" y="130" text-anchor="middle" font-size="10">母亲节</text>
+<circle class="dot" cx="359" cy="148" r="4"/>
+<text class="t-muted" x="359" y="136" text-anchor="middle" font-size="10">618</text>
+<text class="t-muted" x="50" y="214" text-anchor="middle" font-size="9">1月</text>
+<text class="t-muted" x="174" y="214" text-anchor="middle" font-size="9">3月</text>
+<text class="t-muted" x="297" y="214" text-anchor="middle" font-size="9">5月</text>
+<text class="t-muted" x="421" y="214" text-anchor="middle" font-size="9">7月</text>
+<text class="t-muted" x="544" y="214" text-anchor="middle" font-size="9">9月</text>
+<text class="t-muted" x="668" y="214" text-anchor="middle" font-size="9">11月</text>
+</svg>
+<figcaption>纵轴为品牌声量节律。女性节点与物候内容托底，巴黎做年度最高声量峰值，双 11 承接为成交。</figcaption>
+</figure>
+
+<div class="flight">
+  <div class="q"><div class="qh">Q1 · 埋线</div><div class="qb"><b>见其手上线</b><br>档案库内容中台搭建；三八妇女节切入「被看见的女性」；启动首城见针保修试点</div></div>
+  <div class="q"><div class="qh">Q2 · 蓄势</div><div class="qb"><b>母亲节高光</b><br>付玉兰「零号员工」真实手作叙事；618 店播 + 种草承接，走松弛不煽情</div></div>
+  <div class="q"><div class="qh">Q3–Q4 · 立势</div><div class="qb"><b>巴黎时装周为轴</b><br>把里望村手作现场搬进巴黎「见针·万荣」章；六旬姥姥被巴黎看见，产出高质量 PGC 反哺小红书</div></div>
+  <div class="q"><div class="qh">双 11 · 收口</div><div class="qb"><b>转化 + 蓄客</b><br>见针年度限量款带编号档案卡；以养代换，首购赠养护权益，承接天猫箱包第一</div></div>
+</div>
+<blockquote class="note"><p>稀缺性来自「这位姥姥今年只做这么多针」，真实而非人造饥饿。双 11 落地页嵌档案库与验真溯源，正面回应价格质疑，用信任内容而非降价冲榜。</p></blockquote>
+
+<h3>2. 内容日历骨架：借七十二候排格子</h3>
+<p>为了解决三年连载最怕的「内容断粮」，用物候节律给内容排一张长期日历，每个节点对应一类可复用的内容母版，而不是一次性追热点。</p>
+<div class="table-scroll"><table class="data-table">
+<caption>全年文化时刻 · 内容日历（骨架，节气 + 传统节日 + 女性主题）</caption>
+<thead><tr><th>时段</th><th>可用节点</th><th>内容母版方向</th></tr></thead>
+<tbody>
+<tr><td>1–2 月</td><td>春节、立春、雨水</td><td>若参与用山西 / 中原非遗差异化，不追生肖流量明星</td></tr>
+<tr><td>3 月</td><td>三八妇女节、惊蛰、春分</td><td>女性悦己主场，走「为自己 / 松弛」，严禁贤妻良母口吻</td></tr>
+<tr><td>4 月</td><td>清明、谷雨</td><td>时间、自然、慢的东方体感词，接「把手交给时间」</td></tr>
+<tr><td>5 月</td><td>立夏、母亲节</td><td>付玉兰与姥姥团真实手作叙事天然契合，松弛不煽情</td></tr>
+<tr><td>6 月</td><td>端午、夏至、618</td><td>电商大促，店播 + 种草承接，见针保修做卖点</td></tr>
+<tr><td>7–8 月</td><td>小暑、七夕、立秋</td><td>旅行 / 出走延展场景，一包一段路的使用痕迹</td></tr>
+<tr><td>9–10 月</td><td>白露、秋分、中秋、<strong>巴黎时装周</strong></td><td>年度声量峰值，「见针·万荣」巴黎章，姥姥被看见</td></tr>
+<tr><td>11 月</td><td>立冬、<strong>双 11</strong></td><td>全年最大转化收口，限量档案卡 + 以养代换</td></tr>
+<tr><td>12 月</td><td>冬至、年终</td><td>回顾与礼赠，为次年主角埋叙事线</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<!-- ===== CH7 ===== -->
+<section id="ch7">
+<h2>七、整合渠道打法</h2>
+<blockquote class="finding"><p><strong>打法总纲：</strong>不是多渠道铺量，而是「小红书种草飞轮为主阵地，买手 / 店播做成交，线下策展造声量峰值，抖音做破圈，播客与 PR 做深度与背书」的组合。全链路一句话：巴黎立势，小红书养草，抖音播客扩声，双 11 收口。依据是品牌自有数据，内容质量比投放预算更能起量。</p></blockquote>
+
+<figure class="fig">
+<div class="fig-title">整合渠道：小红书种草飞轮</div>
+<svg viewBox="0 0 760 300" role="img" aria-label="小红书种草飞轮与整合渠道">
+<defs><marker id="ar5" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path class="fill-accent" d="M0 0 L8 4 L0 8 Z"/></marker></defs>
+<circle class="box-accent" cx="380" cy="158" r="60"/>
+<text class="t-title" x="380" y="152" text-anchor="middle" font-size="15">小红书</text>
+<text class="t-accent" x="380" y="174" text-anchor="middle" font-size="13">种草飞轮</text>
+<rect class="box-brand" x="300" y="18" width="160" height="52" rx="10"/>
+<text class="t-title" x="380" y="42" text-anchor="middle" font-size="13">① 内容种草</text>
+<text class="t-muted" x="380" y="60" text-anchor="middle" font-size="10.5">见针档案库 · 达人金字塔</text>
+<rect class="box-brand" x="470" y="230" width="170" height="52" rx="10"/>
+<text class="t-title" x="555" y="254" text-anchor="middle" font-size="13">② 成交</text>
+<text class="t-muted" x="555" y="272" text-anchor="middle" font-size="10.5">买手 · 店播 · 双11</text>
+<rect class="box-brand" x="120" y="230" width="170" height="52" rx="10"/>
+<text class="t-title" x="205" y="254" text-anchor="middle" font-size="13">③ 反向种草</text>
+<text class="t-muted" x="205" y="272" text-anchor="middle" font-size="10.5">UGC · 顾客原声</text>
+<path class="ln" marker-end="url(#ar5)" d="M446 78 C 520 110, 540 172, 528 226"/>
+<path class="ln" marker-end="url(#ar5)" d="M470 262 C 400 286, 320 286, 292 264"/>
+<path class="ln" marker-end="url(#ar5)" d="M212 226 C 200 168, 224 110, 314 78"/>
+<rect class="box" x="600" y="120" width="150" height="52" rx="10"/>
+<text class="t-title" x="675" y="143" text-anchor="middle" font-size="12">抖音 · 播客</text>
+<text class="t-muted" x="675" y="160" text-anchor="middle" font-size="10.5">破圈扩声</text>
+<path class="ln-soft" marker-end="url(#ar5)" d="M598 150 C 520 150, 500 152, 444 154"/>
+<rect class="box" x="10" y="120" width="150" height="52" rx="10"/>
+<text class="t-title" x="85" y="143" text-anchor="middle" font-size="12">巴黎 · 线下策展</text>
+<text class="t-muted" x="85" y="160" text-anchor="middle" font-size="10.5">立势 · PR 声量</text>
+<path class="ln-soft" marker-end="url(#ar5)" d="M162 150 C 240 150, 262 156, 316 158"/>
+</svg>
+<figcaption>小红书为主阵地，种草到成交到反向种草自转。巴黎与线下策展在左侧立势注入声量，抖音与播客在右侧破圈扩声。</figcaption>
+</figure>
+
+<h3>1. 小红书：绝对主场，见针档案库做内容中台</h3>
+<ul>
+<li><strong>人群反漏斗 + AIPS 分层</strong>，先卡「28 到 40 中女、悦己、通勤、新中式」核心人群再外扩。品牌现有 67.1% 声量在小红书 <span class="tag brand">品牌公开口径</span>。</li>
+<li><strong>达人金字塔</strong>：3 到 5 位垂类头部背书，加数十位腰部场景实测，加大批 KOC 铺真实感。</li>
+<li><strong>搜索卡位单列</strong>：搜索转化显著高于推荐 <span class="tag brand">第三方口径</span>，建品牌词、品类词、长尾词库，狙击「平替」竞品词。</li>
+<li><strong>内容中台</strong>：以「见针档案库」为选题源，产出手作人肖像故事、工序慢直播、「猜猜这只是谁缝的」互动、「我的包背后的姥姥」UGC 征集。</li>
+</ul>
+
+<h3>2. 线下：策展式限时展，巴黎峰值 + 国内巡展前置</h3>
+<p>复用已跑通的策展模型（远山有声、风生·造物）。巴黎做年度峰值，国内一线城市巡回小展做转化前置。每场展都是「可拍照加有文化叙事」的素材源，前置 KOC 分发反哺飞轮。</p>
+
+<h3>3. 抖音 · 播客 · PR</h3>
+<ul>
+<li><strong>抖音</strong>：承接情感短纪录片破圈，把小红书爆款单品叙事在兴趣电商重做。抖音声量占比低但互动贡献高 <span class="tag brand">品牌公开口径</span>，适合大事件撬互动。</li>
+<li><strong>播客《山下声》</strong>：走「被看见的女性 / 手作与时间」深度对谈，触达高知女性。</li>
+<li><strong>PR</strong>：主打「六旬姥姥登巴黎」文化叙事稿；信任状矩阵（连续两年巴黎时装周、创始人入选 BoF 500）系统化成海外社媒资产。</li>
+</ul>
+
+<h3>4. 代言假设 <span class="tag assume">策略假设</span></h3>
+<p>选角逻辑锁定气质派、影后路线（如吴彦姝这类年龄气质与姥姥团呼应者），在巴黎现场做「两代女性对话」共创，而非顶流带货。依据是品牌已验证 PGC 少量声量撬动多数互动、代言走气质派而非流量的路径 <span class="tag brand">品牌公开口径</span>。此为策略假设，落地需实际签约。</p>
+</section>
+
+<!-- ===== CH8 ===== -->
+<section id="ch8">
+<h2>八、跨团队协同</h2>
+<p>这份提案要落地，靠的是把设计、内容、公关、供应链、客服拧成一条线。下表是各团队在「见针」里的角色分工，回应 JD「协同设计、内容、公关等团队共同推进项目落地」。</p>
+<div class="table-scroll"><table class="data-table">
+<caption>见针 · 跨团队分工（R 主责 / S 支持）</caption>
+<thead><tr><th>团队</th><th>角色</th><th>在见针里具体做什么</th></tr></thead>
+<tbody>
+<tr><td><strong>品牌 / 市场</strong>（本岗位）</td><td>R 总统筹</td><td>母题守门、年度节奏、巴黎与双 11 双轴、跨团队排期与预算、效果复盘</td></tr>
+<tr><td>设计团队</td><td>S</td><td>把「针脚」母题转成 IP 视觉体系、限量款、档案卡设计，确保叙事与产品一致</td></tr>
+<tr><td>内容 / 社媒</td><td>R 执行</td><td>运营见针档案库内容中台、达人金字塔、小红书搜索卡位、UGC 征集</td></tr>
+<tr><td>公关 PR</td><td>S</td><td>「姥姥登巴黎」文化稿、信任状矩阵、舆情响应 SOP</td></tr>
+<tr><td>供应链 / 品控</td><td>S 前置</td><td>见针保修的 SOP 与成本、开线重缝产能、验真溯源系统，是信任层能否兑现的地基</td></tr>
+<tr><td>客服 / 会员</td><td>S</td><td>把「求人买变赶人走」的服务差评转成养护与关系运营，承接首购养护权益</td></tr>
+</tbody>
+</table></div>
+<blockquote class="warn"><p><strong>协同的关键前提写在明处：</strong>信任层承诺一旦对外，就必须真兑现。供应链品控要先过关，任何一次翻车都会因为高调透明而被放大。所以本案把供应链定为「前置」团队，而非事后配合。</p></blockquote>
+</section>
+
+<!-- ===== CH9 ===== -->
+<section id="ch9">
+<h2>九、效果衡量</h2>
+<p>剔除虚荣指标，用三层加双口径来衡量，既看声量也看沉淀，既看转化也看关系。</p>
+<div class="table-scroll"><table class="data-table">
+<caption>见针 · 效果衡量体系</caption>
+<thead><tr><th>层级</th><th>指标</th><th>看什么</th></tr></thead>
+<tbody>
+<tr><td><strong>品牌资产层</strong></td><td>品牌词搜索指数、声量、媒体曝光、NPS</td><td>搜索指数是先行指标，认知锚点是否被建起来</td></tr>
+<tr><td><strong>种草层（AIPS）</strong></td><td>A 认知 → I 兴趣 → TI 深度兴趣 → P 购买 → S 分享 的人群流转、A3 种草人群、爆文数、PGC 撬动互动比</td><td>长决策品类看人群资产沉淀，而非单条爆文</td></tr>
+<tr><td><strong>生意层（双 11 双口径）</strong></td><td>口径一 转化：GMV、客单、种草到成交（小红星归因）；口径二 蓄客：开档数、养护权益领取、续圈复购</td><td>大促既要成交，也要沉淀长期关系</td></tr>
+<tr><td><strong>沉淀 / 舆情层</strong></td><td>见针档案库开档数、UGC 打卡量、正面情感占比、品质负面词下降</td><td>信任层是否真的把差评转成了口碑</td></tr>
+</tbody>
+</table></div>
+<blockquote class="note"><p>口径诚实说明：所有引用的品牌数据（如 67.1% 声量、PGC 撬动互动比、天猫箱包第一）均为 <span class="tag brand">品牌公开口径</span> 或第三方口径，非本案战报。落地时以品牌内部真实数据重新校准目标值。</p></blockquote>
+</section>
+
+<!-- ===== CH10 ===== -->
+<section id="ch10">
+<h2>十、风险与应对</h2>
+<div class="table-scroll"><table class="data-table">
+<thead><tr><th>风险</th><th>说明</th><th>应对</th></tr></thead>
+<tbody>
+<tr><td><strong>姥姥上镜的伦理风险（最高）</strong></td><td>真人出镜的知情同意、署名、报酬，稍有不慎「平视」人设反噬最重</td><td>前置知情同意与合理报酬规范，绝不做成悲情素材，署名与收益共享写进流程</td></tr>
+<tr><td><strong>承诺即债务</strong></td><td>见针保修、重缝、验真一旦落地必须真兑现，品控翻车会被高调透明放大</td><td>试点先行，一城跑通 SOP 与成本再放量；供应链品控作为前置团队先过关</td></tr>
+<tr><td><strong>限量档案卡被读成变相溢价</strong></td><td>稀缺叙事可能被解读为涨价借口</td><td>严守「透明为看懂价值、不为涨价辩护」口径，调价逐项拆成本</td></tr>
+<tr><td><strong>非遗合作落空</strong></td><td>澄泥砚等为策略假设，签不下来则信任道具缺位</td><td>见针主叙事不依赖第三方非遗，澄泥砚是加分而非命门；签不下则不写</td></tr>
+<tr><td><strong>三年内容断粮</strong></td><td>连载对内容持续供给要求高</td><td>先搭好档案库内容中台，用七十二候日历骨架排期，避免第 2 年断粮</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<!-- ===== CH11 ===== -->
+<section id="ch11">
+<h2>十一、口径与诚信声明</h2>
+<blockquote class="finding">
+<p>本提案为品牌营销求职作品，基于公开信息与前置行业研究撰写，不代表 Songmont 内部立场，具体执行需结合公司实际资源与数据。</p>
+<p><strong>三条口径纪律：</strong></p>
+<p>一、凡标 <span class="tag brand">品牌公开口径</span> 者，为品牌或第三方已公开数据，非本案自制战报；落地时以内部真实数据重校。</p>
+<p>二、凡标 <span class="tag assume">策略假设</span> 或 <span class="tag assume">拟合作</span> 者（如澄泥砚等非遗合作、代言人选角、品牌称工艺参数），均为演示性假设，未写成既成事实，需真实签约核实后方可对外。</p>
+<p>三、信任层的任何承诺，先小范围试点验证可兑现，再对外放量，绝不承诺大于兑现。</p>
+</blockquote>
+</section>
+
+<footer>
+  <p><strong>见针 · 一针，一个人 ｜ Songmont 品牌营销 Campaign 提案</strong></p>
+  <p>提案日期 2026-07-01 ｜ 承接《中国原创设计师包袋赛道 × 东方美学消费趋势 行业研究报告》</p>
+  <p>本提案为求职作品，所有品牌数据均标注口径，策略假设均已如实标记，不构成对品牌的既成事实陈述。</p>
+</footer>
+
+</div>
+</main>
+</div>
+<button id="toTop" aria-label="回到顶部">↑</button>
+<script>
+(function(){
+  var root=document.documentElement;
+  var saved=localStorage.getItem('jianzhen-theme');
+  if(saved){root.setAttribute('data-theme',saved);document.body.setAttribute('data-theme',saved);}
+  var tb=document.getElementById('themeBtn');
+  function syncBtn(){var d=root.getAttribute('data-theme')==='dark';tb.textContent=d?'☀ 浅色':'◑ 深色';}
+  syncBtn();
+  tb.addEventListener('click',function(){
+    var d=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',d);document.body.setAttribute('data-theme',d);
+    localStorage.setItem('jianzhen-theme',d);syncBtn();
+  });
+  var links=Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+  var map={};links.forEach(function(a){var id=a.getAttribute('href').slice(1);map[id]=a;});
+  var targets=Object.keys(map).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){l.classList.remove('active');});
+        var a=map[e.target.id];if(a)a.classList.add('active');
+      }
+    });
+  },{rootMargin:'-15% 0px -75% 0px',threshold:0});
+  targets.forEach(function(t){obs.observe(t);});
+  var tt=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>300)tt.classList.add('show');else tt.classList.remove('show');
+  });
+  tt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  var toc=document.getElementById('toc'),btn=document.getElementById('tocBtn');
+  if(btn){btn.addEventListener('click',function(){toc.classList.toggle('open');});}
+  toc.addEventListener('click',function(e){if(e.target.tagName==='A')toc.classList.remove('open');});
+})();
+</script>
+</body>
+</html>
