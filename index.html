@@ -107,12 +107,20 @@
     .measure .over{font:500 12px/1.5 var(--latin);letter-spacing:.13em;color:var(--accent)}
     .measure h3{font-size:26px;margin:22px 0 12px}
     .measure p{font-size:15px;margin:0}
+    .budget{margin:58px 0 0 198px}
+    .budget-head{border-top:1px solid var(--accent);padding-top:27px}
+    .budget-head .over{display:block;font:500 12px/1.5 var(--latin);letter-spacing:.13em;color:var(--accent);margin-bottom:15px}
+    .budget-head h3{font-size:29px;margin-bottom:8px}
+    .budget-head p{font-size:15px;color:#665f57;margin:0}
+    .budget-list{list-style:none;margin:28px 0 0;padding:0;border-bottom:1px solid var(--line)}
+    .budget-list li{display:grid;grid-template-columns:72px minmax(180px,230px) 1fr;gap:16px;align-items:baseline;border-top:1px solid var(--line);padding:18px 0}
+    .budget-share{font:500 22px/1.35 var(--latin);color:var(--accent)}
+    .budget-name{font:400 19px/1.5 var(--heading-font);color:var(--heading)}
+    .budget-why{font-size:14px;color:#686157}
+    .budget-foot{font-size:13px;color:var(--muted);margin:18px 0 0}
     .business-note{margin:50px 0 0 198px;padding:28px 32px;background:#e9e8de}
     .business-note strong{display:block;font:400 25px/1.4 var(--heading-font);color:var(--heading);margin-bottom:12px}
     .business-note p{font-size:15px;margin:0}
-    details{margin:22px 0 0 198px;border-top:1px solid var(--line);padding:20px 0}
-    summary{cursor:pointer;font-size:14px;color:var(--accent)}
-    details p{font-size:14px;color:#666058;max-width:830px;margin:15px 0 0}
     .source-list{display:grid;grid-template-columns:1fr 1fr;gap:0 35px;margin:0 0 0 198px;padding:0;list-style:none}
     .source-list li{border-bottom:1px solid var(--line);padding:14px 0;font-size:14px}
     .footer{padding:47px 0;background:#e9e8de;color:var(--muted)}
@@ -123,7 +131,7 @@
       .hero-media,.hero-media img{min-height:590px}
       .hero-copy{padding:55px 42px}
       .section-top{grid-template-columns:115px 1fr;gap:24px}
-      .bodycopy,.split,.pullquote,.idea-intro,.sequence,.creative-grid,.channel,.timeline,.measure,.business-note,details,.source-list{margin-left:139px}
+      .bodycopy,.split,.pullquote,.idea-intro,.sequence,.creative-grid,.channel,.timeline,.measure,.budget,.business-note,.source-list{margin-left:139px}
     }
     @media(max-width:850px){
       .hero{grid-template-columns:1fr;min-height:0}
@@ -149,7 +157,7 @@
       .section-no{display:block;margin-bottom:15px;padding:0}
       h2{font-size:38px}
       .section-deck{font-size:17px;margin-top:18px}
-      .bodycopy,.split,.pullquote,.idea-intro,.sequence,.creative-grid,.channel,.timeline,.measure,.business-note,details,.source-list{margin-left:0}
+      .bodycopy,.split,.pullquote,.idea-intro,.sequence,.creative-grid,.channel,.timeline,.measure,.budget,.business-note,.source-list{margin-left:0}
       .split,.idea-intro,.sequence,.creative-grid,.channel,.measure,.source-list{grid-template-columns:1fr}
       .split article+article,.channel article+article{border-left:0;border-top:1px solid var(--line);padding-left:0}
       .split article,.channel article{padding:26px 0}
@@ -161,6 +169,8 @@
       .timeline{flex-wrap:wrap;gap:12px}
       .timeline i{min-width:20px}
       .measure{gap:25px}
+      .budget-list li{grid-template-columns:64px 1fr;gap:5px 14px}
+      .budget-why{grid-column:2}
       .footer-inner{display:block}
       .footer-inner span{display:block;margin-bottom:12px}
     }
@@ -301,14 +311,25 @@
           <article><span class="over">GLOBAL CONSIDERATION</span><h3>有没有被理解？</h3><p>从展览与社媒进入官网的人，是否继续阅读品牌故事并访问相关产品页。</p></article>
           <article><span class="over">CHINA HANDOFF</span><h3>有没有被接住？</h3><p>小红书对故事与工艺的搜索、收藏；双 11 期间高意向访问与购买行为，和电商团队共同复盘。</p></article>
         </div>
+        <div class="budget" aria-labelledby="budget-title">
+          <div class="budget-head">
+            <span class="over">RESOURCE ALLOCATION / 100%</span>
+            <h3 id="budget-title">钱花在哪，故事才能走得更远？</h3>
+            <p>分配顺序是先讲清故事，再集中放大，最后接住兴趣。每 100 元中，55 元用于内容与巴黎传播高点，20 元触达海外新受众，15 元承接中国市场，10 元留给验证与调整。</p>
+          </div>
+          <ol class="budget-list">
+            <li><span class="budget-share">30%</span><span class="budget-name">人物与工序内容</span><span class="budget-why">占比最高，因为人物、工序与产品的真实对应是故事的基础。同一批中英素材可用于巴黎、海外社媒和中国商品页。</span></li>
+            <li><span class="budget-share">25%</span><span class="budget-name">巴黎现场增量</span><span class="budget-why">巴黎是国际传播的集中时刻。沿用品牌现有展览，只追加双语说明、人物影像、工序展示和现场采集。</span></li>
+            <li><span class="budget-share">20%</span><span class="budget-name">海外传播</span><span class="budget-why">展览只能触达现场观众。用目标市场的媒体、创作者合作与后续分发，让故事抵达更多人并延长讨论。</span></li>
+            <li><span class="budget-share">15%</span><span class="budget-name">中国市场承接</span><span class="budget-why">海外关注不会自动变成购买。小红书和商品页要讲清具体产品的工艺，双 11 素材接住已有兴趣。</span></li>
+            <li><span class="budget-share">10%</span><span class="budget-name">效果测量与机动</span><span class="budget-why">留出调整空间：看品牌搜索与故事页到产品页的访问，把后续投入给真正带来理解和进一步浏览的内容。</span></li>
+          </ol>
+          <p class="budget-foot">演示配比，合计 100%。原提案的约 5000 万元是首年预算假设；实际总额需按品牌报价重估。维修与售后履约不计入这张传播预算。</p>
+        </div>
         <div class="business-note">
           <strong>我的投资判断</strong>
-          <p>先用一组人物与工序内容测试海外受众是否能复述品牌差异，再决定巴黎展陈和媒体投入的规模。展后持续分发，并让中国商品页接住由内容带来的兴趣；如果只有曝光、没有主动搜索或进一步浏览，就调整故事与投放。</p>
+          <p>预算分阶段释放。先用英文样片小范围测试：受众能否说清“谁做、如何做、与这只包有什么关系”，是否愿意继续查看产品。看懂且愿意了解，再扩大巴黎现场与海外分发；正式传播后看品牌搜索和产品页访问。若只有曝光，就先修改故事，不急着增加投放。中国商品页同步准备，接住展后兴趣。</p>
         </div>
-        <details>
-          <summary>预算与执行条件</summary>
-          <p>原提案以约 5000 万元作为首年整合传播演示盘，重点投入巴黎展陈、内容制作、海外公关与国内社媒承接。实际费用应按品牌内部预算、展期、媒体报价和试点表现重估。人物授权、工序记录和具体产品资料需由品牌团队确认；营销与售后履约分别核算。</p>
-        </details>
       </div>
     </section>
 
